@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = ""
+               BlueprintIdentifier = "244085A325594159007C6C06"
                BuildableName = "Reportedly.app"
                BlueprintName = "Reportedly"
                ReferencedContainer = "container:Reportedly.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = ""
+               BlueprintIdentifier = "244085DB2559415A007C6C06"
                BuildableName = "UnitTests.xctest"
                BlueprintName = "UnitTests"
                ReferencedContainer = "container:Reportedly.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = ""
+               BlueprintIdentifier = "244085E62559415A007C6C06"
                BuildableName = "UITests.xctest"
                BlueprintName = "UITests"
                ReferencedContainer = "container:Reportedly.xcodeproj">
@@ -64,7 +64,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = ""
+            BlueprintIdentifier = "244085A325594159007C6C06"
             BuildableName = "Reportedly.app"
             BlueprintName = "Reportedly"
             ReferencedContainer = "container:Reportedly.xcodeproj">
@@ -81,7 +81,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = ""
+            BlueprintIdentifier = "244085A325594159007C6C06"
             BuildableName = "Reportedly.app"
             BlueprintName = "Reportedly"
             ReferencedContainer = "container:Reportedly.xcodeproj">

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='UITests.xctest' tests='4' failures='0'>
+  <testsuite name='UnitTests.UnitTests' tests='2' failures='0'>
+    <testcase classname='UnitTests.UnitTests' name='testExample' time='0.002'/>
+    <testcase classname='UnitTests.UnitTests' name='testPerformanceExample' time='0.332'/>
+  </testsuite>
+  <testsuite name='UITests.UITests' tests='2' failures='0'>
+    <testcase classname='UITests.UITests' name='testExample' time='1.768'/>
+    <testcase classname='UITests.UITests' name='testLaunchPerformance' time='15.713'/>
+  </testsuite>
+</testsuites>
