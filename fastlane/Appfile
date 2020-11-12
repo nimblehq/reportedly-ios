@@ -1,0 +1,3 @@
+# App Values
+# app_identifier "[[APP_IDENTIFIER]]" # The bundle identifier of your app
+apple_id = "devs-shared@chatq.sg" # Your Apple email address

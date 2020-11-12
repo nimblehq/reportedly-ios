@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,7 @@
 		244085D62559415A007C6C06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244085D42559415A007C6C06 /* LaunchScreen.storyboard */; };
 		244085E12559415A007C6C06 /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085E02559415A007C6C06 /* UnitTests.swift */; };
 		244085EC2559415A007C6C06 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085EB2559415A007C6C06 /* UITests.swift */; };
+		FE9FDB134E58CD04DD6F825D /* Pods_Reportedly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 483C77949F1ED52509FA88EC /* Pods_Reportedly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1588AB8A229769879A8BDAE9 /* Pods-Reportedly.uat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reportedly.uat.xcconfig"; path = "Target Support Files/Pods-Reportedly/Pods-Reportedly.uat.xcconfig"; sourceTree = "<group>"; };
+		20CEDDFBC3FE9DB9AFA39FC1 /* Pods-Reportedly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reportedly.debug.xcconfig"; path = "Target Support Files/Pods-Reportedly/Pods-Reportedly.debug.xcconfig"; sourceTree = "<group>"; };
 		244085A425594159007C6C06 /* Reportedly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reportedly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		244085A725594159007C6C06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		244085AA25594159007C6C06 /* Reportedly.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Reportedly.xcscheme; path = ../../Reportedly.xcodeproj/xcshareddata/xcschemes/Reportedly.xcscheme; sourceTree = "<group>"; };
@@ -70,6 +73,13 @@
 		244085E72559415A007C6C06 /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		244085EB2559415A007C6C06 /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
 		244085ED2559415A007C6C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		483C77949F1ED52509FA88EC /* Pods_Reportedly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reportedly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		550FCCEB23C1F02728678B7E /* Pods-Reportedly.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reportedly.production.xcconfig"; path = "Target Support Files/Pods-Reportedly/Pods-Reportedly.production.xcconfig"; sourceTree = "<group>"; };
+		5A16DC08182E6BB1313979D6 /* Pods-Reportedly.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reportedly.staging.xcconfig"; path = "Target Support Files/Pods-Reportedly/Pods-Reportedly.staging.xcconfig"; sourceTree = "<group>"; };
+		6D20D40191FD2D8F96F14B8C /* Pods-Reportedly.dev production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reportedly.dev production.xcconfig"; path = "Target Support Files/Pods-Reportedly/Pods-Reportedly.dev production.xcconfig"; sourceTree = "<group>"; };
+		6E702914FE6F2E85738A9423 /* Pods-Reportedly.dev staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reportedly.dev staging.xcconfig"; path = "Target Support Files/Pods-Reportedly/Pods-Reportedly.dev staging.xcconfig"; sourceTree = "<group>"; };
+		8F0B526AE097AC2544AB17CE /* Pods-Reportedly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reportedly.release.xcconfig"; path = "Target Support Files/Pods-Reportedly/Pods-Reportedly.release.xcconfig"; sourceTree = "<group>"; };
+		9279EED3C34699EB238805C5 /* Pods-Reportedly.dev uat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reportedly.dev uat.xcconfig"; path = "Target Support Files/Pods-Reportedly/Pods-Reportedly.dev uat.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE9FDB134E58CD04DD6F825D /* Pods_Reportedly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +115,8 @@
 				244085DF2559415A007C6C06 /* UnitTests */,
 				244085EA2559415A007C6C06 /* UITests */,
 				244085A525594159007C6C06 /* Products */,
+				5101865E243594C569714C1D /* Pods */,
+				885C9D6ECBF462D0E6B7414C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -273,6 +286,29 @@
 			path = UITests;
 			sourceTree = "<group>";
 		};
+		5101865E243594C569714C1D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A16DC08182E6BB1313979D6 /* Pods-Reportedly.staging.xcconfig */,
+				20CEDDFBC3FE9DB9AFA39FC1 /* Pods-Reportedly.debug.xcconfig */,
+				550FCCEB23C1F02728678B7E /* Pods-Reportedly.production.xcconfig */,
+				9279EED3C34699EB238805C5 /* Pods-Reportedly.dev uat.xcconfig */,
+				6E702914FE6F2E85738A9423 /* Pods-Reportedly.dev staging.xcconfig */,
+				6D20D40191FD2D8F96F14B8C /* Pods-Reportedly.dev production.xcconfig */,
+				1588AB8A229769879A8BDAE9 /* Pods-Reportedly.uat.xcconfig */,
+				8F0B526AE097AC2544AB17CE /* Pods-Reportedly.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		885C9D6ECBF462D0E6B7414C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				483C77949F1ED52509FA88EC /* Pods_Reportedly.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -280,9 +316,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 244085F62559415A007C6C06 /* Build configuration list for PBXNativeTarget "Reportedly" */;
 			buildPhases = (
+				DB2E260131CE64CFB940E7C7 /* [CP] Check Pods Manifest.lock */,
 				244085A025594159007C6C06 /* Sources */,
 				244085A125594159007C6C06 /* Frameworks */,
 				244085A225594159007C6C06 /* Resources */,
+				AAC6800336D250F439E23787 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -396,6 +434,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AAC6800336D250F439E23787 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Reportedly/Pods-Reportedly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Reportedly/Pods-Reportedly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Reportedly/Pods-Reportedly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB2E260131CE64CFB940E7C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Reportedly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		244085A025594159007C6C06 /* Sources */ = {
@@ -950,6 +1030,7 @@
 		};
 		244085F72559415A007C6C06 /* Staging */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A16DC08182E6BB1313979D6 /* Pods-Reportedly.staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -960,8 +1041,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nimble.Reportedly;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				LINKER_DISPLAYS_MANGLED_NAMES = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = nimble.Reportedly.staging;
+				PRODUCT_NAME = "$(TARGET_NAME)-Staging";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -969,6 +1051,7 @@
 		};
 		244085F82559415A007C6C06 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20CEDDFBC3FE9DB9AFA39FC1 /* Pods-Reportedly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -979,6 +1062,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LINKER_DISPLAYS_MANGLED_NAMES = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = nimble.Reportedly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -988,6 +1072,7 @@
 		};
 		244085F92559415A007C6C06 /* Production */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 550FCCEB23C1F02728678B7E /* Pods-Reportedly.production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -998,7 +1083,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nimble.Reportedly;
+				LINKER_DISPLAYS_MANGLED_NAMES = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = nimble.Reportedly.production;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1007,6 +1093,7 @@
 		};
 		244085FA2559415A007C6C06 /* Dev UAT */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9279EED3C34699EB238805C5 /* Pods-Reportedly.dev uat.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1017,8 +1104,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nimble.Reportedly;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				LINKER_DISPLAYS_MANGLED_NAMES = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = nimble.Reportedly.uat;
+				PRODUCT_NAME = "$(TARGET_NAME)-UAT";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1026,6 +1114,7 @@
 		};
 		244085FB2559415A007C6C06 /* Dev Staging */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E702914FE6F2E85738A9423 /* Pods-Reportedly.dev staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1036,8 +1125,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nimble.Reportedly;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				LINKER_DISPLAYS_MANGLED_NAMES = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = nimble.Reportedly.staging;
+				PRODUCT_NAME = "$(TARGET_NAME)-Staging";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1045,6 +1135,7 @@
 		};
 		244085FC2559415A007C6C06 /* Dev Production */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D20D40191FD2D8F96F14B8C /* Pods-Reportedly.dev production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1055,7 +1146,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nimble.Reportedly;
+				LINKER_DISPLAYS_MANGLED_NAMES = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = nimble.Reportedly.production;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1064,6 +1157,7 @@
 		};
 		244085FD2559415A007C6C06 /* UAT */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1588AB8A229769879A8BDAE9 /* Pods-Reportedly.uat.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1074,8 +1168,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nimble.Reportedly;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				LINKER_DISPLAYS_MANGLED_NAMES = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = nimble.Reportedly.uat;
+				PRODUCT_NAME = "$(TARGET_NAME)-UAT";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1083,6 +1178,7 @@
 		};
 		244085FE2559415A007C6C06 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F0B526AE097AC2544AB17CE /* Pods-Reportedly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1093,6 +1189,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LINKER_DISPLAYS_MANGLED_NAMES = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = nimble.Reportedly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1104,7 +1201,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 466GWDQENP;
 				INFOPLIST_FILE = UnitTests/Info.plist;
@@ -1118,7 +1214,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reportedly.app/Reportedly";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reportedly-Staging.app/Reportedly-Staging";
 			};
 			name = Staging;
 		};
@@ -1126,7 +1222,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 466GWDQENP;
 				INFOPLIST_FILE = UnitTests/Info.plist;
@@ -1148,7 +1243,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 466GWDQENP;
 				INFOPLIST_FILE = UnitTests/Info.plist;
@@ -1170,7 +1264,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 466GWDQENP;
 				INFOPLIST_FILE = UnitTests/Info.plist;
@@ -1184,7 +1277,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reportedly.app/Reportedly";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reportedly-UAT.app/Reportedly-UAT";
 			};
 			name = "Dev UAT";
 		};
@@ -1192,7 +1285,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 466GWDQENP;
 				INFOPLIST_FILE = UnitTests/Info.plist;
@@ -1206,7 +1298,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reportedly.app/Reportedly";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reportedly-Staging.app/Reportedly-Staging";
 			};
 			name = "Dev Staging";
 		};
@@ -1214,7 +1306,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 466GWDQENP;
 				INFOPLIST_FILE = UnitTests/Info.plist;
@@ -1236,7 +1327,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 466GWDQENP;
 				INFOPLIST_FILE = UnitTests/Info.plist;
@@ -1250,7 +1340,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reportedly.app/Reportedly";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reportedly-UAT.app/Reportedly-UAT";
 			};
 			name = UAT;
 		};
@@ -1258,7 +1348,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 466GWDQENP;
 				INFOPLIST_FILE = UnitTests/Info.plist;

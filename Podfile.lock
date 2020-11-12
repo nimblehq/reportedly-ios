@@ -1,0 +1,44 @@
+PODS:
+  - Alamofire (4.9.1)
+  - NimbleExtension (0.1.0)
+  - R.swift (5.2.2):
+    - R.swift.Library (~> 5.2.0)
+  - R.swift.Library (5.2.0)
+  - SnapKit (4.2.0)
+  - SwiftLint (0.40.3)
+
+DEPENDENCIES:
+  - Alamofire
+  - NimbleExtension (from `https://github.com/nimblehq/NimbleExtension.git`)
+  - R.swift
+  - SnapKit
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - R.swift
+    - R.swift.Library
+    - SnapKit
+    - SwiftLint
+
+EXTERNAL SOURCES:
+  NimbleExtension:
+    :git: https://github.com/nimblehq/NimbleExtension.git
+
+CHECKOUT OPTIONS:
+  NimbleExtension:
+    :commit: e6fe1d9ddb7028ebbb068ceeb24d0a798f3e7fc9
+    :git: https://github.com/nimblehq/NimbleExtension.git
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  NimbleExtension: acad4290f27afd4241b1ea20f8597889085e2ce7
+  R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
+  R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SwiftLint: dfd554ff0dff17288ee574814ccdd5cea85d76f7
+
+PODFILE CHECKSUM: 3a70ba1c86cd56312c60d01ac870628a0d13a3b3
+
+COCOAPODS: 1.9.1

@@ -6,7 +6,13 @@
 //
 
 import XCTest
+#if STAGING
+@testable import Reportedly_Staging
+#elseif UAT
+@testable import Reportedly_UAT
+#else
 @testable import Reportedly
+#endif
 
 class UnitTests: XCTestCase {
 

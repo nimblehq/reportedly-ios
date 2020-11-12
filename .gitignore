@@ -31,3 +31,9 @@ Temporary Items
 
 cookiecutter.json
 {{ cookiecutter.*
+
+# Xcode
+xcuserdata/
+
+# CocoaPods
+Pods/

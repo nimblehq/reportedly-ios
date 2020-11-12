@@ -1,0 +1,51 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+fastlane_require 'dotenv'
+
+default_platform(:ios)
+
+before_all do
+    Dotenv.overload '.env'
+    puts("Sourced .env file")
+end
+
+platform :ios do
+    
+    desc "Run all the tests"
+    lane :allTests do
+        testProduction
+        testStaging
+        testUAT
+    end
+
+    desc "Run tests for Production scheme"
+    lane :testProduction do
+        commonTest("Reportedly")
+    end
+
+    desc "Run tests for Staging scheme"
+    lane :testStaging do
+        commonTest("Reportedly Staging")
+    end
+
+    desc "Run tests for UAT scheme"
+    lane :testUAT do
+        commonTest("Reportedly UAT")
+    end
+
+end
+
+def commonTest(scheme)
+    run_tests(workspace: "Reportedly.xcworkspace",
+            devices: ["iPhone 12"],
+            scheme: scheme)
+end
