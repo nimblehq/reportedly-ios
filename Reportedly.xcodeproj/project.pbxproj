@@ -13,17 +13,30 @@
 		244085B625594159007C6C06 /* Entitlements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085B525594159007C6C06 /* Entitlements.swift */; };
 		244085B925594159007C6C06 /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085B825594159007C6C06 /* Localizations.swift */; };
 		244085BC25594159007C6C06 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085BB25594159007C6C06 /* Resource.swift */; };
-		244085BF25594159007C6C06 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085BE25594159007C6C06 /* Extensions.swift */; };
 		244085C225594159007C6C06 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085C125594159007C6C06 /* Models.swift */; };
-		244085C525594159007C6C06 /* Modules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085C425594159007C6C06 /* Modules.swift */; };
-		244085C825594159007C6C06 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085C725594159007C6C06 /* Protocols.swift */; };
+		244085C825594159007C6C06 /* URLOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085C725594159007C6C06 /* URLOpener.swift */; };
 		244085CB25594159007C6C06 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085CA25594159007C6C06 /* Services.swift */; };
-		244085CE25594159007C6C06 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085CD25594159007C6C06 /* Utilities.swift */; };
+		244085CE25594159007C6C06 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085CD25594159007C6C06 /* Logger.swift */; };
 		244085D125594159007C6C06 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085D025594159007C6C06 /* View.swift */; };
 		244085D32559415A007C6C06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244085D22559415A007C6C06 /* Assets.xcassets */; };
 		244085D62559415A007C6C06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244085D42559415A007C6C06 /* LaunchScreen.storyboard */; };
 		244085E12559415A007C6C06 /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085E02559415A007C6C06 /* UnitTests.swift */; };
 		244085EC2559415A007C6C06 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085EB2559415A007C6C06 /* UITests.swift */; };
+		24CB965D255E836C00AAC566 /* LoginEmailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB9658255E836C00AAC566 /* LoginEmailModule.swift */; };
+		24CB965E255E836C00AAC566 /* LoginEmailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB9659255E836C00AAC566 /* LoginEmailPresenter.swift */; };
+		24CB965F255E836C00AAC566 /* LoginEmailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB965A255E836C00AAC566 /* LoginEmailInteractor.swift */; };
+		24CB9660255E836C00AAC566 /* LoginEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB965B255E836C00AAC566 /* LoginEmailViewController.swift */; };
+		24CB9661255E836C00AAC566 /* LoginEmailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB965C255E836C00AAC566 /* LoginEmailRouter.swift */; };
+		24CB9669255E846B00AAC566 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB9668255E846B00AAC566 /* String+Extensions.swift */; };
+		24CB966F255E872700AAC566 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB966E255E872700AAC566 /* NavigationController.swift */; };
+		24CB9674255E884500AAC566 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB9673255E884500AAC566 /* TypeAliases.swift */; };
+		24CB967F255E88FF00AAC566 /* BuildConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB967E255E88FF00AAC566 /* BuildConfiguration.swift */; };
+		24CB9684255E896300AAC566 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB9683255E896300AAC566 /* ViewController.swift */; };
+		24CB9689255E8B5400AAC566 /* ColorSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB9688255E8B5400AAC566 /* ColorSystem.swift */; };
+		24CB968E255E8D3500AAC566 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB968D255E8D3500AAC566 /* UIColor+Extensions.swift */; };
+		24EE32D925628C7100A9C0DC /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE32D825628C7100A9C0DC /* UITextField+Extensions.swift */; };
+		24EE32E425628F2900A9C0DC /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE32E325628F2900A9C0DC /* UIButton+Extensions.swift */; };
+		24EE32F92562982B00A9C0DC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE32F82562982B00A9C0DC /* R.generated.swift */; };
 		FE9FDB134E58CD04DD6F825D /* Pods_Reportedly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 483C77949F1ED52509FA88EC /* Pods_Reportedly.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,12 +70,10 @@
 		244085B525594159007C6C06 /* Entitlements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entitlements.swift; sourceTree = "<group>"; };
 		244085B825594159007C6C06 /* Localizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizations.swift; sourceTree = "<group>"; };
 		244085BB25594159007C6C06 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
-		244085BE25594159007C6C06 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		244085C125594159007C6C06 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		244085C425594159007C6C06 /* Modules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modules.swift; sourceTree = "<group>"; };
-		244085C725594159007C6C06 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		244085C725594159007C6C06 /* URLOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLOpener.swift; sourceTree = "<group>"; };
 		244085CA25594159007C6C06 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
-		244085CD25594159007C6C06 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		244085CD25594159007C6C06 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		244085D025594159007C6C06 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		244085D22559415A007C6C06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		244085D52559415A007C6C06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,6 +84,21 @@
 		244085E72559415A007C6C06 /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		244085EB2559415A007C6C06 /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
 		244085ED2559415A007C6C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24CB9658255E836C00AAC566 /* LoginEmailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailModule.swift; sourceTree = "<group>"; };
+		24CB9659255E836C00AAC566 /* LoginEmailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailPresenter.swift; sourceTree = "<group>"; };
+		24CB965A255E836C00AAC566 /* LoginEmailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailInteractor.swift; sourceTree = "<group>"; };
+		24CB965B255E836C00AAC566 /* LoginEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailViewController.swift; sourceTree = "<group>"; };
+		24CB965C255E836C00AAC566 /* LoginEmailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailRouter.swift; sourceTree = "<group>"; };
+		24CB9668255E846B00AAC566 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		24CB966E255E872700AAC566 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		24CB9673255E884500AAC566 /* TypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
+		24CB967E255E88FF00AAC566 /* BuildConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildConfiguration.swift; sourceTree = "<group>"; };
+		24CB9683255E896300AAC566 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		24CB9688255E8B5400AAC566 /* ColorSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSystem.swift; sourceTree = "<group>"; };
+		24CB968D255E8D3500AAC566 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		24EE32D825628C7100A9C0DC /* UITextField+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		24EE32E325628F2900A9C0DC /* UIButton+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		24EE32F82562982B00A9C0DC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		483C77949F1ED52509FA88EC /* Pods_Reportedly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reportedly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		550FCCEB23C1F02728678B7E /* Pods-Reportedly.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reportedly.production.xcconfig"; path = "Target Support Files/Pods-Reportedly/Pods-Reportedly.production.xcconfig"; sourceTree = "<group>"; };
 		5A16DC08182E6BB1313979D6 /* Pods-Reportedly.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reportedly.staging.xcconfig"; path = "Target Support Files/Pods-Reportedly/Pods-Reportedly.staging.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +165,7 @@
 				244085D72559415A007C6C06 /* Info.plist */,
 				244085A925594159007C6C06 /* Removable Resources */,
 				244085AD25594159007C6C06 /* Application */,
+				24CB966D255E86DB00AAC566 /* Designs */,
 				244085BD25594159007C6C06 /* Extensions */,
 				244085C025594159007C6C06 /* Models */,
 				244085C325594159007C6C06 /* Modules */,
@@ -184,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				244085B225594159007C6C06 /* Constants.swift */,
+				24CB9673255E884500AAC566 /* TypeAliases.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -207,6 +235,7 @@
 		244085BA25594159007C6C06 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				24EE32F82562982B00A9C0DC /* R.generated.swift */,
 				244085BB25594159007C6C06 /* Resource.swift */,
 			);
 			path = Resources;
@@ -215,7 +244,10 @@
 		244085BD25594159007C6C06 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				244085BE25594159007C6C06 /* Extensions.swift */,
+				24CB9668255E846B00AAC566 /* String+Extensions.swift */,
+				24EE32E325628F2900A9C0DC /* UIButton+Extensions.swift */,
+				24CB968D255E8D3500AAC566 /* UIColor+Extensions.swift */,
+				24EE32D825628C7100A9C0DC /* UITextField+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -231,7 +263,7 @@
 		244085C325594159007C6C06 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				244085C425594159007C6C06 /* Modules.swift */,
+				24CB9657255E836C00AAC566 /* LoginEmail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -239,7 +271,7 @@
 		244085C625594159007C6C06 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				244085C725594159007C6C06 /* Protocols.swift */,
+				244085C725594159007C6C06 /* URLOpener.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -255,7 +287,9 @@
 		244085CC25594159007C6C06 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				244085CD25594159007C6C06 /* Utilities.swift */,
+				24CB9688255E8B5400AAC566 /* ColorSystem.swift */,
+				24CB967E255E88FF00AAC566 /* BuildConfiguration.swift */,
+				244085CD25594159007C6C06 /* Logger.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -284,6 +318,27 @@
 				244085ED2559415A007C6C06 /* Info.plist */,
 			);
 			path = UITests;
+			sourceTree = "<group>";
+		};
+		24CB9657255E836C00AAC566 /* LoginEmail */ = {
+			isa = PBXGroup;
+			children = (
+				24CB9658255E836C00AAC566 /* LoginEmailModule.swift */,
+				24CB9659255E836C00AAC566 /* LoginEmailPresenter.swift */,
+				24CB965A255E836C00AAC566 /* LoginEmailInteractor.swift */,
+				24CB965B255E836C00AAC566 /* LoginEmailViewController.swift */,
+				24CB965C255E836C00AAC566 /* LoginEmailRouter.swift */,
+			);
+			path = LoginEmail;
+			sourceTree = "<group>";
+		};
+		24CB966D255E86DB00AAC566 /* Designs */ = {
+			isa = PBXGroup;
+			children = (
+				24CB9683255E896300AAC566 /* ViewController.swift */,
+				24CB966E255E872700AAC566 /* NavigationController.swift */,
+			);
+			path = Designs;
 			sourceTree = "<group>";
 		};
 		5101865E243594C569714C1D /* Pods */ = {
@@ -317,6 +372,7 @@
 			buildConfigurationList = 244085F62559415A007C6C06 /* Build configuration list for PBXNativeTarget "Reportedly" */;
 			buildPhases = (
 				DB2E260131CE64CFB940E7C7 /* [CP] Check Pods Manifest.lock */,
+				24EE32EB2562966F00A9C0DC /* RSwift Run Script */,
 				244085A025594159007C6C06 /* Sources */,
 				244085A125594159007C6C06 /* Frameworks */,
 				244085A225594159007C6C06 /* Resources */,
@@ -436,6 +492,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		24EE32EB2562966F00A9C0DC /* RSwift Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"",
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = "RSwift Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/Reportedly/Application/Resources/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Reportedly/Application/Resources/R.generated.swift\"\n";
+		};
 		AAC6800336D250F439E23787 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -484,17 +561,30 @@
 			files = (
 				244085D125594159007C6C06 /* View.swift in Sources */,
 				244085B925594159007C6C06 /* Localizations.swift in Sources */,
-				244085C525594159007C6C06 /* Modules.swift in Sources */,
 				244085B025594159007C6C06 /* Application.AppDelegate.swift in Sources */,
+				24CB9661255E836C00AAC566 /* LoginEmailRouter.swift in Sources */,
 				244085CB25594159007C6C06 /* Services.swift in Sources */,
 				244085B625594159007C6C06 /* Entitlements.swift in Sources */,
+				24CB965D255E836C00AAC566 /* LoginEmailModule.swift in Sources */,
+				24CB9674255E884500AAC566 /* TypeAliases.swift in Sources */,
 				244085C225594159007C6C06 /* Models.swift in Sources */,
-				244085CE25594159007C6C06 /* Utilities.swift in Sources */,
-				244085C825594159007C6C06 /* Protocols.swift in Sources */,
+				24EE32D925628C7100A9C0DC /* UITextField+Extensions.swift in Sources */,
+				244085CE25594159007C6C06 /* Logger.swift in Sources */,
+				24CB965F255E836C00AAC566 /* LoginEmailInteractor.swift in Sources */,
+				24CB9660255E836C00AAC566 /* LoginEmailViewController.swift in Sources */,
+				24EE32E425628F2900A9C0DC /* UIButton+Extensions.swift in Sources */,
+				244085C825594159007C6C06 /* URLOpener.swift in Sources */,
+				24CB9669255E846B00AAC566 /* String+Extensions.swift in Sources */,
+				24CB966F255E872700AAC566 /* NavigationController.swift in Sources */,
+				24CB967F255E88FF00AAC566 /* BuildConfiguration.swift in Sources */,
+				24CB9689255E8B5400AAC566 /* ColorSystem.swift in Sources */,
+				24EE32F92562982B00A9C0DC /* R.generated.swift in Sources */,
+				24CB968E255E8D3500AAC566 /* UIColor+Extensions.swift in Sources */,
+				24CB965E255E836C00AAC566 /* LoginEmailPresenter.swift in Sources */,
 				244085BC25594159007C6C06 /* Resource.swift in Sources */,
+				24CB9684255E896300AAC566 /* ViewController.swift in Sources */,
 				244085A825594159007C6C06 /* AppDelegate.swift in Sources */,
 				244085B325594159007C6C06 /* Constants.swift in Sources */,
-				244085BF25594159007C6C06 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
