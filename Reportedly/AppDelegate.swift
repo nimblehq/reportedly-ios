@@ -2,7 +2,8 @@
 //  AppDelegate.swift
 //  Reportedly
 //
-//  Created by Minh Pham on 11/9/20.
+//  Created by Mikey Pham on 11/9/20.
+//  Copyright © 2020 NimbleHQ. All rights reserved.
 //
 
 import UIKit
@@ -11,10 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    // MARK: - Application life cycle
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        self.window = window
+        let module = LoginEmailModule()
+        module.router.show(on: window)
+        window.makeKeyAndVisible()
+        
         return true
     }
 
