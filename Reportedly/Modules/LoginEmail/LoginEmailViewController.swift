@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-protocol LoginEmailViewInput: AnyObject {
+protocol LoginEmailViewInput: AnyObject, CommonViewInput {
     
     var emailFieldText: String { get }
     var passwordFieldText: String { get }
@@ -24,16 +24,19 @@ protocol LoginEmailViewOutput: AnyObject {
     func viewDidLoad()
     func textFieldsDidChange()
     func didTapLoginButton()
+    func didTapSignupLinkView()
 }
 
 final class LoginEmailViewController: ViewController {
 
     private let backgroundImageView = UIImageView()
-    private let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
+    private let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .regular))
+    private let titleLabel = UILabel()
     private let containerStackView = UIStackView()
     private let emailField = UITextField()
     private let passwordField = UITextField()
-    private let loginButton = UIButton(type: .custom)
+    private let loginButton = UIButton(type: .system)
+    private let signupLabelWithLinkView = LabelWithLinkView()
     
     var output: LoginEmailViewOutput?
 
@@ -51,14 +54,18 @@ final class LoginEmailViewController: ViewController {
     
     override func setTexts() {
         super.setTexts()
+        titleLabel.text = "Reportedly"
         emailField.placeholder = "Email"
         passwordField.placeholder = "Password"
         loginButton.setTitle("Login", for: .normal)
+        signupLabelWithLinkView.setText(labelText: "Don't have an account yet?", linkText: "Sign up now")
     }
     
     override func setColors() {
         super.setColors()
         view.backgroundColor = .background
+        
+        titleLabel.textColor = .textPrimary
         
         emailField.tintColor = .primary
         emailField.backgroundColor = .forms
@@ -70,7 +77,7 @@ final class LoginEmailViewController: ViewController {
         
         loginButton.setTitleColor(.darkGray, for: .disabled)
         loginButton.setTitleColor(.black, for: .normal)
-        loginButton.setBackgroundColor(.gray, for: .disabled)
+        loginButton.setBackgroundColor(.lightGray, for: .disabled)
         loginButton.setBackgroundColor(.primary, for: .normal)
     }
 }
@@ -137,31 +144,55 @@ extension LoginEmailViewController: UITextFieldDelegate {
     }
 }
 
+// MARK: - UITextField Delegates
+
+extension LoginEmailViewController: LabelLinkViewDelegate {
+    
+    func labelWithLinkViewDidTapLink(_ linkView: LabelWithLinkView) {
+        output?.didTapSignupLinkView()
+    }
+}
+
 // MARK: - Private Functions
 
 extension LoginEmailViewController {
     
     private func setUpLayouts() {
+        let titleContainerView = UIView()
+        titleContainerView.addSubview(titleLabel)
+        
+        containerStackView.addArrangedSubview(emailField)
+        containerStackView.addArrangedSubview(passwordField)
+        containerStackView.addArrangedSubview(loginButton)
+        
         view.addSubview(backgroundImageView)
         view.addSubview(blurEffectView)
+        view.addSubview(titleContainerView)
         view.addSubview(containerStackView)
+        view.addSubview(signupLabelWithLinkView)
         
         backgroundImageView.snp.makeConstraints {
-            $0.top.left.bottom.right.equalToSuperview()
+            $0.edges.equalToSuperview()
         }
         
         blurEffectView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
         
+        titleContainerView.snp.makeConstraints {
+            $0.centerX.leading.equalToSuperview()
+            $0.top.equalTo(view.snp.topMargin)
+            $0.bottom.equalTo(containerStackView.snp.top)
+        }
+        
+        titleLabel.snp.makeConstraints {
+            $0.centerX.centerY.leading.equalToSuperview()
+        }
+        
         containerStackView.snp.makeConstraints {
             $0.centerX.centerY.equalToSuperview()
             $0.width.equalToSuperview().multipliedBy(0.85)
         }
-        
-        containerStackView.addArrangedSubview(emailField)
-        containerStackView.addArrangedSubview(passwordField)
-        containerStackView.addArrangedSubview(loginButton)
         
         emailField.snp.makeConstraints {
             $0.height.equalTo(56.0)
@@ -174,15 +205,22 @@ extension LoginEmailViewController {
         loginButton.snp.makeConstraints {
             $0.height.equalTo(56.0)
         }
+        
+        signupLabelWithLinkView.snp.makeConstraints {
+            $0.leading.centerX.equalToSuperview()
+            $0.bottom.equalTo(view.safeAreaInsets.bottom).inset(24)
+        }
     }
 
     private func setUpViews() {
         setUpSuperview()
         setUpBackgroundImageView()
+        setUpTitleLabel()
         setUpContainerStackView()
         setUpEmailField()
         setUpPasswordField()
         setUpLoginButton()
+        setUpSignupLabelWithLinkView()
     }
 
     private func setUpSuperview() {
@@ -191,9 +229,14 @@ extension LoginEmailViewController {
     }
     
     private func setUpBackgroundImageView() {
-        backgroundImageView.backgroundColor = .red
         backgroundImageView.contentMode = .scaleAspectFill
         backgroundImageView.image = Asset.bg_launch_screen()
+    }
+    
+    private func setUpTitleLabel() {
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 40)
+        titleLabel.numberOfLines = 1
+        titleLabel.textAlignment = .center
     }
     
     private func setUpContainerStackView() {
@@ -221,6 +264,10 @@ extension LoginEmailViewController {
         loginButton.isEnabled = false
         loginButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         loginButton.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
+    }
+    
+    private func setUpSignupLabelWithLinkView() {
+        signupLabelWithLinkView.delegate = self
     }
     
     private func animateContainerStackView(shouldMoveUp: Bool) {

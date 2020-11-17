@@ -37,3 +37,6 @@ xcuserdata/
 
 # CocoaPods
 Pods/
+
+# RSwift
+Reportedly/Application/Resources/R.generated.swift

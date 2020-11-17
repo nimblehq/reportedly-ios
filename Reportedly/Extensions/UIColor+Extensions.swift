@@ -10,13 +10,15 @@ import UIKit
 
 extension UIColor {
     
-    static var primary: UIColor { ColorSystem.shared.primaryColor }
-    
-    static var textPrimary: UIColor { ColorSystem.shared.textPrimaryColor }
+    static var background: UIColor { ColorSystem.shared.backgroundColor }
     
     static var forms: UIColor { ColorSystem.shared.formsColor }
     
-    static var background: UIColor { ColorSystem.shared.backgroundColor }
+    static var primary: UIColor { ColorSystem.shared.primaryColor }
+    
+    static var textHighlighted: UIColor { ColorSystem.shared.textHighlightedColor }
+    
+    static var textPrimary: UIColor { ColorSystem.shared.textPrimaryColor }
     
     var hexString: String {
         guard let components = cgColor.components else { fatalError("Invalid Color") }
