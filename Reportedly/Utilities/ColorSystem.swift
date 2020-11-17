@@ -1,6 +1,6 @@
 //
 //  ColorSystem.swift
-//  The1
+//  Reportedly
 //
 //  Created by Mikey Pham on 11/13/20.
 //  Copyright © 2020 NimbleHQ. All rights reserved.
@@ -25,7 +25,7 @@ public class ColorSystem {
             let transition = CATransition()
             transition.type = .fade
             transition.duration = 0.2
-            UIApplication.shared.keyWindow?.layer.add(transition, forKey: "transition")
+            UIApplication.shared.windows.filter { $0.isKeyWindow }.first?.layer.add(transition, forKey: "transition")
             
             updateColors(colorTheme: colorTheme)
             userDefaults.set(colorTheme, forKey: ColorSystem.COLOR_THEME_KEY)
@@ -35,6 +35,7 @@ public class ColorSystem {
     
     private(set) var primaryColor: UIColor!
     private(set) var textPrimaryColor: UIColor!
+    private(set) var textHighlightedColor: UIColor!
     private(set) var formsColor: UIColor!
     private(set) var backgroundColor: UIColor!
 
@@ -56,13 +57,15 @@ public class ColorSystem {
         primaryColor = UIColor(hex: 0xFFFFFF)
         switch colorTheme {
         case .dark: // TODO: To be updated, for now it should be the same with light mode
-            textPrimaryColor = UIColor(hex: 0xFFFFFF)
-            formsColor = UIColor(hex: 0xFFFFFF).withAlphaComponent(0.2)
             backgroundColor = UIColor(hex: 0x999999)
+            formsColor = UIColor(hex: 0xFFFFFF).withAlphaComponent(0.2)
+            textHighlightedColor = UIColor(hex: 0x007AFF)
+            textPrimaryColor = UIColor(hex: 0xFFFFFF)
         case .light:
-            textPrimaryColor = UIColor(hex: 0xFFFFFF)
-            formsColor = UIColor(hex: 0xFFFFFF).withAlphaComponent(0.2)
             backgroundColor = UIColor(hex: 0x999999)
+            formsColor = UIColor(hex: 0xFFFFFF).withAlphaComponent(0.2)
+            textHighlightedColor = UIColor(hex: 0x007AFF)
+            textPrimaryColor = UIColor(hex: 0xFFFFFF)
         }
     }
 }

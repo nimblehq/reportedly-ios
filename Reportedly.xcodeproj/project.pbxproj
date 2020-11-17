@@ -17,11 +17,15 @@
 		244085C825594159007C6C06 /* URLOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085C725594159007C6C06 /* URLOpener.swift */; };
 		244085CB25594159007C6C06 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085CA25594159007C6C06 /* Services.swift */; };
 		244085CE25594159007C6C06 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085CD25594159007C6C06 /* Logger.swift */; };
-		244085D125594159007C6C06 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085D025594159007C6C06 /* View.swift */; };
+		244085D125594159007C6C06 /* LabelWithLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085D025594159007C6C06 /* LabelWithLinkView.swift */; };
 		244085D32559415A007C6C06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244085D22559415A007C6C06 /* Assets.xcassets */; };
 		244085D62559415A007C6C06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244085D42559415A007C6C06 /* LaunchScreen.storyboard */; };
 		244085E12559415A007C6C06 /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085E02559415A007C6C06 /* UnitTests.swift */; };
 		244085EC2559415A007C6C06 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085EB2559415A007C6C06 /* UITests.swift */; };
+		24820DC8256386990072D245 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DC6256386990072D245 /* ToastView.swift */; };
+		24820DC9256386990072D245 /* ToastPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DC7256386990072D245 /* ToastPresenter.swift */; };
+		24820DCE2563873F0072D245 /* CGAffineTransform+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DCD2563873F0072D245 /* CGAffineTransform+Extensions.swift */; };
+		24820DD6256389200072D245 /* CommonViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DD5256389200072D245 /* CommonViewInput.swift */; };
 		24CB965D255E836C00AAC566 /* LoginEmailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB9658255E836C00AAC566 /* LoginEmailModule.swift */; };
 		24CB965E255E836C00AAC566 /* LoginEmailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB9659255E836C00AAC566 /* LoginEmailPresenter.swift */; };
 		24CB965F255E836C00AAC566 /* LoginEmailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB965A255E836C00AAC566 /* LoginEmailInteractor.swift */; };
@@ -74,7 +78,7 @@
 		244085C725594159007C6C06 /* URLOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLOpener.swift; sourceTree = "<group>"; };
 		244085CA25594159007C6C06 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		244085CD25594159007C6C06 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		244085D025594159007C6C06 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		244085D025594159007C6C06 /* LabelWithLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithLinkView.swift; sourceTree = "<group>"; };
 		244085D22559415A007C6C06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		244085D52559415A007C6C06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		244085D72559415A007C6C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +88,10 @@
 		244085E72559415A007C6C06 /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		244085EB2559415A007C6C06 /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
 		244085ED2559415A007C6C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24820DC6256386990072D245 /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		24820DC7256386990072D245 /* ToastPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastPresenter.swift; sourceTree = "<group>"; };
+		24820DCD2563873F0072D245 /* CGAffineTransform+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGAffineTransform+Extensions.swift"; sourceTree = "<group>"; };
+		24820DD5256389200072D245 /* CommonViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonViewInput.swift; sourceTree = "<group>"; };
 		24CB9658255E836C00AAC566 /* LoginEmailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailModule.swift; sourceTree = "<group>"; };
 		24CB9659255E836C00AAC566 /* LoginEmailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailPresenter.swift; sourceTree = "<group>"; };
 		24CB965A255E836C00AAC566 /* LoginEmailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailInteractor.swift; sourceTree = "<group>"; };
@@ -244,6 +252,7 @@
 		244085BD25594159007C6C06 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				24820DCD2563873F0072D245 /* CGAffineTransform+Extensions.swift */,
 				24CB9668255E846B00AAC566 /* String+Extensions.swift */,
 				24EE32E325628F2900A9C0DC /* UIButton+Extensions.swift */,
 				24CB968D255E8D3500AAC566 /* UIColor+Extensions.swift */,
@@ -271,6 +280,7 @@
 		244085C625594159007C6C06 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				24820DD5256389200072D245 /* CommonViewInput.swift */,
 				244085C725594159007C6C06 /* URLOpener.swift */,
 			);
 			path = Protocols;
@@ -297,7 +307,8 @@
 		244085CF25594159007C6C06 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				244085D025594159007C6C06 /* View.swift */,
+				24820DC5256386990072D245 /* Toast */,
+				244085D025594159007C6C06 /* LabelWithLinkView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -318,6 +329,15 @@
 				244085ED2559415A007C6C06 /* Info.plist */,
 			);
 			path = UITests;
+			sourceTree = "<group>";
+		};
+		24820DC5256386990072D245 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				24820DC6256386990072D245 /* ToastView.swift */,
+				24820DC7256386990072D245 /* ToastPresenter.swift */,
+			);
+			path = Toast;
 			sourceTree = "<group>";
 		};
 		24CB9657255E836C00AAC566 /* LoginEmail */ = {
@@ -559,7 +579,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				244085D125594159007C6C06 /* View.swift in Sources */,
+				244085D125594159007C6C06 /* LabelWithLinkView.swift in Sources */,
 				244085B925594159007C6C06 /* Localizations.swift in Sources */,
 				244085B025594159007C6C06 /* Application.AppDelegate.swift in Sources */,
 				24CB9661255E836C00AAC566 /* LoginEmailRouter.swift in Sources */,
@@ -575,16 +595,20 @@
 				24EE32E425628F2900A9C0DC /* UIButton+Extensions.swift in Sources */,
 				244085C825594159007C6C06 /* URLOpener.swift in Sources */,
 				24CB9669255E846B00AAC566 /* String+Extensions.swift in Sources */,
+				24820DC8256386990072D245 /* ToastView.swift in Sources */,
 				24CB966F255E872700AAC566 /* NavigationController.swift in Sources */,
 				24CB967F255E88FF00AAC566 /* BuildConfiguration.swift in Sources */,
 				24CB9689255E8B5400AAC566 /* ColorSystem.swift in Sources */,
 				24EE32F92562982B00A9C0DC /* R.generated.swift in Sources */,
 				24CB968E255E8D3500AAC566 /* UIColor+Extensions.swift in Sources */,
+				24820DD6256389200072D245 /* CommonViewInput.swift in Sources */,
+				24820DC9256386990072D245 /* ToastPresenter.swift in Sources */,
 				24CB965E255E836C00AAC566 /* LoginEmailPresenter.swift in Sources */,
 				244085BC25594159007C6C06 /* Resource.swift in Sources */,
 				24CB9684255E896300AAC566 /* ViewController.swift in Sources */,
 				244085A825594159007C6C06 /* AppDelegate.swift in Sources */,
 				244085B325594159007C6C06 /* Constants.swift in Sources */,
+				24820DCE2563873F0072D245 /* CGAffineTransform+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
