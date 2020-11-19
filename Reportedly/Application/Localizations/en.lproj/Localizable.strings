@@ -1,0 +1,19 @@
+//
+//  Localizable.strings (English)
+//  Reportedly
+//
+//  Created by Mikey Pham on 11/19/20.
+//  Copyright © 2020 NimbleHQ. All rights reserved.
+//
+
+"module.LoginEmail.HeaderTitle" = "Reportedly";
+
+"module.LoginEmail.EmailPlaceholder" = "Email";
+
+"module.LoginEmail.PasswordPlaceholder" = "Password";
+
+"module.LoginEmail.LoginButton" = "Login";
+
+"module.LoginEmail.SignupDescription" = "Don't have an account yet?";
+
+"module.LoginEmail.SignupLink" = "Sign up now";

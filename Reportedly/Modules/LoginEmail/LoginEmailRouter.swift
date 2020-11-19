@@ -26,10 +26,10 @@ final class LoginEmailRouter: LoginEmailRouterInput {
     }
     
     func show(on window: UIWindow) {
-         if let viewController = viewController {
-             let navigationController = NavigationController(rootViewController: viewController)
-             window.rootViewController = navigationController
-             self.window = window
-         }
-     }
+        if let viewController = viewController {
+            let navigationController = NavigationController(rootViewController: viewController)
+            window.rootViewController = navigationController
+            self.window = window
+        }
+    }
 }

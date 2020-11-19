@@ -54,11 +54,14 @@ final class LoginEmailViewController: ViewController {
     
     override func setUpTexts() {
         super.setUpTexts()
-        titleLabel.text = "Reportedly"
-        emailField.placeholder = "Email"
-        passwordField.placeholder = "Password"
-        loginButton.setTitle("Login", for: .normal)
-        signupLabelWithLinkView.setText(labelText: "Don't have an account yet?", linkText: "Sign up now")
+        titleLabel.text = Localize.moduleLoginEmailHeaderTitle.localized()
+        emailField.placeholder = Localize.moduleLoginEmailEmailPlaceholder.localized()
+        passwordField.placeholder = Localize.moduleLoginEmailPasswordPlaceholder.localized()
+        loginButton.setTitle(Localize.moduleLoginEmailLoginButton.localized(), for: .normal)
+        signupLabelWithLinkView.setText(
+            labelText: Localize.moduleLoginEmailSignupDescription.localized(),
+            linkText: Localize.moduleLoginEmailSignupLink.localized()
+        )
     }
     
     override func setUpColors() {

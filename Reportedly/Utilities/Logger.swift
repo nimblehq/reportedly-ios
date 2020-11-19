@@ -55,7 +55,7 @@ final class Logger {
 }
 
 // MARK: - Private
-    
+
 extension Logger {
     
     private func filename(from file: StaticString) -> String {

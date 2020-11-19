@@ -9,7 +9,7 @@
 import Foundation
 
 protocol LoginEmailInteractorInput: AnyObject {
-
+    
     // TODO: Add login logic functions
 }
 
@@ -19,7 +19,7 @@ protocol LoginEmailInteractorOutput: AnyObject {
 }
 
 final class LoginEmailInteractor: LoginEmailInteractorInput {
-
+    
     weak var output: LoginEmailInteractorOutput?
     
     init(
@@ -32,5 +32,5 @@ final class LoginEmailInteractor: LoginEmailInteractorInput {
 // MARK: - Private Helper
 
 extension LoginEmailInteractor {
-
+    
 }
