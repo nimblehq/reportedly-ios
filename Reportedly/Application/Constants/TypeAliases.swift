@@ -8,9 +8,12 @@
 
 import Foundation
 
+// MARK: - General Typealiases
+
 typealias Callback<T> = (T) -> Void
 typealias EmptyCallback = () -> Void
 
 // MARK: - R.Swift related
 
 typealias Asset = R.image
+typealias Localize = R.string.localizable

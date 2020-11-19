@@ -38,7 +38,7 @@ public class ColorSystem {
     private(set) var textHighlightedColor: UIColor!
     private(set) var formsColor: UIColor!
     private(set) var backgroundColor: UIColor!
-
+    
     init(userDefaults: UserDefaults) {
         self.userDefaults = userDefaults
         // Find last set ColorTheme in userDefault or set it for the first time

@@ -9,12 +9,12 @@
 import UIKit
 
 protocol CommonViewInput {
-
+    
     func showToastNotification(message: String)
 }
 
 extension CommonViewInput where Self: UIViewController {
-
+    
     func showToastNotification(message: String) {
         ToastPresenter.shared.showNotification(message)
     }
