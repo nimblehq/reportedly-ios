@@ -234,7 +234,7 @@ extension LoginEmailViewController {
     }
     
     private func setUpTitleLabel() {
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 40)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 38)
         titleLabel.numberOfLines = 1
         titleLabel.textAlignment = .center
     }

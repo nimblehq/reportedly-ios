@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		243A35CC25679DEF00390E9E /* Thread+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A35CB25679DEF00390E9E /* Thread+Extensions.swift */; };
 		244085A825594159007C6C06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085A725594159007C6C06 /* AppDelegate.swift */; };
 		244085B025594159007C6C06 /* Application.AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085AF25594159007C6C06 /* Application.AppDelegate.swift */; };
 		244085B325594159007C6C06 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085B225594159007C6C06 /* Constants.swift */; };
@@ -64,6 +65,7 @@
 /* Begin PBXFileReference section */
 		1588AB8A229769879A8BDAE9 /* Pods-Reportedly.uat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reportedly.uat.xcconfig"; path = "Target Support Files/Pods-Reportedly/Pods-Reportedly.uat.xcconfig"; sourceTree = "<group>"; };
 		20CEDDFBC3FE9DB9AFA39FC1 /* Pods-Reportedly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reportedly.debug.xcconfig"; path = "Target Support Files/Pods-Reportedly/Pods-Reportedly.debug.xcconfig"; sourceTree = "<group>"; };
+		243A35CB25679DEF00390E9E /* Thread+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thread+Extensions.swift"; sourceTree = "<group>"; };
 		244085A425594159007C6C06 /* Reportedly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reportedly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		244085A725594159007C6C06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		244085AA25594159007C6C06 /* Reportedly.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Reportedly.xcscheme; path = ../../Reportedly.xcodeproj/xcshareddata/xcschemes/Reportedly.xcscheme; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				24EE32E325628F2900A9C0DC /* UIButton+Extensions.swift */,
 				24CB968D255E8D3500AAC566 /* UIColor+Extensions.swift */,
 				24EE32D825628C7100A9C0DC /* UITextField+Extensions.swift */,
+				243A35CB25679DEF00390E9E /* Thread+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 				24CB9661255E836C00AAC566 /* LoginEmailRouter.swift in Sources */,
 				244085CB25594159007C6C06 /* Services.swift in Sources */,
 				244085B625594159007C6C06 /* Entitlements.swift in Sources */,
+				243A35CC25679DEF00390E9E /* Thread+Extensions.swift in Sources */,
 				24CB965D255E836C00AAC566 /* LoginEmailModule.swift in Sources */,
 				24CB9674255E884500AAC566 /* TypeAliases.swift in Sources */,
 				244085C225594159007C6C06 /* Models.swift in Sources */,
