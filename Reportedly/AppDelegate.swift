@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Application life cycle
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // Showing the launch screen 0.5s more, right now it is dismissing to fast
+        Thread.sleep(forTimeInterval: 0.5)
+        
+        // Then, show the login screen
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
         let module = LoginEmailModule()
