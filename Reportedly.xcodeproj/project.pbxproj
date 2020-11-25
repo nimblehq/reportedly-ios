@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241F08FE256E6ACC00EC3120 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241F08FD256E6ACC00EC3120 /* CGFloat+Extensions.swift */; };
 		243A35CC25679DEF00390E9E /* Thread+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A35CB25679DEF00390E9E /* Thread+Extensions.swift */; };
 		244085A825594159007C6C06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085A725594159007C6C06 /* AppDelegate.swift */; };
 		244085B025594159007C6C06 /* Application.AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085AF25594159007C6C06 /* Application.AppDelegate.swift */; };
@@ -65,6 +66,7 @@
 /* Begin PBXFileReference section */
 		1588AB8A229769879A8BDAE9 /* Pods-Reportedly.uat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reportedly.uat.xcconfig"; path = "Target Support Files/Pods-Reportedly/Pods-Reportedly.uat.xcconfig"; sourceTree = "<group>"; };
 		20CEDDFBC3FE9DB9AFA39FC1 /* Pods-Reportedly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reportedly.debug.xcconfig"; path = "Target Support Files/Pods-Reportedly/Pods-Reportedly.debug.xcconfig"; sourceTree = "<group>"; };
+		241F08FD256E6ACC00EC3120 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		243A35CB25679DEF00390E9E /* Thread+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thread+Extensions.swift"; sourceTree = "<group>"; };
 		244085A425594159007C6C06 /* Reportedly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reportedly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		244085A725594159007C6C06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				24820DCD2563873F0072D245 /* CGAffineTransform+Extensions.swift */,
+				241F08FD256E6ACC00EC3120 /* CGFloat+Extensions.swift */,
 				24CB9668255E846B00AAC566 /* String+Extensions.swift */,
 				24EE32E325628F2900A9C0DC /* UIButton+Extensions.swift */,
 				24CB968D255E8D3500AAC566 /* UIColor+Extensions.swift */,
@@ -596,6 +599,7 @@
 				244085CE25594159007C6C06 /* Logger.swift in Sources */,
 				24CB965F255E836C00AAC566 /* LoginEmailInteractor.swift in Sources */,
 				24CB9660255E836C00AAC566 /* LoginEmailViewController.swift in Sources */,
+				241F08FE256E6ACC00EC3120 /* CGFloat+Extensions.swift in Sources */,
 				24EE32E425628F2900A9C0DC /* UIButton+Extensions.swift in Sources */,
 				244085C825594159007C6C06 /* URLOpener.swift in Sources */,
 				24CB9669255E846B00AAC566 /* String+Extensions.swift in Sources */,

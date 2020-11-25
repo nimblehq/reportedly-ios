@@ -13,17 +13,17 @@ final class NavigationController: UINavigationController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .default
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationBar()
-        setColors()
+        setUpColors()
     }
-
-    private func setColors() {
+    
+    private func setUpColors() {
         setNeedsStatusBarAppearanceUpdate()
     }
-
+    
     private func setUpNavigationBar() {
         navigationBar.isTranslucent = false
         navigationBar.shadowImage = .init()

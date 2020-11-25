@@ -9,25 +9,27 @@
 import UIKit
 
 protocol LoginEmailInput: AnyObject {
+    
 }
 
 protocol LoginEmailOutput: AnyObject {
+    
 }
 
 final class LoginEmailModule {
-
+    
     let view: LoginEmailViewController
     let presenter: LoginEmailPresenter
     let interactor: LoginEmailInteractor
     let router: LoginEmailRouter
-
+    
     var output: LoginEmailOutput? {
         get { presenter.output }
         set { presenter.output = newValue }
     }
-
+    
     var input: LoginEmailInput { presenter }
-
+    
     init() {
         view = LoginEmailViewController()
         interactor = LoginEmailInteractor()

@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 class ViewController: UIViewController {
-
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .default
     }
@@ -19,11 +19,11 @@ class ViewController: UIViewController {
     override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation { .portrait }
     
     var hideNavigationBar: Bool = false
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setColors()
-        setTexts()
+        setUpColors()
+        setUpTexts()
         setUpBackBarButton()
     }
     
@@ -33,13 +33,13 @@ class ViewController: UIViewController {
             navigationController?.setNavigationBarHidden(true, animated: animated)
         }
     }
-
-    func setTexts() { }
-
-    func setColors() {
+    
+    func setUpTexts() { }
+    
+    func setUpColors() {
         setNeedsStatusBarAppearanceUpdate()
     }
-
+    
     func setUpBackBarButton() {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }

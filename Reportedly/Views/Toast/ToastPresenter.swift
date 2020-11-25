@@ -9,13 +9,14 @@
 import UIKit
 
 protocol ToastPresenterDelegate: AnyObject {
+    
     func showNotification(message: String)
 }
 
 final class ToastPresenter {
     
     static let shared = ToastPresenter(baseView: UIApplication.shared.windows.filter { $0.isKeyWindow }.first)
-
+    
     private weak var baseView: UIView?
     private var notificationView: ToastView?
     private var dismissNotificationTimer: Timer?

@@ -9,14 +9,14 @@
 import UIKit
 
 final class ToastView: UIView {
-
+    
     let titleLabel = UILabel()
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
-
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         commonInit()
@@ -31,6 +31,7 @@ final class ToastView: UIView {
 // MARK: - Public Functions
 
 extension ToastView {
+    
     func setTitle(_ title: String?) {
         titleLabel.text = title
     }
@@ -39,6 +40,7 @@ extension ToastView {
 // MARK: - Set Colors
 
 extension ToastView {
+    
     private func setUpColors() {
         backgroundColor = .forms
         titleLabel.textColor = .textPrimary
@@ -48,20 +50,21 @@ extension ToastView {
 // MARK: - Setup Views
 
 extension ToastView {
+    
     private func commonInit() {
         setUpLayouts()
         setUpViews()
         setUpColors()
     }
-
+    
     private func setUpLayouts() {
         addSubview(titleLabel)
-    
+        
         titleLabel.snp.makeConstraints {
             $0.edges.equalToSuperview().inset(16)
         }
     }
-
+    
     private func setUpViews() {
         clipsToBounds = true
         titleLabel.font = UIFont.systemFont(ofSize: 13)
