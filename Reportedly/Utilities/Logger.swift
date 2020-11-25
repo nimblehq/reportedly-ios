@@ -6,7 +6,6 @@
 //  Copyright © 2020 NimbleHQ. All rights reserved.
 //
 
-
 import Foundation
 import NimbleExtension
 import os.log

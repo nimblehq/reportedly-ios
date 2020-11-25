@@ -10,10 +10,10 @@ final class LoginEmailPresenter {
     
     weak var view: LoginEmailViewInput?
     weak var output: LoginEmailOutput?
-
+    
     private let interactor: LoginEmailInteractorInput
     private let router: LoginEmailRouterInput
-
+    
     init(interactor: LoginEmailInteractorInput, router: LoginEmailRouterInput) {
         self.interactor = interactor
         self.router = router
@@ -27,13 +27,13 @@ extension LoginEmailPresenter: LoginEmailViewOutput {
     func viewDidLoad() {
         view?.configure()
     }
-
+    
     func textFieldsDidChange() {
         let email = view?.emailFieldText ?? ""
         let password = view?.passwordFieldText ?? ""
         view?.setLoginButtonEnabled(email.isEmail && !password.isEmpty)
     }
-
+    
     func didTapLoginButton() {
         guard let email = view?.emailFieldText, let password = view?.passwordFieldText else { return }
         // TODO: Implement login logic here
@@ -49,13 +49,11 @@ extension LoginEmailPresenter: LoginEmailViewOutput {
 // MARK: - LoginEmailInput
 
 extension LoginEmailPresenter: LoginEmailInput {
-
     
 }
 
 // MARK: - LoginEmailInput
 
 extension LoginEmailPresenter: LoginEmailInteractorOutput {
-
     
 }

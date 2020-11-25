@@ -13,7 +13,7 @@ protocol LoginEmailViewInput: AnyObject, CommonViewInput {
     
     var emailFieldText: String { get }
     var passwordFieldText: String { get }
-
+    
     func configure()
     func setLoginButtonEnabled(_ isEnabled: Bool)
     // TODO: Add loading states functions here
@@ -28,7 +28,7 @@ protocol LoginEmailViewOutput: AnyObject {
 }
 
 final class LoginEmailViewController: ViewController {
-
+    
     private let backgroundImageView = UIImageView()
     private let blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .regular))
     private let titleLabel = UILabel()
@@ -39,7 +39,7 @@ final class LoginEmailViewController: ViewController {
     private let signupLabelWithLinkView = LabelWithLinkView()
     
     var output: LoginEmailViewOutput?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hideNavigationBar = true
@@ -52,8 +52,8 @@ final class LoginEmailViewController: ViewController {
         loginButton.roundCorners(.allCorners, radius: 8)
     }
     
-    override func setTexts() {
-        super.setTexts()
+    override func setUpTexts() {
+        super.setUpTexts()
         titleLabel.text = "Reportedly"
         emailField.placeholder = "Email"
         passwordField.placeholder = "Password"
@@ -61,8 +61,8 @@ final class LoginEmailViewController: ViewController {
         signupLabelWithLinkView.setText(labelText: "Don't have an account yet?", linkText: "Sign up now")
     }
     
-    override func setColors() {
-        super.setColors()
+    override func setUpColors() {
+        super.setUpColors()
         view.backgroundColor = .background
         
         titleLabel.textColor = .textPrimary
@@ -98,7 +98,7 @@ extension LoginEmailViewController: LoginEmailViewInput {
         setUpLayouts()
         setUpViews()
     }
-
+    
     func setLoginButtonEnabled(_ isEnabled: Bool) {
         loginButton.isEnabled = isEnabled
     }
@@ -111,11 +111,11 @@ extension LoginEmailViewController {
     @objc private func didTapLoginButton() {
         output?.didTapLoginButton()
     }
-
+    
     @objc private func dismissKeyboard(_ gesture: UIGestureRecognizer? = nil) {
         view.endEditing(true)
     }
-
+    
     @objc private func textFieldDidChange(_ textField: UITextField) {
         output?.textFieldsDidChange()
     }
@@ -124,6 +124,7 @@ extension LoginEmailViewController {
 // MARK: - UITextField Delegates
 
 extension LoginEmailViewController: UITextFieldDelegate {
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         animateContainerStackView(shouldMoveUp: false)
     }
@@ -195,7 +196,7 @@ extension LoginEmailViewController {
         }
         
         emailField.snp.makeConstraints {
-            $0.height.equalTo(56.0)
+            $0.height.equalTo(CGFloat.spacer9)
         }
         
         passwordField.snp.makeConstraints {
@@ -203,15 +204,15 @@ extension LoginEmailViewController {
         }
         
         loginButton.snp.makeConstraints {
-            $0.height.equalTo(56.0)
+            $0.height.equalTo(CGFloat.spacer9)
         }
         
         signupLabelWithLinkView.snp.makeConstraints {
             $0.leading.centerX.equalToSuperview()
-            $0.bottom.equalTo(view.safeAreaInsets.bottom).inset(24)
+            $0.bottom.equalTo(view.safeAreaInsets.bottom).inset(CGFloat.spacer5)
         }
     }
-
+    
     private func setUpViews() {
         setUpSuperview()
         setUpBackgroundImageView()
@@ -222,7 +223,7 @@ extension LoginEmailViewController {
         setUpLoginButton()
         setUpSignupLabelWithLinkView()
     }
-
+    
     private func setUpSuperview() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard(_:)))
         view.addGestureRecognizer(tap)
@@ -243,11 +244,11 @@ extension LoginEmailViewController {
         containerStackView.axis = .vertical
         containerStackView.spacing = 20
     }
-
+    
     private func setUpEmailField() {
         emailField.keyboardType = .emailAddress
         emailField.returnKeyType = .next
-        emailField.addHorizontalPadding(withValue: 8)
+        emailField.addHorizontalPadding(withValue: CGFloat.spacer2)
         emailField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         emailField.delegate = self
     }
@@ -255,14 +256,14 @@ extension LoginEmailViewController {
     private func setUpPasswordField() {
         passwordField.isSecureTextEntry = true
         passwordField.returnKeyType = .go
-        passwordField.addHorizontalPadding(withValue: 8)
+        passwordField.addHorizontalPadding(withValue: CGFloat.spacer2)
         passwordField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         passwordField.delegate = self
     }
-
+    
     private func setUpLoginButton() {
         loginButton.isEnabled = false
-        loginButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        loginButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat.spacer4)
         loginButton.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
     }
     
@@ -281,3 +282,4 @@ extension LoginEmailViewController {
         }
     }
 }
+
