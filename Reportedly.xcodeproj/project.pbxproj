@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		241F08FE256E6ACC00EC3120 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241F08FD256E6ACC00EC3120 /* CGFloat+Extensions.swift */; };
 		24161AAA25665A6F00149CBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24161AA825665A6F00149CBE /* Localizable.strings */; };
 		24161AB525665FE600149CBE /* StringResource+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24161AB425665FE600149CBE /* StringResource+Extensions.swift */; };
 		24161ABA2566607600149CBE /* LanguageSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24161AB92566607600149CBE /* LanguageSystem.swift */; };
+		241F08FE256E6ACC00EC3120 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241F08FD256E6ACC00EC3120 /* CGFloat+Extensions.swift */; };
 		243A35CC25679DEF00390E9E /* Thread+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A35CB25679DEF00390E9E /* Thread+Extensions.swift */; };
 		244085A825594159007C6C06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085A725594159007C6C06 /* AppDelegate.swift */; };
 		244085B025594159007C6C06 /* Application.AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085AF25594159007C6C06 /* Application.AppDelegate.swift */; };
@@ -42,6 +42,11 @@
 		24CB9684255E896300AAC566 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB9683255E896300AAC566 /* ViewController.swift */; };
 		24CB9689255E8B5400AAC566 /* ColorSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB9688255E8B5400AAC566 /* ColorSystem.swift */; };
 		24CB968E255E8D3500AAC566 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB968D255E8D3500AAC566 /* UIColor+Extensions.swift */; };
+		24CF122F25762EB2006D6BA0 /* SignupRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF122A25762EB2006D6BA0 /* SignupRouter.swift */; };
+		24CF123025762EB2006D6BA0 /* SignupModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF122B25762EB2006D6BA0 /* SignupModule.swift */; };
+		24CF123125762EB2006D6BA0 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF122C25762EB2006D6BA0 /* SignupViewController.swift */; };
+		24CF123225762EB2006D6BA0 /* SignupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF122D25762EB2006D6BA0 /* SignupInteractor.swift */; };
+		24CF123325762EB2006D6BA0 /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF122E25762EB2006D6BA0 /* SignupPresenter.swift */; };
 		24EE32D925628C7100A9C0DC /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE32D825628C7100A9C0DC /* UITextField+Extensions.swift */; };
 		24EE32E425628F2900A9C0DC /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE32E325628F2900A9C0DC /* UIButton+Extensions.swift */; };
 		24EE32F92562982B00A9C0DC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EE32F82562982B00A9C0DC /* R.generated.swift */; };
@@ -68,11 +73,11 @@
 /* Begin PBXFileReference section */
 		1588AB8A229769879A8BDAE9 /* Pods-Reportedly.uat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reportedly.uat.xcconfig"; path = "Target Support Files/Pods-Reportedly/Pods-Reportedly.uat.xcconfig"; sourceTree = "<group>"; };
 		20CEDDFBC3FE9DB9AFA39FC1 /* Pods-Reportedly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reportedly.debug.xcconfig"; path = "Target Support Files/Pods-Reportedly/Pods-Reportedly.debug.xcconfig"; sourceTree = "<group>"; };
-		241F08FD256E6ACC00EC3120 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		24161AA925665A6F00149CBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		24161AB025665B3000149CBE /* th-TH */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "th-TH"; path = "th-TH.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		24161AB425665FE600149CBE /* StringResource+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringResource+Extensions.swift"; sourceTree = "<group>"; };
 		24161AB92566607600149CBE /* LanguageSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageSystem.swift; sourceTree = "<group>"; };
+		241F08FD256E6ACC00EC3120 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		243A35CB25679DEF00390E9E /* Thread+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thread+Extensions.swift"; sourceTree = "<group>"; };
 		244085A425594159007C6C06 /* Reportedly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reportedly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		244085A725594159007C6C06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +118,11 @@
 		24CB9683255E896300AAC566 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		24CB9688255E8B5400AAC566 /* ColorSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSystem.swift; sourceTree = "<group>"; };
 		24CB968D255E8D3500AAC566 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		24CF122A25762EB2006D6BA0 /* SignupRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRouter.swift; sourceTree = "<group>"; };
+		24CF122B25762EB2006D6BA0 /* SignupModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModule.swift; sourceTree = "<group>"; };
+		24CF122C25762EB2006D6BA0 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		24CF122D25762EB2006D6BA0 /* SignupInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupInteractor.swift; sourceTree = "<group>"; };
+		24CF122E25762EB2006D6BA0 /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
 		24EE32D825628C7100A9C0DC /* UITextField+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		24EE32E325628F2900A9C0DC /* UIButton+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		24EE32F82562982B00A9C0DC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -284,7 +294,7 @@
 		244085C325594159007C6C06 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				24CB9657255E836C00AAC566 /* LoginEmail */,
+				24CF122825762E1A006D6BA0 /* Authentication */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -372,6 +382,27 @@
 				24CB966E255E872700AAC566 /* NavigationController.swift */,
 			);
 			path = Designs;
+			sourceTree = "<group>";
+		};
+		24CF122825762E1A006D6BA0 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				24CF122925762E44006D6BA0 /* Signup */,
+				24CB9657255E836C00AAC566 /* LoginEmail */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		24CF122925762E44006D6BA0 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				24CF122A25762EB2006D6BA0 /* SignupRouter.swift */,
+				24CF122B25762EB2006D6BA0 /* SignupModule.swift */,
+				24CF122C25762EB2006D6BA0 /* SignupViewController.swift */,
+				24CF122D25762EB2006D6BA0 /* SignupInteractor.swift */,
+				24CF122E25762EB2006D6BA0 /* SignupPresenter.swift */,
+			);
+			path = Signup;
 			sourceTree = "<group>";
 		};
 		5101865E243594C569714C1D /* Pods */ = {
@@ -598,9 +629,11 @@
 				244085B025594159007C6C06 /* Application.AppDelegate.swift in Sources */,
 				24CB9661255E836C00AAC566 /* LoginEmailRouter.swift in Sources */,
 				244085CB25594159007C6C06 /* Services.swift in Sources */,
+				24CF123325762EB2006D6BA0 /* SignupPresenter.swift in Sources */,
 				244085B625594159007C6C06 /* Entitlements.swift in Sources */,
 				243A35CC25679DEF00390E9E /* Thread+Extensions.swift in Sources */,
 				24CB965D255E836C00AAC566 /* LoginEmailModule.swift in Sources */,
+				24CF123225762EB2006D6BA0 /* SignupInteractor.swift in Sources */,
 				24CB9674255E884500AAC566 /* TypeAliases.swift in Sources */,
 				244085C225594159007C6C06 /* Models.swift in Sources */,
 				24EE32D925628C7100A9C0DC /* UITextField+Extensions.swift in Sources */,
@@ -612,6 +645,7 @@
 				244085C825594159007C6C06 /* URLOpener.swift in Sources */,
 				24CB9669255E846B00AAC566 /* String+Extensions.swift in Sources */,
 				24820DC8256386990072D245 /* ToastView.swift in Sources */,
+				24CF123125762EB2006D6BA0 /* SignupViewController.swift in Sources */,
 				24CB966F255E872700AAC566 /* NavigationController.swift in Sources */,
 				24CB967F255E88FF00AAC566 /* BuildConfiguration.swift in Sources */,
 				24CB9689255E8B5400AAC566 /* ColorSystem.swift in Sources */,
@@ -624,6 +658,8 @@
 				244085BC25594159007C6C06 /* Resource.swift in Sources */,
 				24CB9684255E896300AAC566 /* ViewController.swift in Sources */,
 				244085A825594159007C6C06 /* AppDelegate.swift in Sources */,
+				24CF123025762EB2006D6BA0 /* SignupModule.swift in Sources */,
+				24CF122F25762EB2006D6BA0 /* SignupRouter.swift in Sources */,
 				244085B325594159007C6C06 /* Constants.swift in Sources */,
 				24161AB525665FE600149CBE /* StringResource+Extensions.swift in Sources */,
 				24820DCE2563873F0072D245 /* CGAffineTransform+Extensions.swift in Sources */,

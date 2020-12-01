@@ -11,8 +11,9 @@ import SnapKit
 
 protocol LoginEmailViewInput: AnyObject, CommonViewInput {
     
-    var emailFieldText: String { get }
-    var passwordFieldText: String { get }
+    var emailFieldText: String? { get }
+    var passwordFieldText: String? { get }
+    var isValidEmailAndPassword: Bool { get }
     
     func configure()
     func setLoginButtonEnabled(_ isEnabled: Bool)
@@ -89,12 +90,18 @@ final class LoginEmailViewController: ViewController {
 
 extension LoginEmailViewController: LoginEmailViewInput {
     
-    var emailFieldText: String {
-        emailField.text ?? ""
+    var emailFieldText: String? {
+        emailField.text
     }
     
-    var passwordFieldText: String {
-        passwordField.text ?? ""
+    var passwordFieldText: String? {
+        passwordField.text
+    }
+    
+    var isValidEmailAndPassword: Bool {
+        let emailText = emailFieldText ?? ""
+        let passwordText = passwordField.text ?? ""
+        return emailText.isEmail && !passwordText.isEmpty
     }
     
     func configure() {
@@ -141,14 +148,14 @@ extension LoginEmailViewController: UITextFieldDelegate {
         case emailField:
             passwordField.becomeFirstResponder()
         default:
-            output?.didTapLoginButton()
+            if isValidEmailAndPassword { output?.didTapLoginButton() }
             dismissKeyboard()
         }
         return true
     }
 }
 
-// MARK: - UITextField Delegates
+// MARK: - LabelLinkView Delegates
 
 extension LoginEmailViewController: LabelLinkViewDelegate {
     
@@ -250,6 +257,7 @@ extension LoginEmailViewController {
     
     private func setUpEmailField() {
         emailField.keyboardType = .emailAddress
+        emailField.textContentType = .emailAddress
         emailField.returnKeyType = .next
         emailField.addHorizontalPadding(withValue: CGFloat.spacer2)
         emailField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
@@ -258,6 +266,7 @@ extension LoginEmailViewController {
     
     private func setUpPasswordField() {
         passwordField.isSecureTextEntry = true
+        passwordField.textContentType = .password
         passwordField.returnKeyType = .go
         passwordField.addHorizontalPadding(withValue: CGFloat.spacer2)
         passwordField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)

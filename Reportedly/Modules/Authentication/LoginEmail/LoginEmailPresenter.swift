@@ -29,9 +29,8 @@ extension LoginEmailPresenter: LoginEmailViewOutput {
     }
     
     func textFieldsDidChange() {
-        let email = view?.emailFieldText ?? ""
-        let password = view?.passwordFieldText ?? ""
-        view?.setLoginButtonEnabled(email.isEmail && !password.isEmpty)
+        let shouldEnableLoginButton = view?.isValidEmailAndPassword ?? false
+        view?.setLoginButtonEnabled(shouldEnableLoginButton)
     }
     
     func didTapLoginButton() {
@@ -41,8 +40,7 @@ extension LoginEmailPresenter: LoginEmailViewOutput {
     }
     
     func didTapSignupLinkView() {
-        // TODO: Implement signup logic here
-        view?.showToastNotification(message: "Signup link pressed!")
+        router.showSignupScreen()
     }
 }
 

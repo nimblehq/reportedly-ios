@@ -19,3 +19,15 @@
 "module.LoginEmail.SignupDescription" = "Don't have an account yet?";
 
 "module.LoginEmail.SignupLink" = "Sign up now";
+
+"module.Signup.HeaderTitle" = "Signup";
+
+"module.Signup.EmailPlaceholder" = "Email";
+
+"module.Signup.PasswordPlaceholder" = "Password";
+
+"module.Signup.ConfirmPasswordPlaceholder" = "Confirm Password";
+
+"module.Signup.SlackIdPlaceholder" = "Slack ID";
+
+"module.Signup.SignupButton" = "Signup";
