@@ -21,13 +21,15 @@ final class NavigationController: UINavigationController {
     }
     
     private func setUpColors() {
+        navigationBar.tintColor = .primary
+        view.backgroundColor = .clear
         setNeedsStatusBarAppearanceUpdate()
     }
     
     private func setUpNavigationBar() {
-        navigationBar.isTranslucent = false
-        navigationBar.shadowImage = .init()
-        navigationBar.setBackgroundImage(.init(), for: .any, barMetrics: .default)
+        navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationBar.shadowImage = UIImage()
+        navigationBar.isTranslucent = true
     }
 }
 

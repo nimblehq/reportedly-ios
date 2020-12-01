@@ -29,9 +29,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if hideNavigationBar {
-            navigationController?.setNavigationBarHidden(true, animated: animated)
-        }
+        navigationController?.setNavigationBarHidden(hideNavigationBar, animated: animated)
     }
     
     func setUpTexts() { }
