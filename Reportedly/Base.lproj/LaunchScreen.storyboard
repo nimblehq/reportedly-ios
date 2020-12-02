@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_launch_screen" translatesAutoresizingMaskIntoConstraints="NO" id="Lo9-Xb-R9I" userLabel="Launch Screen Background">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="Lo9-Xb-R9I" userLabel="Launch Screen Background">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.218474911971831" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_nimble_logo" translatesAutoresizingMaskIntoConstraints="NO" id="v1a-XO-AfP" userLabel="Nimble Logo">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NimbleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="v1a-XO-AfP" userLabel="Nimble Logo">
                                 <rect key="frame" x="106" y="429" width="202" height="48"/>
                             </imageView>
                         </subviews>
@@ -46,8 +46,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg_launch_screen" width="750" height="1624"/>
-        <image name="ic_nimble_logo" width="202" height="48"/>
+        <image name="LaunchScreen" width="375" height="812"/>
+        <image name="NimbleLogo" width="202" height="48"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

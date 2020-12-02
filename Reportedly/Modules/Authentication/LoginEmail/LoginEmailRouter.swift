@@ -11,7 +11,7 @@ import UIKit
 protocol LoginEmailRouterInput {
     
     func show(on window: UIWindow)
-    func showSignupScreen()
+    func pushSignupScreen()
 }
 
 final class LoginEmailRouter: LoginEmailRouterInput {
@@ -35,7 +35,7 @@ final class LoginEmailRouter: LoginEmailRouterInput {
         }
     }
 
-    func showSignupScreen() {
+    func pushSignupScreen() {
         let module = SignupModule()
         viewController?.navigationController?.pushViewController(module.view, animated: true)
     }

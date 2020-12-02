@@ -38,7 +38,7 @@ final class LabelWithLinkView: UIView {
         
         labelLinkStackView.snp.makeConstraints {
             $0.top.bottom.centerX.equalToSuperview()
-            $0.height.equalTo(44.0)
+            $0.height.equalTo(CGFloat.spacer8)
         }
         
         setUpLabelLinkStackView()
@@ -48,11 +48,11 @@ final class LabelWithLinkView: UIView {
     
     private func setUpLabelLinkStackView() {
         labelLinkStackView.axis = .horizontal
-        labelLinkStackView.spacing = 4
+        labelLinkStackView.spacing = .spacer1
     }
     
     private func setUpLabel() {
-        label.font = UIFont.systemFont(ofSize: 13)
+        label.font = UIFont.appFont(ofSize: .xSmall)
         label.textColor = .textPrimary
     }
     
@@ -72,7 +72,7 @@ extension LabelWithLinkView {
             attributes: [
                 .foregroundColor: UIColor.textHighlighted,
                 .underlineStyle: NSUnderlineStyle.single.rawValue,
-                .font: UIFont.systemFont(ofSize: 13)
+                .font: UIFont.appFont(ofSize: .xSmall)
             ]
         )
         linkButton.setAttributedTitle(linkButtonTitle, for: .normal)
@@ -88,7 +88,7 @@ extension LabelWithLinkView {
             attributes: [
                 .foregroundColor: UIColor.textHighlighted,
                 .underlineStyle: NSUnderlineStyle.single.rawValue,
-                .font: UIFont.boldSystemFont(ofSize: 13)
+                .font: UIFont.appBoldFont(ofSize: .xSmall)
             ]
         )
         linkButton.setAttributedTitle(linkButtonTitle, for: .normal)

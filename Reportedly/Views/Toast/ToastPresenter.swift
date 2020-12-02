@@ -40,7 +40,7 @@ final class ToastPresenter {
         notificationView?.setTitle(message)
         
         notificationView?.snp.makeConstraints {
-            $0.width.equalToSuperview().offset(-16)
+            $0.width.equalToSuperview().inset(CGFloat.spacer4)
             $0.centerX.equalToSuperview()
             $0.top.equalTo(baseView.snp.topMargin)
         }

@@ -8,8 +8,8 @@
 
 final class SignupPresenter {
 
-    let router: SignupRouterInput
-    let interactor: SignupInteractorInput
+    private let router: SignupRouterInput
+    private let interactor: SignupInteractorInput
 
     weak var view: SignupViewInput?
     weak var output: SignupOutput?

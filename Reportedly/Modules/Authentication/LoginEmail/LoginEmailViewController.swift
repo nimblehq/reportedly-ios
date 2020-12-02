@@ -241,18 +241,18 @@ extension LoginEmailViewController {
     
     private func setUpBackgroundImageView() {
         backgroundImageView.contentMode = .scaleAspectFill
-        backgroundImageView.image = Asset.bg_launch_screen()
+        backgroundImageView.image = Asset.background.launchScreen()
     }
     
     private func setUpTitleLabel() {
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 38)
+        titleLabel.font = UIFont.appBoldFont(ofSize: .xLarge)
         titleLabel.numberOfLines = 1
         titleLabel.textAlignment = .center
     }
     
     private func setUpContainerStackView() {
         containerStackView.axis = .vertical
-        containerStackView.spacing = 20
+        containerStackView.spacing = .spacer4
     }
     
     private func setUpEmailField() {
@@ -275,7 +275,7 @@ extension LoginEmailViewController {
     
     private func setUpLoginButton() {
         loginButton.isEnabled = false
-        loginButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat.spacer4)
+        loginButton.titleLabel?.font = UIFont.appBoldFont(ofSize: .regular)
         loginButton.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
     }
     
