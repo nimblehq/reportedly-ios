@@ -46,11 +46,11 @@ final class SignupViewController: ViewController {
         output?.viewDidLoad()
     }
     override func viewDidLayoutSubviews() {
-        emailField.roundCorners(.allCorners, radius: 8)
-        passwordField.roundCorners(.allCorners, radius: 8)
-        confirmPasswordField.roundCorners(.allCorners, radius: 8)
-        slackIdField.roundCorners(.allCorners, radius: 8)
-        signupButton.roundCorners(.allCorners, radius: 8)
+        emailField.roundCorners(.allCorners, radius: .spacer2)
+        passwordField.roundCorners(.allCorners, radius: .spacer2)
+        confirmPasswordField.roundCorners(.allCorners, radius: .spacer2)
+        slackIdField.roundCorners(.allCorners, radius: .spacer2)
+        signupButton.roundCorners(.allCorners, radius: .spacer2)
     }
     
     override func setUpTexts() {
@@ -208,7 +208,7 @@ extension SignupViewController {
         
         titleContainerView.snp.makeConstraints {
             $0.centerX.leading.equalToSuperview()
-            $0.top.equalTo(view.snp.topMargin)
+            $0.top.equalTo(view.snp.top)
             $0.bottom.equalTo(containerStackView.snp.top)
         }
         
@@ -261,18 +261,18 @@ extension SignupViewController {
     
     private func setUpBackgroundImageView() {
         backgroundImageView.contentMode = .scaleAspectFill
-        backgroundImageView.image = Asset.bg_launch_screen()
+        backgroundImageView.image = Asset.background.launchScreen()
     }
     
     private func setUpTitleLabel() {
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 38)
+        titleLabel.font = UIFont.appBoldFont(ofSize: .xLarge)
         titleLabel.numberOfLines = 1
         titleLabel.textAlignment = .center
     }
     
     private func setUpContainerStackView() {
         containerStackView.axis = .vertical
-        containerStackView.spacing = 20
+        containerStackView.spacing = .spacer4
     }
     
     private func setUpEmailField() {
@@ -314,7 +314,7 @@ extension SignupViewController {
     
     private func setUpSignupButton() {
         signupButton.isEnabled = false
-        signupButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat.spacer4)
+        signupButton.titleLabel?.font = UIFont.appBoldFont(ofSize: .regular)
         signupButton.addTarget(self, action: #selector(didTapSignupButton), for: .touchUpInside)
     }
     

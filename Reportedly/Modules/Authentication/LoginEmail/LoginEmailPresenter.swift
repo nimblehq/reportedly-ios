@@ -40,7 +40,7 @@ extension LoginEmailPresenter: LoginEmailViewOutput {
     }
     
     func didTapSignupLinkView() {
-        router.showSignupScreen()
+        router.pushSignupScreen()
     }
 }
 

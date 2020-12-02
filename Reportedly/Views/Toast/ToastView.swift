@@ -24,7 +24,7 @@ final class ToastView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        roundCorners(.allCorners, radius: 8)
+        roundCorners(.allCorners, radius: .spacer2)
     }
 }
 
@@ -61,13 +61,13 @@ extension ToastView {
         addSubview(titleLabel)
         
         titleLabel.snp.makeConstraints {
-            $0.edges.equalToSuperview().inset(16)
+            $0.edges.equalToSuperview().inset(CGFloat.spacer4)
         }
     }
     
     private func setUpViews() {
         clipsToBounds = true
-        titleLabel.font = UIFont.systemFont(ofSize: 13)
+        titleLabel.font = UIFont.appFont(ofSize: .xSmall)
         titleLabel.numberOfLines = 0
         titleLabel.textAlignment = .center
     }

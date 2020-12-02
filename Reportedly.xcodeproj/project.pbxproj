@@ -30,6 +30,7 @@
 		24820DC9256386990072D245 /* ToastPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DC7256386990072D245 /* ToastPresenter.swift */; };
 		24820DCE2563873F0072D245 /* CGAffineTransform+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DCD2563873F0072D245 /* CGAffineTransform+Extensions.swift */; };
 		24820DD6256389200072D245 /* CommonViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DD5256389200072D245 /* CommonViewInput.swift */; };
+		2485124C25779B7A006133A8 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485124B25779B7A006133A8 /* UIFont+Extensions.swift */; };
 		24CB965D255E836C00AAC566 /* LoginEmailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB9658255E836C00AAC566 /* LoginEmailModule.swift */; };
 		24CB965E255E836C00AAC566 /* LoginEmailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB9659255E836C00AAC566 /* LoginEmailPresenter.swift */; };
 		24CB965F255E836C00AAC566 /* LoginEmailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB965A255E836C00AAC566 /* LoginEmailInteractor.swift */; };
@@ -106,6 +107,7 @@
 		24820DC7256386990072D245 /* ToastPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastPresenter.swift; sourceTree = "<group>"; };
 		24820DCD2563873F0072D245 /* CGAffineTransform+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGAffineTransform+Extensions.swift"; sourceTree = "<group>"; };
 		24820DD5256389200072D245 /* CommonViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonViewInput.swift; sourceTree = "<group>"; };
+		2485124B25779B7A006133A8 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		24CB9658255E836C00AAC566 /* LoginEmailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailModule.swift; sourceTree = "<group>"; };
 		24CB9659255E836C00AAC566 /* LoginEmailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailPresenter.swift; sourceTree = "<group>"; };
 		24CB965A255E836C00AAC566 /* LoginEmailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailInteractor.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				243A35CB25679DEF00390E9E /* Thread+Extensions.swift */,
 				24EE32E325628F2900A9C0DC /* UIButton+Extensions.swift */,
 				24CB968D255E8D3500AAC566 /* UIColor+Extensions.swift */,
+				2485124B25779B7A006133A8 /* UIFont+Extensions.swift */,
 				24EE32D825628C7100A9C0DC /* UITextField+Extensions.swift */,
 			);
 			path = Extensions;
@@ -635,6 +638,7 @@
 				24CB965D255E836C00AAC566 /* LoginEmailModule.swift in Sources */,
 				24CF123225762EB2006D6BA0 /* SignupInteractor.swift in Sources */,
 				24CB9674255E884500AAC566 /* TypeAliases.swift in Sources */,
+				2485124C25779B7A006133A8 /* UIFont+Extensions.swift in Sources */,
 				244085C225594159007C6C06 /* Models.swift in Sources */,
 				24EE32D925628C7100A9C0DC /* UITextField+Extensions.swift in Sources */,
 				244085CE25594159007C6C06 /* Logger.swift in Sources */,
