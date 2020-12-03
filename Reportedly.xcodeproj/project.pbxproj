@@ -19,7 +19,7 @@
 		244085BC25594159007C6C06 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085BB25594159007C6C06 /* Resource.swift */; };
 		244085C225594159007C6C06 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085C125594159007C6C06 /* Models.swift */; };
 		244085C825594159007C6C06 /* URLOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085C725594159007C6C06 /* URLOpener.swift */; };
-		244085CB25594159007C6C06 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085CA25594159007C6C06 /* Services.swift */; };
+		244085CB25594159007C6C06 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085CA25594159007C6C06 /* Network.swift */; };
 		244085CE25594159007C6C06 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085CD25594159007C6C06 /* Logger.swift */; };
 		244085D125594159007C6C06 /* LabelWithLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085D025594159007C6C06 /* LabelWithLinkView.swift */; };
 		244085D32559415A007C6C06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244085D22559415A007C6C06 /* Assets.xcassets */; };
@@ -31,6 +31,14 @@
 		24820DCE2563873F0072D245 /* CGAffineTransform+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DCD2563873F0072D245 /* CGAffineTransform+Extensions.swift */; };
 		24820DD6256389200072D245 /* CommonViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DD5256389200072D245 /* CommonViewInput.swift */; };
 		2485124C25779B7A006133A8 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485124B25779B7A006133A8 /* UIFont+Extensions.swift */; };
+		2484C8E02578EFFC00DAB3BB /* LaunchList.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 2484C8DF2578EFFC00DAB3BB /* LaunchList.graphql */; };
+		2484C8EE2578F0D400DAB3BB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484C8ED2578F0D400DAB3BB /* API.swift */; };
+		2484C8F32578F1CC00DAB3BB /* NetworkInterceptorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484C8F22578F1CC00DAB3BB /* NetworkInterceptorProvider.swift */; };
+		2484C8FB2578F23100DAB3BB /* ResponseLoggingInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484C8FA2578F23100DAB3BB /* ResponseLoggingInterceptor.swift */; };
+		2484C9002578F32E00DAB3BB /* RequestLoggingInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484C8FF2578F32E00DAB3BB /* RequestLoggingInterceptor.swift */; };
+		2484C9052578F3E300DAB3BB /* UserManagementInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484C9042578F3E300DAB3BB /* UserManagementInterceptor.swift */; };
+		2484C9152578F63300DAB3BB /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484C9142578F63300DAB3BB /* UserManager.swift */; };
+		2484C91D2578F76200DAB3BB /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484C91C2578F76200DAB3BB /* Token.swift */; };
 		24CB965D255E836C00AAC566 /* LoginEmailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB9658255E836C00AAC566 /* LoginEmailModule.swift */; };
 		24CB965E255E836C00AAC566 /* LoginEmailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB9659255E836C00AAC566 /* LoginEmailPresenter.swift */; };
 		24CB965F255E836C00AAC566 /* LoginEmailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB965A255E836C00AAC566 /* LoginEmailInteractor.swift */; };
@@ -91,7 +99,7 @@
 		244085BB25594159007C6C06 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		244085C125594159007C6C06 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		244085C725594159007C6C06 /* URLOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLOpener.swift; sourceTree = "<group>"; };
-		244085CA25594159007C6C06 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		244085CA25594159007C6C06 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		244085CD25594159007C6C06 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		244085D025594159007C6C06 /* LabelWithLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithLinkView.swift; sourceTree = "<group>"; };
 		244085D22559415A007C6C06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +116,15 @@
 		24820DCD2563873F0072D245 /* CGAffineTransform+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGAffineTransform+Extensions.swift"; sourceTree = "<group>"; };
 		24820DD5256389200072D245 /* CommonViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonViewInput.swift; sourceTree = "<group>"; };
 		2485124B25779B7A006133A8 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		2484C8DE2578EEBF00DAB3BB /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		2484C8DF2578EFFC00DAB3BB /* LaunchList.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = LaunchList.graphql; sourceTree = "<group>"; };
+		2484C8ED2578F0D400DAB3BB /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		2484C8F22578F1CC00DAB3BB /* NetworkInterceptorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterceptorProvider.swift; sourceTree = "<group>"; };
+		2484C8FA2578F23100DAB3BB /* ResponseLoggingInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseLoggingInterceptor.swift; sourceTree = "<group>"; };
+		2484C8FF2578F32E00DAB3BB /* RequestLoggingInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLoggingInterceptor.swift; sourceTree = "<group>"; };
+		2484C9042578F3E300DAB3BB /* UserManagementInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagementInterceptor.swift; sourceTree = "<group>"; };
+		2484C9142578F63300DAB3BB /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		2484C91C2578F76200DAB3BB /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		24CB9658255E836C00AAC566 /* LoginEmailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailModule.swift; sourceTree = "<group>"; };
 		24CB9659255E836C00AAC566 /* LoginEmailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailPresenter.swift; sourceTree = "<group>"; };
 		24CB965A255E836C00AAC566 /* LoginEmailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailInteractor.swift; sourceTree = "<group>"; };
@@ -264,8 +281,11 @@
 		244085BA25594159007C6C06 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2484C8ED2578F0D400DAB3BB /* API.swift */,
+				2484C8DE2578EEBF00DAB3BB /* schema.json */,
 				24EE32F82562982B00A9C0DC /* R.generated.swift */,
 				244085BB25594159007C6C06 /* Resource.swift */,
+				2484C8DF2578EFFC00DAB3BB /* LaunchList.graphql */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -314,7 +334,8 @@
 		244085C925594159007C6C06 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				244085CA25594159007C6C06 /* Services.swift */,
+				2484C9132578F61B00DAB3BB /* UserStorage */,
+				2484C9092578F58900DAB3BB /* Network */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -364,6 +385,27 @@
 				24820DC7256386990072D245 /* ToastPresenter.swift */,
 			);
 			path = Toast;
+			sourceTree = "<group>";
+		};
+		2484C9092578F58900DAB3BB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				244085CA25594159007C6C06 /* Network.swift */,
+				2484C8F22578F1CC00DAB3BB /* NetworkInterceptorProvider.swift */,
+				2484C8FA2578F23100DAB3BB /* ResponseLoggingInterceptor.swift */,
+				2484C8FF2578F32E00DAB3BB /* RequestLoggingInterceptor.swift */,
+				2484C9042578F3E300DAB3BB /* UserManagementInterceptor.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2484C9132578F61B00DAB3BB /* UserStorage */ = {
+			isa = PBXGroup;
+			children = (
+				2484C9142578F63300DAB3BB /* UserManager.swift */,
+				2484C91C2578F76200DAB3BB /* Token.swift */,
+			);
+			path = UserStorage;
 			sourceTree = "<group>";
 		};
 		24CB9657255E836C00AAC566 /* LoginEmail */ = {
@@ -440,6 +482,7 @@
 			buildPhases = (
 				DB2E260131CE64CFB940E7C7 /* [CP] Check Pods Manifest.lock */,
 				24EE32EB2562966F00A9C0DC /* RSwift Run Script */,
+				2484C8CB2578EAD100DAB3BB /* Generate Apollo GraphQL API Run Script */,
 				244085A025594159007C6C06 /* Sources */,
 				244085A125594159007C6C06 /* Frameworks */,
 				244085A225594159007C6C06 /* Resources */,
@@ -540,6 +583,7 @@
 			files = (
 				244085D32559415A007C6C06 /* Assets.xcassets in Resources */,
 				24161AAA25665A6F00149CBE /* Localizable.strings in Resources */,
+				2484C8E02578EFFC00DAB3BB /* LaunchList.graphql in Resources */,
 				244085D62559415A007C6C06 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,6 +605,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2484C8CB2578EAD100DAB3BB /* Generate Apollo GraphQL API Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}/Application/Resources\"\n\n# Load local schema once downloaded:\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n\n# Download schema from sample server: https://apollo-fullstack-tutorial.herokuapp.com/\n#\"${SCRIPT_PATH}\"/run-bundled-codegen.sh schema:download --endpoint=\"https://apollo-fullstack-tutorial.herokuapp.com/\"\n";
+		};
 		24EE32EB2562966F00A9C0DC /* RSwift Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -631,8 +693,9 @@
 				244085D125594159007C6C06 /* LabelWithLinkView.swift in Sources */,
 				244085B025594159007C6C06 /* Application.AppDelegate.swift in Sources */,
 				24CB9661255E836C00AAC566 /* LoginEmailRouter.swift in Sources */,
-				244085CB25594159007C6C06 /* Services.swift in Sources */,
 				24CF123325762EB2006D6BA0 /* SignupPresenter.swift in Sources */,
+				2484C9152578F63300DAB3BB /* UserManager.swift in Sources */,
+				244085CB25594159007C6C06 /* Network.swift in Sources */,
 				244085B625594159007C6C06 /* Entitlements.swift in Sources */,
 				243A35CC25679DEF00390E9E /* Thread+Extensions.swift in Sources */,
 				24CB965D255E836C00AAC566 /* LoginEmailModule.swift in Sources */,
@@ -648,9 +711,11 @@
 				24EE32E425628F2900A9C0DC /* UIButton+Extensions.swift in Sources */,
 				244085C825594159007C6C06 /* URLOpener.swift in Sources */,
 				24CB9669255E846B00AAC566 /* String+Extensions.swift in Sources */,
+				2484C8F32578F1CC00DAB3BB /* NetworkInterceptorProvider.swift in Sources */,
 				24820DC8256386990072D245 /* ToastView.swift in Sources */,
 				24CF123125762EB2006D6BA0 /* SignupViewController.swift in Sources */,
 				24CB966F255E872700AAC566 /* NavigationController.swift in Sources */,
+				2484C9002578F32E00DAB3BB /* RequestLoggingInterceptor.swift in Sources */,
 				24CB967F255E88FF00AAC566 /* BuildConfiguration.swift in Sources */,
 				24CB9689255E8B5400AAC566 /* ColorSystem.swift in Sources */,
 				24EE32F92562982B00A9C0DC /* R.generated.swift in Sources */,
@@ -659,13 +724,17 @@
 				24820DC9256386990072D245 /* ToastPresenter.swift in Sources */,
 				24161ABA2566607600149CBE /* LanguageSystem.swift in Sources */,
 				24CB965E255E836C00AAC566 /* LoginEmailPresenter.swift in Sources */,
+				2484C8FB2578F23100DAB3BB /* ResponseLoggingInterceptor.swift in Sources */,
+				2484C91D2578F76200DAB3BB /* Token.swift in Sources */,
 				244085BC25594159007C6C06 /* Resource.swift in Sources */,
 				24CB9684255E896300AAC566 /* ViewController.swift in Sources */,
 				244085A825594159007C6C06 /* AppDelegate.swift in Sources */,
 				24CF123025762EB2006D6BA0 /* SignupModule.swift in Sources */,
 				24CF122F25762EB2006D6BA0 /* SignupRouter.swift in Sources */,
+				2484C9052578F3E300DAB3BB /* UserManagementInterceptor.swift in Sources */,
 				244085B325594159007C6C06 /* Constants.swift in Sources */,
 				24161AB525665FE600149CBE /* StringResource+Extensions.swift in Sources */,
+				2484C8EE2578F0D400DAB3BB /* API.swift in Sources */,
 				24820DCE2563873F0072D245 /* CGAffineTransform+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
