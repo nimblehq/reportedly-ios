@@ -1,0 +1,11 @@
+# Test query only, will update to actual query later on
+query LaunchList {
+  launches {
+    cursor
+    hasMore
+    launches {
+      id
+      site
+    }
+  }
+}
