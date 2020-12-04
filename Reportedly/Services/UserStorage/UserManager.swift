@@ -9,9 +9,9 @@
 import Foundation
 
 final class UserManager {
-
+    
     static let shared = UserManager()
-
+    
     // TODO: - Update to get actual token from sever later on
     public var token: Token? { nil }
 }
