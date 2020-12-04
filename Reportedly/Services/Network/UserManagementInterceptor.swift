@@ -8,7 +8,7 @@
 
 import Apollo
 
-class UserManagementInterceptor: ApolloInterceptor {
+final class UserManagementInterceptor: ApolloInterceptor {
     
     enum UserError: Error {
         case noUserLoggedIn

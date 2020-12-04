@@ -6,7 +6,6 @@ target 'Reportedly' do
   use_frameworks!
 
   # Pods for Reportedly
-  pod 'Alamofire'
   pod 'Apollo'
   pod 'NimbleExtension', :git => 'https://github.com/nimblehq/NimbleExtension.git'
   pod 'R.swift'
