@@ -41,7 +41,3 @@ Podfile.lock
 
 # RSwift
 Reportedly/Application/Resources/R.generated.swift
-
-
-# Appolo
-Reportedly/Application/Resources/API.swift
