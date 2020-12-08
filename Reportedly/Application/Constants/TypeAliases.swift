@@ -8,12 +8,19 @@
 
 import Foundation
 
-// MARK: - General Typealiases
+// MARK: - Completion Typealiases
 
-typealias Callback<T> = (T) -> Void
-typealias EmptyCallback = () -> Void
+typealias Completion<T>        = (T) -> Void
+typealias EmptyCompletion        = () -> Void
+typealias ResponseCompletion     = (_ data: Data?, _ success: ResponseSuccess?, _ error: ResponseError?) -> Void
+typealias StringCompletion       = (String) -> Void
+typealias SuccessCompletion      = (Bool) -> Void
 
-// MARK: - R.Swift related
+// MARK: - DataType Typealiases
+
+typealias JSONDictionary         = [String: Any]
+
+// MARK: - R.Swift Typealiases
 
 typealias Asset = R.image
 typealias Localize = R.string.localizable
