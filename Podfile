@@ -17,6 +17,7 @@ target 'Reportedly' do
   pod 'SnapKit'
   pod 'SwiftLint'
   pod 'SwifterSwift'
+  pod 'lottie-ios'
   
 end
 
