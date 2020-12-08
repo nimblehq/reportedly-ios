@@ -30,7 +30,6 @@
 		24820DC9256386990072D245 /* ToastPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DC7256386990072D245 /* ToastPresenter.swift */; };
 		24820DCE2563873F0072D245 /* CGAffineTransform+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DCD2563873F0072D245 /* CGAffineTransform+Extensions.swift */; };
 		24820DD6256389200072D245 /* CommonViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DD5256389200072D245 /* CommonViewInput.swift */; };
-		2485124C25779B7A006133A8 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485124B25779B7A006133A8 /* UIFont+Extensions.swift */; };
 		2484C8E02578EFFC00DAB3BB /* LaunchList.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 2484C8DF2578EFFC00DAB3BB /* LaunchList.graphql */; };
 		2484C8EE2578F0D400DAB3BB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484C8ED2578F0D400DAB3BB /* API.swift */; };
 		2484C8F32578F1CC00DAB3BB /* NetworkInterceptorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484C8F22578F1CC00DAB3BB /* NetworkInterceptorProvider.swift */; };
@@ -39,6 +38,20 @@
 		2484C9052578F3E300DAB3BB /* UserManagementInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484C9042578F3E300DAB3BB /* UserManagementInterceptor.swift */; };
 		2484C9152578F63300DAB3BB /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484C9142578F63300DAB3BB /* UserManager.swift */; };
 		2484C91D2578F76200DAB3BB /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484C91C2578F76200DAB3BB /* Token.swift */; };
+		2485124C25779B7A006133A8 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485124B25779B7A006133A8 /* UIFont+Extensions.swift */; };
+		248C277D257F693600B75CA1 /* BaseAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C2778257F693600B75CA1 /* BaseAPIService.swift */; };
+		248C277E257F693600B75CA1 /* HTTPHeaderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C2779257F693600B75CA1 /* HTTPHeaderBuilder.swift */; };
+		248C277F257F693600B75CA1 /* AuthenticationAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C277A257F693600B75CA1 /* AuthenticationAPIService.swift */; };
+		248C2780257F693600B75CA1 /* SubmitReportAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C277B257F693600B75CA1 /* SubmitReportAPIService.swift */; };
+		248C2781257F693600B75CA1 /* RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C277C257F693600B75CA1 /* RequestInterceptor.swift */; };
+		248C278B257F6A0C00B75CA1 /* AuthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C2788257F6A0C00B75CA1 /* AuthData.swift */; };
+		248C279A257F6AB400B75CA1 /* Cryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C2799257F6AB400B75CA1 /* Cryptor.swift */; };
+		248C27AB257F6B4A00B75CA1 /* Obfuscator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C27AA257F6B4A00B75CA1 /* Obfuscator.swift */; };
+		248C27B4257F6C0F00B75CA1 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C27B2257F6C0F00B75CA1 /* Enums.swift */; };
+		248C27B5257F6C0F00B75CA1 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C27B3257F6C0F00B75CA1 /* Structs.swift */; };
+		248C27C6257F6D1100B75CA1 /* NSData+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C27C5257F6D1100B75CA1 /* NSData+Extensions.swift */; };
+		248C27CE257F6DE300B75CA1 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C27CD257F6DE300B75CA1 /* ReachabilityManager.swift */; };
+		248C27F8257F838C00B75CA1 /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C27F7257F838C00B75CA1 /* Notification+Extensions.swift */; };
 		24CB965D255E836C00AAC566 /* LoginEmailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB9658255E836C00AAC566 /* LoginEmailModule.swift */; };
 		24CB965E255E836C00AAC566 /* LoginEmailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB9659255E836C00AAC566 /* LoginEmailPresenter.swift */; };
 		24CB965F255E836C00AAC566 /* LoginEmailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB965A255E836C00AAC566 /* LoginEmailInteractor.swift */; };
@@ -115,7 +128,6 @@
 		24820DC7256386990072D245 /* ToastPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastPresenter.swift; sourceTree = "<group>"; };
 		24820DCD2563873F0072D245 /* CGAffineTransform+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGAffineTransform+Extensions.swift"; sourceTree = "<group>"; };
 		24820DD5256389200072D245 /* CommonViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonViewInput.swift; sourceTree = "<group>"; };
-		2485124B25779B7A006133A8 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		2484C8DE2578EEBF00DAB3BB /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		2484C8DF2578EFFC00DAB3BB /* LaunchList.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = LaunchList.graphql; sourceTree = "<group>"; };
 		2484C8ED2578F0D400DAB3BB /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -125,6 +137,20 @@
 		2484C9042578F3E300DAB3BB /* UserManagementInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagementInterceptor.swift; sourceTree = "<group>"; };
 		2484C9142578F63300DAB3BB /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		2484C91C2578F76200DAB3BB /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		2485124B25779B7A006133A8 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		248C2778257F693600B75CA1 /* BaseAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAPIService.swift; sourceTree = "<group>"; };
+		248C2779257F693600B75CA1 /* HTTPHeaderBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPHeaderBuilder.swift; sourceTree = "<group>"; };
+		248C277A257F693600B75CA1 /* AuthenticationAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationAPIService.swift; sourceTree = "<group>"; };
+		248C277B257F693600B75CA1 /* SubmitReportAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitReportAPIService.swift; sourceTree = "<group>"; };
+		248C277C257F693600B75CA1 /* RequestInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestInterceptor.swift; sourceTree = "<group>"; };
+		248C2788257F6A0C00B75CA1 /* AuthData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthData.swift; sourceTree = "<group>"; };
+		248C2799257F6AB400B75CA1 /* Cryptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cryptor.swift; sourceTree = "<group>"; };
+		248C27AA257F6B4A00B75CA1 /* Obfuscator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Obfuscator.swift; sourceTree = "<group>"; };
+		248C27B2257F6C0F00B75CA1 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		248C27B3257F6C0F00B75CA1 /* Structs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		248C27C5257F6D1100B75CA1 /* NSData+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Extensions.swift"; sourceTree = "<group>"; };
+		248C27CD257F6DE300B75CA1 /* ReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
+		248C27F7257F838C00B75CA1 /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
 		24CB9658255E836C00AAC566 /* LoginEmailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailModule.swift; sourceTree = "<group>"; };
 		24CB9659255E836C00AAC566 /* LoginEmailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailPresenter.swift; sourceTree = "<group>"; };
 		24CB965A255E836C00AAC566 /* LoginEmailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailInteractor.swift; sourceTree = "<group>"; };
@@ -257,6 +283,8 @@
 			isa = PBXGroup;
 			children = (
 				244085B225594159007C6C06 /* Constants.swift */,
+				248C27B2257F6C0F00B75CA1 /* Enums.swift */,
+				248C27B3257F6C0F00B75CA1 /* Structs.swift */,
 				24CB9673255E884500AAC566 /* TypeAliases.swift */,
 			);
 			path = Constants;
@@ -295,6 +323,8 @@
 			children = (
 				24820DCD2563873F0072D245 /* CGAffineTransform+Extensions.swift */,
 				241F08FD256E6ACC00EC3120 /* CGFloat+Extensions.swift */,
+				248C27C5257F6D1100B75CA1 /* NSData+Extensions.swift */,
+				248C27F7257F838C00B75CA1 /* Notification+Extensions.swift */,
 				24CB9668255E846B00AAC566 /* String+Extensions.swift */,
 				24161AB425665FE600149CBE /* StringResource+Extensions.swift */,
 				243A35CB25679DEF00390E9E /* Thread+Extensions.swift */,
@@ -334,7 +364,6 @@
 		244085C925594159007C6C06 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				2484C9132578F61B00DAB3BB /* UserStorage */,
 				2484C9092578F58900DAB3BB /* Network */,
 			);
 			path = Services;
@@ -343,10 +372,13 @@
 		244085CC25594159007C6C06 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				24161AB92566607600149CBE /* LanguageSystem.swift */,
-				24CB9688255E8B5400AAC566 /* ColorSystem.swift */,
 				24CB967E255E88FF00AAC566 /* BuildConfiguration.swift */,
+				24CB9688255E8B5400AAC566 /* ColorSystem.swift */,
+				248C2799257F6AB400B75CA1 /* Cryptor.swift */,
+				24161AB92566607600149CBE /* LanguageSystem.swift */,
 				244085CD25594159007C6C06 /* Logger.swift */,
+				248C27AA257F6B4A00B75CA1 /* Obfuscator.swift */,
+				248C27CD257F6DE300B75CA1 /* ReachabilityManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -390,11 +422,8 @@
 		2484C9092578F58900DAB3BB /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				244085CA25594159007C6C06 /* Network.swift */,
-				2484C8F22578F1CC00DAB3BB /* NetworkInterceptorProvider.swift */,
-				2484C8FA2578F23100DAB3BB /* ResponseLoggingInterceptor.swift */,
-				2484C8FF2578F32E00DAB3BB /* RequestLoggingInterceptor.swift */,
-				2484C9042578F3E300DAB3BB /* UserManagementInterceptor.swift */,
+				248C2777257F68C600B75CA1 /* GraphQL */,
+				248C276B257F67D000B75CA1 /* RESTful */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -406,6 +435,56 @@
 				2484C91C2578F76200DAB3BB /* Token.swift */,
 			);
 			path = UserStorage;
+			sourceTree = "<group>";
+		};
+		248C276B257F67D000B75CA1 /* RESTful */ = {
+			isa = PBXGroup;
+			children = (
+				248C2786257F69A400B75CA1 /* API */,
+				248C2785257F699800B75CA1 /* Model */,
+			);
+			path = RESTful;
+			sourceTree = "<group>";
+		};
+		248C2777257F68C600B75CA1 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				2484C9132578F61B00DAB3BB /* UserStorage */,
+				244085CA25594159007C6C06 /* Network.swift */,
+				2484C8F22578F1CC00DAB3BB /* NetworkInterceptorProvider.swift */,
+				2484C8FA2578F23100DAB3BB /* ResponseLoggingInterceptor.swift */,
+				2484C8FF2578F32E00DAB3BB /* RequestLoggingInterceptor.swift */,
+				2484C9042578F3E300DAB3BB /* UserManagementInterceptor.swift */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		248C2785257F699800B75CA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				248C2788257F6A0C00B75CA1 /* AuthData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		248C2786257F69A400B75CA1 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				248C2787257F69CA00B75CA1 /* Base */,
+				248C277A257F693600B75CA1 /* AuthenticationAPIService.swift */,
+				248C277B257F693600B75CA1 /* SubmitReportAPIService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		248C2787257F69CA00B75CA1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				248C2778257F693600B75CA1 /* BaseAPIService.swift */,
+				248C2779257F693600B75CA1 /* HTTPHeaderBuilder.swift */,
+				248C277C257F693600B75CA1 /* RequestInterceptor.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		24CB9657255E836C00AAC566 /* LoginEmail */ = {
@@ -621,7 +700,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}/Application/Resources\"\n\n# Load local schema once downloaded:\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n\n# Download schema from sample server: https://apollo-fullstack-tutorial.herokuapp.com/\n#\"${SCRIPT_PATH}\"/run-bundled-codegen.sh schema:download --endpoint=\"https://apollo-fullstack-tutorial.herokuapp.com/\"\n";
+			shellScript = "SCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}/Application/Resources\"\n\n# Load local schema once downloaded:\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n\n# Download schema from sample server: https://apollo-fullstack-tutorial.herokuapp.com/\n#\"${SCRIPT_PATH}\"/run-bundled-codegen.sh schema:download --endpoint=\"http://898d5fad949e.ngrok.io\"\n";
 		};
 		24EE32EB2562966F00A9C0DC /* RSwift Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -694,11 +773,13 @@
 				244085B025594159007C6C06 /* Application.AppDelegate.swift in Sources */,
 				24CB9661255E836C00AAC566 /* LoginEmailRouter.swift in Sources */,
 				24CF123325762EB2006D6BA0 /* SignupPresenter.swift in Sources */,
+				248C27CE257F6DE300B75CA1 /* ReachabilityManager.swift in Sources */,
 				2484C9152578F63300DAB3BB /* UserManager.swift in Sources */,
 				244085CB25594159007C6C06 /* Network.swift in Sources */,
 				244085B625594159007C6C06 /* Entitlements.swift in Sources */,
 				243A35CC25679DEF00390E9E /* Thread+Extensions.swift in Sources */,
 				24CB965D255E836C00AAC566 /* LoginEmailModule.swift in Sources */,
+				248C27F8257F838C00B75CA1 /* Notification+Extensions.swift in Sources */,
 				24CF123225762EB2006D6BA0 /* SignupInteractor.swift in Sources */,
 				24CB9674255E884500AAC566 /* TypeAliases.swift in Sources */,
 				2485124C25779B7A006133A8 /* UIFont+Extensions.swift in Sources */,
@@ -708,12 +789,16 @@
 				24CB965F255E836C00AAC566 /* LoginEmailInteractor.swift in Sources */,
 				24CB9660255E836C00AAC566 /* LoginEmailViewController.swift in Sources */,
 				241F08FE256E6ACC00EC3120 /* CGFloat+Extensions.swift in Sources */,
+				248C277E257F693600B75CA1 /* HTTPHeaderBuilder.swift in Sources */,
 				24EE32E425628F2900A9C0DC /* UIButton+Extensions.swift in Sources */,
 				244085C825594159007C6C06 /* URLOpener.swift in Sources */,
+				248C277D257F693600B75CA1 /* BaseAPIService.swift in Sources */,
 				24CB9669255E846B00AAC566 /* String+Extensions.swift in Sources */,
 				2484C8F32578F1CC00DAB3BB /* NetworkInterceptorProvider.swift in Sources */,
 				24820DC8256386990072D245 /* ToastView.swift in Sources */,
 				24CF123125762EB2006D6BA0 /* SignupViewController.swift in Sources */,
+				248C27AB257F6B4A00B75CA1 /* Obfuscator.swift in Sources */,
+				248C279A257F6AB400B75CA1 /* Cryptor.swift in Sources */,
 				24CB966F255E872700AAC566 /* NavigationController.swift in Sources */,
 				2484C9002578F32E00DAB3BB /* RequestLoggingInterceptor.swift in Sources */,
 				24CB967F255E88FF00AAC566 /* BuildConfiguration.swift in Sources */,
@@ -721,6 +806,9 @@
 				24EE32F92562982B00A9C0DC /* R.generated.swift in Sources */,
 				24CB968E255E8D3500AAC566 /* UIColor+Extensions.swift in Sources */,
 				24820DD6256389200072D245 /* CommonViewInput.swift in Sources */,
+				248C277F257F693600B75CA1 /* AuthenticationAPIService.swift in Sources */,
+				248C27B4257F6C0F00B75CA1 /* Enums.swift in Sources */,
+				248C2781257F693600B75CA1 /* RequestInterceptor.swift in Sources */,
 				24820DC9256386990072D245 /* ToastPresenter.swift in Sources */,
 				24161ABA2566607600149CBE /* LanguageSystem.swift in Sources */,
 				24CB965E255E836C00AAC566 /* LoginEmailPresenter.swift in Sources */,
@@ -731,11 +819,15 @@
 				244085A825594159007C6C06 /* AppDelegate.swift in Sources */,
 				24CF123025762EB2006D6BA0 /* SignupModule.swift in Sources */,
 				24CF122F25762EB2006D6BA0 /* SignupRouter.swift in Sources */,
+				248C278B257F6A0C00B75CA1 /* AuthData.swift in Sources */,
 				2484C9052578F3E300DAB3BB /* UserManagementInterceptor.swift in Sources */,
 				244085B325594159007C6C06 /* Constants.swift in Sources */,
 				24161AB525665FE600149CBE /* StringResource+Extensions.swift in Sources */,
 				2484C8EE2578F0D400DAB3BB /* API.swift in Sources */,
+				248C2780257F693600B75CA1 /* SubmitReportAPIService.swift in Sources */,
 				24820DCE2563873F0072D245 /* CGAffineTransform+Extensions.swift in Sources */,
+				248C27B5257F6C0F00B75CA1 /* Structs.swift in Sources */,
+				248C27C6257F6D1100B75CA1 /* NSData+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

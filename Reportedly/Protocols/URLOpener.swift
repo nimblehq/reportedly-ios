@@ -13,7 +13,7 @@ protocol URLOpener: AnyObject {
     func open(
         _ url: URL,
         options: [UIApplication.OpenExternalURLOptionsKey: Any],
-        completionHandler completion: Callback<Bool>?
+        completionHandler completion: Completion<Bool>?
     )
     
     func canOpenURL(_ url: URL) -> Bool
