@@ -34,16 +34,13 @@ extension SignupPresenter: SignupViewOutput {
     func didTapSignupButton() {
         guard let email = view?.emailFieldText,
               let password = view?.passwordFieldText,
-              let confirmPassword = view?.confirmPasswordFieldText,
+              let confirmedPassword = view?.confirmPasswordFieldText,
               let slackId = view?.slackIdFieldText
         else { return }
-        log.debug("Signup button pressed with\nemail: \(email)\npassword: \(password)\nconfirmPassword: \(confirmPassword)\nslackId: \(slackId)")
-        
-        // TODO: Implement signup API call here
         view?.dismissKeyboard()
-        view?.showSuccessOverlayView { [weak self] in
-            self?.router.popToRootViewController()
-        }
+        interactor.signup(email: email, password: password, confirmedPassword: confirmedPassword, slackId: slackId)
+        log.debug("Signup button pressed with\nemail: \(email)\npassword: \(password)\nconfirmPassword: \(confirmedPassword)\nslackId: \(slackId)")
+//        U019TLN0E7Q
     }
     
     func textFieldsDidChange() {
@@ -55,6 +52,16 @@ extension SignupPresenter: SignupViewOutput {
 // MARK: - SignupInteractorOutput
 
 extension SignupPresenter: SignupInteractorOutput {
+    
+    func didSignup() {
+        view?.showSuccessOverlayView { [weak self] in
+            self?.router.popToRootViewController()
+        }
+    }
+    
+    func didFailToSignup(error: ResponseError) {
+        view?.showToastNotification(message: error.message)
+    }
 }
 
 // MARK: - SignupInput

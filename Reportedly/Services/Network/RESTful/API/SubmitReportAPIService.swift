@@ -8,7 +8,7 @@
 
 import Alamofire
 
-class SubmitReportService: BaseAPIService {
+final class SubmitReportService: BaseAPIService {
 
     // MARK: - Public Constants
     
@@ -16,7 +16,7 @@ class SubmitReportService: BaseAPIService {
 
     // MARK: - Public Functions
     
-    func refreshToken(completion: SuccessCompletion? = nil) {
+    func submitReport(completion: SuccessCompletion? = nil) {
         // TODO: Add submit API logic here
         completion?(true)
     }

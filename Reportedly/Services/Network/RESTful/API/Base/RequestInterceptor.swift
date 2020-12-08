@@ -24,6 +24,7 @@ class RequestInterceptor {
     let method: HTTPMethod
     let queryParams: JSONDictionary
     let requestType: RequestType
+    let shouldAuthenticate: Bool
     let url: String
 
     // MARK: - Private Variables & Constants
@@ -33,11 +34,20 @@ class RequestInterceptor {
     private var header: HTTPHeaders { HTTPHeaderBuilder.shared.header }
 
     // MARK: - Init Functions
-    init(bodyParams: JSONDictionary, method: HTTPMethod, queryParams: JSONDictionary, requestType: RequestType, url: String, completion: @escaping ResponseCompletion) {
+    init(
+        bodyParams: JSONDictionary,
+        method: HTTPMethod,
+        queryParams: JSONDictionary,
+        requestType: RequestType,
+        shouldAuthenticate: Bool,
+        url: String,
+        completion: @escaping ResponseCompletion
+    ) {
         self.bodyParams = bodyParams
         self.method = method
         self.queryParams = queryParams
         self.requestType = requestType
+        self.shouldAuthenticate = shouldAuthenticate
         self.url = url
         self.completion = completion
     }
@@ -132,9 +142,9 @@ class RequestInterceptor {
             log.info("\(response)")
             if let data = data, let dataString = String(data: data, encoding: .utf8) {
                 if let dataDict = dataString.toJSONDictionary {
-                    print("Data \(dataDict)")
+                    log.info("Data \(dataDict)")
                 } else {
-                    print("Data array \(dataString.toJSONArray)")
+                    log.info("Data array \(dataString.toJSONArray)")
                 }
             }
             log.info("-------------END-------------")

@@ -15,7 +15,7 @@ class BaseAPIService {
     static let DEFAULT_TIMEOUT: TimeInterval = 20
     static let MAX_REQUEST_RETRY_COUNT       = 3
     static let PAGE_SIZE                     = 10
-    static let SERVER_DOMAIN                 = "http://898d5fad949e.ngrok.io"
+    static let SERVER_DOMAIN                 = "http://898d5fad949e.ngrok.io/api/v1"
 
     // MARK: - Managers
     
@@ -23,7 +23,14 @@ class BaseAPIService {
 
     // MARK: - Public Functions
     
-    @discardableResult func request(topic: String = "", method: HTTPMethod = .get, bodyParams: JSONDictionary = [:], queryParams: JSONDictionary = [:], completion: @escaping ResponseCompletion) -> DataRequest? {
+    @discardableResult func request(
+        topic: String = "",
+        method: HTTPMethod = .get,
+        bodyParams: JSONDictionary = [:],
+        queryParams: JSONDictionary = [:],
+        shouldAuthenticate: Bool = true,
+        completion: @escaping ResponseCompletion
+    ) -> DataRequest? {
 
         // Stop the request immediately and returns no network error
         guard reachabilityManager.hasInternet else {
@@ -38,8 +45,20 @@ class BaseAPIService {
         }
 
         // Execute the request
-        let requestType: RequestType = (!bodyParams.isEmpty && !queryParams.isEmpty) ? .requestWithBodyAndURLParams : !bodyParams.isEmpty ? .requestWithBody : .defaultRequest
-        return RequestInterceptor(bodyParams: bodyParams, method: method, queryParams: queryParams, requestType: requestType, url: url(with: topic), completion: completion).makeRequest()
+        let requestType: RequestType = (!bodyParams.isEmpty && !queryParams.isEmpty)
+            ? .requestWithBodyAndURLParams
+            : !bodyParams.isEmpty
+            ? .requestWithBody
+            : .defaultRequest
+        return RequestInterceptor(
+            bodyParams: bodyParams,
+            method: method,
+            queryParams: queryParams,
+            requestType: requestType,
+            shouldAuthenticate: shouldAuthenticate,
+            url: url(with: topic),
+            completion: completion
+        ).makeRequest()
     }
 
     func url(with topic: String) -> String {

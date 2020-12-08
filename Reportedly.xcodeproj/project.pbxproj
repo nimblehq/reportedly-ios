@@ -31,6 +31,7 @@
 		244085D62559415A007C6C06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244085D42559415A007C6C06 /* LaunchScreen.storyboard */; };
 		244085E12559415A007C6C06 /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085E02559415A007C6C06 /* UnitTests.swift */; };
 		244085EC2559415A007C6C06 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085EB2559415A007C6C06 /* UITests.swift */; };
+		2480CAD8257F9ADF00B079DF /* SignupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2480CAD7257F9ADF00B079DF /* SignupRequest.swift */; };
 		24820DC8256386990072D245 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DC6256386990072D245 /* ToastView.swift */; };
 		24820DC9256386990072D245 /* ToastPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DC7256386990072D245 /* ToastPresenter.swift */; };
 		24820DCE2563873F0072D245 /* CGAffineTransform+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DCD2563873F0072D245 /* CGAffineTransform+Extensions.swift */; };
@@ -49,7 +50,6 @@
 		248C277F257F693600B75CA1 /* AuthenticationAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C277A257F693600B75CA1 /* AuthenticationAPIService.swift */; };
 		248C2780257F693600B75CA1 /* SubmitReportAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C277B257F693600B75CA1 /* SubmitReportAPIService.swift */; };
 		248C2781257F693600B75CA1 /* RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C277C257F693600B75CA1 /* RequestInterceptor.swift */; };
-		248C278B257F6A0C00B75CA1 /* AuthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C2788257F6A0C00B75CA1 /* AuthData.swift */; };
 		248C279A257F6AB400B75CA1 /* Cryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C2799257F6AB400B75CA1 /* Cryptor.swift */; };
 		248C27AB257F6B4A00B75CA1 /* Obfuscator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C27AA257F6B4A00B75CA1 /* Obfuscator.swift */; };
 		248C27B4257F6C0F00B75CA1 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C27B2257F6C0F00B75CA1 /* Enums.swift */; };
@@ -134,6 +134,7 @@
 		244085E72559415A007C6C06 /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		244085EB2559415A007C6C06 /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
 		244085ED2559415A007C6C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2480CAD7257F9ADF00B079DF /* SignupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRequest.swift; sourceTree = "<group>"; };
 		24820DC6256386990072D245 /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		24820DC7256386990072D245 /* ToastPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastPresenter.swift; sourceTree = "<group>"; };
 		24820DCD2563873F0072D245 /* CGAffineTransform+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGAffineTransform+Extensions.swift"; sourceTree = "<group>"; };
@@ -153,7 +154,6 @@
 		248C277A257F693600B75CA1 /* AuthenticationAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationAPIService.swift; sourceTree = "<group>"; };
 		248C277B257F693600B75CA1 /* SubmitReportAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitReportAPIService.swift; sourceTree = "<group>"; };
 		248C277C257F693600B75CA1 /* RequestInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestInterceptor.swift; sourceTree = "<group>"; };
-		248C2788257F6A0C00B75CA1 /* AuthData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthData.swift; sourceTree = "<group>"; };
 		248C2799257F6AB400B75CA1 /* Cryptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cryptor.swift; sourceTree = "<group>"; };
 		248C27AA257F6B4A00B75CA1 /* Obfuscator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Obfuscator.swift; sourceTree = "<group>"; };
 		248C27B2257F6C0F00B75CA1 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -453,6 +453,7 @@
 		2484C9092578F58900DAB3BB /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				2484C9132578F61B00DAB3BB /* UserStorage */,
 				248C2777257F68C600B75CA1 /* GraphQL */,
 				248C276B257F67D000B75CA1 /* RESTful */,
 			);
@@ -462,8 +463,8 @@
 		2484C9132578F61B00DAB3BB /* UserStorage */ = {
 			isa = PBXGroup;
 			children = (
-				2484C9142578F63300DAB3BB /* UserManager.swift */,
 				2484C91C2578F76200DAB3BB /* Token.swift */,
+				2484C9142578F63300DAB3BB /* UserManager.swift */,
 			);
 			path = UserStorage;
 			sourceTree = "<group>";
@@ -472,7 +473,7 @@
 			isa = PBXGroup;
 			children = (
 				248C2786257F69A400B75CA1 /* API */,
-				248C2785257F699800B75CA1 /* Model */,
+				248C2785257F699800B75CA1 /* Requests */,
 			);
 			path = RESTful;
 			sourceTree = "<group>";
@@ -480,7 +481,6 @@
 		248C2777257F68C600B75CA1 /* GraphQL */ = {
 			isa = PBXGroup;
 			children = (
-				2484C9132578F61B00DAB3BB /* UserStorage */,
 				244085CA25594159007C6C06 /* Network.swift */,
 				2484C8F22578F1CC00DAB3BB /* NetworkInterceptorProvider.swift */,
 				2484C8FA2578F23100DAB3BB /* ResponseLoggingInterceptor.swift */,
@@ -490,12 +490,12 @@
 			path = GraphQL;
 			sourceTree = "<group>";
 		};
-		248C2785257F699800B75CA1 /* Model */ = {
+		248C2785257F699800B75CA1 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				248C2788257F6A0C00B75CA1 /* AuthData.swift */,
+				2480CAD7257F9ADF00B079DF /* SignupRequest.swift */,
 			);
-			path = Model;
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		248C2786257F69A400B75CA1 /* API */ = {
@@ -831,6 +831,7 @@
 				24820DC8256386990072D245 /* ToastView.swift in Sources */,
 				241AE5F0257F292200DC3E0E /* UIView+Extensions.swift in Sources */,
 				24CF123125762EB2006D6BA0 /* SignupViewController.swift in Sources */,
+				2480CAD8257F9ADF00B079DF /* SignupRequest.swift in Sources */,
 				248C27AB257F6B4A00B75CA1 /* Obfuscator.swift in Sources */,
 				248C279A257F6AB400B75CA1 /* Cryptor.swift in Sources */,
 				24CB966F255E872700AAC566 /* NavigationController.swift in Sources */,
@@ -854,7 +855,6 @@
 				244085A825594159007C6C06 /* AppDelegate.swift in Sources */,
 				24CF123025762EB2006D6BA0 /* SignupModule.swift in Sources */,
 				24CF122F25762EB2006D6BA0 /* SignupRouter.swift in Sources */,
-				248C278B257F6A0C00B75CA1 /* AuthData.swift in Sources */,
 				2484C9052578F3E300DAB3BB /* UserManagementInterceptor.swift in Sources */,
 				241AE5E2257F21D600DC3E0E /* LottieViewPresenter.swift in Sources */,
 				244085B325594159007C6C06 /* Constants.swift in Sources */,

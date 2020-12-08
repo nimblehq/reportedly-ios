@@ -31,7 +31,9 @@ final class SignupModule {
     init() {
         view = SignupViewController()
         router = SignupRouter()
-        interactor = SignupInteractor()
+        interactor = SignupInteractor(
+            authenticationAPIService: AuthenticationAPIService()
+        )
         presenter = SignupPresenter(
             router: router,
             interactor: interactor

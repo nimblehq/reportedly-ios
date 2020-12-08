@@ -9,9 +9,10 @@
 import Foundation
 
 // MARK: - Request & Response Enums
+
 enum RequestResourceType: String {
-    case auth = "oauth/token"
-    case survey = "surveys.json"
+    case signup = "signup"
+    case signin = "signin"
 }
 
 enum RequestType {

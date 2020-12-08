@@ -10,11 +10,12 @@ import Foundation
 
 // MARK: - Completion Typealiases
 
-typealias Completion<T>        = (T) -> Void
-typealias EmptyCompletion        = () -> Void
-typealias ResponseCompletion     = (_ data: Data?, _ success: ResponseSuccess?, _ error: ResponseError?) -> Void
-typealias StringCompletion       = (String) -> Void
-typealias SuccessCompletion      = (Bool) -> Void
+typealias Completion<T>             = (T) -> Void
+typealias EmptyCompletion           = () -> Void
+typealias ResultRestfulCompletion   = (Result<ResponseSuccess, ResponseError>) -> Void
+typealias ResponseCompletion        = (_ data: Data?, _ success: ResponseSuccess?, _ error: ResponseError?) -> Void
+typealias StringCompletion          = (String) -> Void
+typealias SuccessCompletion         = (Bool) -> Void
 
 // MARK: - DataType Typealiases
 
