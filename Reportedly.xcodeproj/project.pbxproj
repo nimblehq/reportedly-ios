@@ -10,6 +10,11 @@
 		24161AAA25665A6F00149CBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24161AA825665A6F00149CBE /* Localizable.strings */; };
 		24161AB525665FE600149CBE /* StringResource+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24161AB425665FE600149CBE /* StringResource+Extensions.swift */; };
 		24161ABA2566607600149CBE /* LanguageSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24161AB92566607600149CBE /* LanguageSystem.swift */; };
+		241AE5CA257F204C00DC3E0E /* LottieAnimationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241AE5C9257F204C00DC3E0E /* LottieAnimationFactory.swift */; };
+		241AE5D9257F214D00DC3E0E /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241AE5D8257F214D00DC3E0E /* SuccessView.swift */; };
+		241AE5E2257F21D600DC3E0E /* LottieViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241AE5E1257F21D600DC3E0E /* LottieViewPresenter.swift */; };
+		241AE5E8257F244900DC3E0E /* AnimatedSuccessCheck.json in Resources */ = {isa = PBXBuildFile; fileRef = 241AE5E7257F244900DC3E0E /* AnimatedSuccessCheck.json */; };
+		241AE5F0257F292200DC3E0E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241AE5EF257F292200DC3E0E /* UIView+Extensions.swift */; };
 		241F08FE256E6ACC00EC3120 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241F08FD256E6ACC00EC3120 /* CGFloat+Extensions.swift */; };
 		243A35CC25679DEF00390E9E /* Thread+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A35CB25679DEF00390E9E /* Thread+Extensions.swift */; };
 		244085A825594159007C6C06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085A725594159007C6C06 /* AppDelegate.swift */; };
@@ -99,6 +104,11 @@
 		24161AB025665B3000149CBE /* th-TH */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "th-TH"; path = "th-TH.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		24161AB425665FE600149CBE /* StringResource+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringResource+Extensions.swift"; sourceTree = "<group>"; };
 		24161AB92566607600149CBE /* LanguageSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageSystem.swift; sourceTree = "<group>"; };
+		241AE5C9257F204C00DC3E0E /* LottieAnimationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimationFactory.swift; sourceTree = "<group>"; };
+		241AE5D8257F214D00DC3E0E /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
+		241AE5E1257F21D600DC3E0E /* LottieViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewPresenter.swift; sourceTree = "<group>"; };
+		241AE5E7257F244900DC3E0E /* AnimatedSuccessCheck.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AnimatedSuccessCheck.json; sourceTree = "<group>"; };
+		241AE5EF257F292200DC3E0E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		241F08FD256E6ACC00EC3120 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		243A35CB25679DEF00390E9E /* Thread+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thread+Extensions.swift"; sourceTree = "<group>"; };
 		244085A425594159007C6C06 /* Reportedly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reportedly.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +216,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		241AE5DD257F218400DC3E0E /* LottieView */ = {
+			isa = PBXGroup;
+			children = (
+				241AE5D8257F214D00DC3E0E /* SuccessView.swift */,
+				241AE5E1257F21D600DC3E0E /* LottieViewPresenter.swift */,
+			);
+			path = LottieView;
+			sourceTree = "<group>";
+		};
+		241AE5E6257F242C00DC3E0E /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				241AE5E7257F244900DC3E0E /* AnimatedSuccessCheck.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		2440859B25594159007C6C06 = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +338,7 @@
 			children = (
 				2484C8ED2578F0D400DAB3BB /* API.swift */,
 				2484C8DE2578EEBF00DAB3BB /* schema.json */,
+				241AE5E6257F242C00DC3E0E /* Lottie */,
 				24EE32F82562982B00A9C0DC /* R.generated.swift */,
 				244085BB25594159007C6C06 /* Resource.swift */,
 				2484C8DF2578EFFC00DAB3BB /* LaunchList.graphql */,
@@ -332,6 +360,7 @@
 				24CB968D255E8D3500AAC566 /* UIColor+Extensions.swift */,
 				2485124B25779B7A006133A8 /* UIFont+Extensions.swift */,
 				24EE32D825628C7100A9C0DC /* UITextField+Extensions.swift */,
+				241AE5EF257F292200DC3E0E /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -379,6 +408,7 @@
 				244085CD25594159007C6C06 /* Logger.swift */,
 				248C27AA257F6B4A00B75CA1 /* Obfuscator.swift */,
 				248C27CD257F6DE300B75CA1 /* ReachabilityManager.swift */,
+				241AE5C9257F204C00DC3E0E /* LottieAnimationFactory.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -386,6 +416,7 @@
 		244085CF25594159007C6C06 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				241AE5DD257F218400DC3E0E /* LottieView */,
 				24820DC5256386990072D245 /* Toast */,
 				244085D025594159007C6C06 /* LabelWithLinkView.swift */,
 			);
@@ -663,6 +694,7 @@
 				244085D32559415A007C6C06 /* Assets.xcassets in Resources */,
 				24161AAA25665A6F00149CBE /* Localizable.strings in Resources */,
 				2484C8E02578EFFC00DAB3BB /* LaunchList.graphql in Resources */,
+				241AE5E8257F244900DC3E0E /* AnimatedSuccessCheck.json in Resources */,
 				244085D62559415A007C6C06 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -780,6 +812,7 @@
 				243A35CC25679DEF00390E9E /* Thread+Extensions.swift in Sources */,
 				24CB965D255E836C00AAC566 /* LoginEmailModule.swift in Sources */,
 				248C27F8257F838C00B75CA1 /* Notification+Extensions.swift in Sources */,
+				241AE5CA257F204C00DC3E0E /* LottieAnimationFactory.swift in Sources */,
 				24CF123225762EB2006D6BA0 /* SignupInteractor.swift in Sources */,
 				24CB9674255E884500AAC566 /* TypeAliases.swift in Sources */,
 				2485124C25779B7A006133A8 /* UIFont+Extensions.swift in Sources */,
@@ -796,6 +829,7 @@
 				24CB9669255E846B00AAC566 /* String+Extensions.swift in Sources */,
 				2484C8F32578F1CC00DAB3BB /* NetworkInterceptorProvider.swift in Sources */,
 				24820DC8256386990072D245 /* ToastView.swift in Sources */,
+				241AE5F0257F292200DC3E0E /* UIView+Extensions.swift in Sources */,
 				24CF123125762EB2006D6BA0 /* SignupViewController.swift in Sources */,
 				248C27AB257F6B4A00B75CA1 /* Obfuscator.swift in Sources */,
 				248C279A257F6AB400B75CA1 /* Cryptor.swift in Sources */,
@@ -811,6 +845,7 @@
 				248C2781257F693600B75CA1 /* RequestInterceptor.swift in Sources */,
 				24820DC9256386990072D245 /* ToastPresenter.swift in Sources */,
 				24161ABA2566607600149CBE /* LanguageSystem.swift in Sources */,
+				241AE5D9257F214D00DC3E0E /* SuccessView.swift in Sources */,
 				24CB965E255E836C00AAC566 /* LoginEmailPresenter.swift in Sources */,
 				2484C8FB2578F23100DAB3BB /* ResponseLoggingInterceptor.swift in Sources */,
 				2484C91D2578F76200DAB3BB /* Token.swift in Sources */,
@@ -821,6 +856,7 @@
 				24CF122F25762EB2006D6BA0 /* SignupRouter.swift in Sources */,
 				248C278B257F6A0C00B75CA1 /* AuthData.swift in Sources */,
 				2484C9052578F3E300DAB3BB /* UserManagementInterceptor.swift in Sources */,
+				241AE5E2257F21D600DC3E0E /* LottieViewPresenter.swift in Sources */,
 				244085B325594159007C6C06 /* Constants.swift in Sources */,
 				24161AB525665FE600149CBE /* StringResource+Extensions.swift in Sources */,
 				2484C8EE2578F0D400DAB3BB /* API.swift in Sources */,
