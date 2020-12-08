@@ -17,6 +17,7 @@ protocol SignupViewInput: AnyObject, CommonViewInput {
     var isValidSignupData: Bool { get }
     
     func configure()
+    func dismissKeyboard()
     func setSignupButtonEnabled(_ isEnabled: Bool)
 }
 
@@ -127,6 +128,10 @@ extension SignupViewController: SignupViewInput {
     func configure() {
         setUpLayouts()
         setUpViews()
+    }
+    
+    func dismissKeyboard() {
+        dismissKeyboard(nil)
     }
     
     func setSignupButtonEnabled(_ isEnabled: Bool) {

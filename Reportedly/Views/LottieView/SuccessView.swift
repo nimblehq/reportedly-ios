@@ -29,7 +29,7 @@ class SuccessView: UIView {
 extension SuccessView {
     
     private func setUpColors() {
-        backgroundColor = .clear
+        backgroundColor = .overlay
     }
 }
 

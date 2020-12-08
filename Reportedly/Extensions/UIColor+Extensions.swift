@@ -12,6 +12,8 @@ extension UIColor {
     
     static var background: UIColor { ColorSystem.shared.backgroundColor }
     
+    static var overlay: UIColor { ColorSystem.shared.overlayColor }
+    
     static var forms: UIColor { ColorSystem.shared.formsColor }
     
     static var primary: UIColor { ColorSystem.shared.primaryColor }
