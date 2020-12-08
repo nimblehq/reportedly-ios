@@ -37,8 +37,13 @@ extension SignupPresenter: SignupViewOutput {
               let confirmPassword = view?.confirmPasswordFieldText,
               let slackId = view?.slackIdFieldText
         else { return }
-        // TODO: Implement login logic here
-        view?.showToastNotification(message: "Signup button pressed with\nemail: \(email)\npassword: \(password)\nconfirmPassword: \(confirmPassword)\nslackId: \(slackId)")
+        log.debug("Signup button pressed with\nemail: \(email)\npassword: \(password)\nconfirmPassword: \(confirmPassword)\nslackId: \(slackId)")
+        
+        // TODO: Implement signup API call here
+        view?.dismissKeyboard()
+        view?.showSuccessOverlayView { [weak self] in
+            self?.router.popToRootViewController()
+        }
     }
     
     func textFieldsDidChange() {

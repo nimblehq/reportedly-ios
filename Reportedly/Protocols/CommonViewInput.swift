@@ -11,9 +11,15 @@ import UIKit
 protocol CommonViewInput {
     
     func showToastNotification(message: String)
+    
+    func showSuccessOverlayView(completion: EmptyCompletion?)
 }
 
 extension CommonViewInput where Self: UIViewController {
+    
+    func showSuccessOverlayView(completion: EmptyCompletion? = nil) {
+        LottieViewPresenter.shared.showSuccessView(completion: completion)
+    }
     
     func showToastNotification(message: String) {
         ToastPresenter.shared.showNotification(message)

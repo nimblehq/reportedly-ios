@@ -38,6 +38,7 @@ public class ColorSystem {
     private(set) var textHighlightedColor: UIColor!
     private(set) var formsColor: UIColor!
     private(set) var backgroundColor: UIColor!
+    private(set) var overlayColor: UIColor!
     
     init(userDefaults: UserDefaults) {
         self.userDefaults = userDefaults
@@ -59,11 +60,13 @@ public class ColorSystem {
         case .dark: // TODO: To be updated, for now it should be the same with light mode
             backgroundColor = UIColor(hex: 0x999999)
             formsColor = UIColor(hex: 0xFFFFFF).withAlphaComponent(0.2)
+            overlayColor = UIColor(hex: 0x000000).withAlphaComponent(0.75)
             textHighlightedColor = UIColor(hex: 0x007AFF)
             textPrimaryColor = UIColor(hex: 0xFFFFFF)
         case .light:
             backgroundColor = UIColor(hex: 0x999999)
             formsColor = UIColor(hex: 0xFFFFFF).withAlphaComponent(0.2)
+            overlayColor = UIColor(hex: 0x000000).withAlphaComponent(0.75)
             textHighlightedColor = UIColor(hex: 0x007AFF)
             textPrimaryColor = UIColor(hex: 0xFFFFFF)
         }

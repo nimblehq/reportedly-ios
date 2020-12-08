@@ -10,6 +10,8 @@ import UIKit
 
 // sourcery: AutoMockable
 protocol SignupRouterInput: AnyObject {
+    
+    func popToRootViewController()
 }
 
 final class SignupRouter {
@@ -24,4 +26,8 @@ final class SignupRouter {
 // MARK: - SignupRouterInput
 
 extension SignupRouter: SignupRouterInput {
+    
+    func popToRootViewController() {
+        viewController?.navigationController?.popToRootViewController(animated: true)
+    }
 }

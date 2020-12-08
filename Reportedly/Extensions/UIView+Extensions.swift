@@ -26,7 +26,7 @@ extension UIView {
         })
     }
     
-    func presentViewOnTopWindow(_ duration: Double = 0.3, for dismissAfter: Double = 0, _ completion: EmptyCompletion? = nil) {
+    func presentViewOnTopWindow(_ duration: TimeInterval = 0.3, for dismissAfter: TimeInterval = 0, _ completion: EmptyCompletion? = nil) {
         alpha = 0
         frame = UIScreen.main.bounds
         let windows = UIApplication.shared.windows.filter { $0.isKeyWindow }.first

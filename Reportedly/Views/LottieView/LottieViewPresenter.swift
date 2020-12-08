@@ -19,12 +19,11 @@ final class LottieViewPresenter {
     
     private var successView: SuccessView?
     
-    func showSuccessView(for duration: TimeInterval = 0.7, completion: EmptyCompletion? = nil) {
-        guard successView == nil else { return log.error("There is a current success view showing, can't show another one.") }
+    func showSuccessView(for duration: TimeInterval = 1.5, completion: EmptyCompletion? = nil) {
         
         // Setup a new success view and display
         successView = SuccessView()
-        successView?.presentViewOnTopWindow(for: 0.5) { [weak self] in
+        successView?.presentViewOnTopWindow(for: duration) { [weak self] in
             completion?()
             self?.successView = nil
         }
