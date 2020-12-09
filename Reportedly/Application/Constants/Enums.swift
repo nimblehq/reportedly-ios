@@ -12,7 +12,7 @@ import Foundation
 
 enum RequestResourceType: String {
     case signup = "signup"
-    case signin = "signin"
+    case login = "login"
 }
 
 enum RequestType {

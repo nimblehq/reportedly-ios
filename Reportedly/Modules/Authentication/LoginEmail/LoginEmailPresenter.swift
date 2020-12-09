@@ -35,8 +35,10 @@ extension LoginEmailPresenter: LoginEmailViewOutput {
     
     func didTapLoginButton() {
         guard let email = view?.emailFieldText, let password = view?.passwordFieldText else { return }
-        // TODO: Implement login logic here
-        view?.showToastNotification(message: "Login button pressed with\nemail: \(email)\npassword: \(password)")
+        view?.dismissKeyboard()
+        view?.showLoadingView(message: Localize.genericLoading.localized())
+        interactor.login(email: email, password: password)
+        log.debug("Login button pressed with\nemail: \(email)\npassword: \(password)")
     }
     
     func didTapSignupLinkView() {
@@ -54,4 +56,15 @@ extension LoginEmailPresenter: LoginEmailInput {
 
 extension LoginEmailPresenter: LoginEmailInteractorOutput {
     
+    func didLogin() {
+        view?.hideLoadingView()
+        view?.showSuccessOverlayView {
+            // TODO: Send user to Home Screen
+        }
+    }
+    
+    func didFailToLogin(error: ResponseError) {
+        view?.hideLoadingView()
+        view?.showToastNotification(message: error.message)
+    }
 }

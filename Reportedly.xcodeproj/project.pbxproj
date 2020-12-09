@@ -58,6 +58,7 @@
 		248C27CE257F6DE300B75CA1 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C27CD257F6DE300B75CA1 /* ReachabilityManager.swift */; };
 		248C27F8257F838C00B75CA1 /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C27F7257F838C00B75CA1 /* Notification+Extensions.swift */; };
 		248E93662580A43300839C68 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248E93652580A43300839C68 /* LoadingView.swift */; };
+		248E936B2580B07600839C68 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248E936A2580B07600839C68 /* LoginRequest.swift */; };
 		24CB965D255E836C00AAC566 /* LoginEmailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB9658255E836C00AAC566 /* LoginEmailModule.swift */; };
 		24CB965E255E836C00AAC566 /* LoginEmailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB9659255E836C00AAC566 /* LoginEmailPresenter.swift */; };
 		24CB965F255E836C00AAC566 /* LoginEmailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB965A255E836C00AAC566 /* LoginEmailInteractor.swift */; };
@@ -163,6 +164,7 @@
 		248C27CD257F6DE300B75CA1 /* ReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		248C27F7257F838C00B75CA1 /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
 		248E93652580A43300839C68 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		248E936A2580B07600839C68 /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		24CB9658255E836C00AAC566 /* LoginEmailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailModule.swift; sourceTree = "<group>"; };
 		24CB9659255E836C00AAC566 /* LoginEmailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailPresenter.swift; sourceTree = "<group>"; };
 		24CB965A255E836C00AAC566 /* LoginEmailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailInteractor.swift; sourceTree = "<group>"; };
@@ -496,6 +498,7 @@
 		248C2785257F699800B75CA1 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				248E936A2580B07600839C68 /* LoginRequest.swift */,
 				2480CAD7257F9ADF00B079DF /* SignupRequest.swift */,
 			);
 			path = Requests;
@@ -525,9 +528,9 @@
 			isa = PBXGroup;
 			children = (
 				24CB9658255E836C00AAC566 /* LoginEmailModule.swift */,
-				24CB9659255E836C00AAC566 /* LoginEmailPresenter.swift */,
-				24CB965A255E836C00AAC566 /* LoginEmailInteractor.swift */,
 				24CB965B255E836C00AAC566 /* LoginEmailViewController.swift */,
+				24CB965A255E836C00AAC566 /* LoginEmailInteractor.swift */,
+				24CB9659255E836C00AAC566 /* LoginEmailPresenter.swift */,
 				24CB965C255E836C00AAC566 /* LoginEmailRouter.swift */,
 			);
 			path = LoginEmail;
@@ -554,11 +557,11 @@
 		24CF122925762E44006D6BA0 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
-				24CF122A25762EB2006D6BA0 /* SignupRouter.swift */,
 				24CF122B25762EB2006D6BA0 /* SignupModule.swift */,
 				24CF122C25762EB2006D6BA0 /* SignupViewController.swift */,
 				24CF122D25762EB2006D6BA0 /* SignupInteractor.swift */,
 				24CF122E25762EB2006D6BA0 /* SignupPresenter.swift */,
+				24CF122A25762EB2006D6BA0 /* SignupRouter.swift */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -857,6 +860,7 @@
 				244085BC25594159007C6C06 /* Resource.swift in Sources */,
 				24CB9684255E896300AAC566 /* ViewController.swift in Sources */,
 				244085A825594159007C6C06 /* AppDelegate.swift in Sources */,
+				248E936B2580B07600839C68 /* LoginRequest.swift in Sources */,
 				24CF123025762EB2006D6BA0 /* SignupModule.swift in Sources */,
 				24CF122F25762EB2006D6BA0 /* SignupRouter.swift in Sources */,
 				2484C9052578F3E300DAB3BB /* UserManagementInterceptor.swift in Sources */,

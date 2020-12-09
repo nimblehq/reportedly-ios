@@ -32,7 +32,9 @@ final class LoginEmailModule {
     
     init() {
         view = LoginEmailViewController()
-        interactor = LoginEmailInteractor()
+        interactor = LoginEmailInteractor(
+            authenticationAPIService: AuthenticationAPIService()
+        )
         router = LoginEmailRouter(urlOpener: UIApplication.shared)
         presenter = LoginEmailPresenter(interactor: interactor, router: router)
         

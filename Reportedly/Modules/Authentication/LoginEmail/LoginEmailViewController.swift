@@ -16,6 +16,7 @@ protocol LoginEmailViewInput: AnyObject, CommonViewInput {
     var isValidEmailAndPassword: Bool { get }
     
     func configure()
+    func dismissKeyboard()
     func setLoginButtonEnabled(_ isEnabled: Bool)
     // TODO: Add loading states functions here
 }
@@ -107,6 +108,10 @@ extension LoginEmailViewController: LoginEmailViewInput {
     func configure() {
         setUpLayouts()
         setUpViews()
+    }
+    
+    func dismissKeyboard() {
+        dismissKeyboard(nil)
     }
     
     func setLoginButtonEnabled(_ isEnabled: Bool) {

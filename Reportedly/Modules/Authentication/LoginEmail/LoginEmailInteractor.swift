@@ -10,27 +10,43 @@ import Foundation
 
 protocol LoginEmailInteractorInput: AnyObject {
     
-    // TODO: Add login logic functions
+    func login(email: String, password: String)
 }
 
 protocol LoginEmailInteractorOutput: AnyObject {
     
-    // TODO: Add login completion callbacks functions
+    func didLogin()
+    func didFailToLogin(error: ResponseError)
 }
 
-final class LoginEmailInteractor: LoginEmailInteractorInput {
+final class LoginEmailInteractor {
+    
+    private let authenticationAPIService: AuthenticationAPIServiceProtocol
     
     weak var output: LoginEmailInteractorOutput?
     
     init(
-        // TODO: Add shared managers here
+        authenticationAPIService: AuthenticationAPIServiceProtocol
     ) {
-        
+        self.authenticationAPIService = authenticationAPIService
     }
 }
 
-// MARK: - Private Helper
+// MARK: - LoginEmailInteractorInput
 
-extension LoginEmailInteractor {
+extension LoginEmailInteractor: LoginEmailInteractorInput {
     
+    func login(email: String, password: String) {
+        let request = LoginRequest(
+            email: email,
+            password: password
+        )
+        authenticationAPIService.login(with: request) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success: self.output?.didLogin()
+            case .failure(let error): self.output?.didFailToLogin(error: error)
+            }
+        }
+    }
 }
