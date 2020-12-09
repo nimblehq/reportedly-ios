@@ -33,7 +33,7 @@
 		244085EC2559415A007C6C06 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085EB2559415A007C6C06 /* UITests.swift */; };
 		2480CAD8257F9ADF00B079DF /* SignupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2480CAD7257F9ADF00B079DF /* SignupRequest.swift */; };
 		24820DC8256386990072D245 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DC6256386990072D245 /* ToastView.swift */; };
-		24820DC9256386990072D245 /* ToastPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DC7256386990072D245 /* ToastPresenter.swift */; };
+		24820DC9256386990072D245 /* CommonViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DC7256386990072D245 /* CommonViewPresenter.swift */; };
 		24820DCE2563873F0072D245 /* CGAffineTransform+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DCD2563873F0072D245 /* CGAffineTransform+Extensions.swift */; };
 		24820DD6256389200072D245 /* CommonViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DD5256389200072D245 /* CommonViewInput.swift */; };
 		2484C8E02578EFFC00DAB3BB /* LaunchList.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 2484C8DF2578EFFC00DAB3BB /* LaunchList.graphql */; };
@@ -57,6 +57,7 @@
 		248C27C6257F6D1100B75CA1 /* NSData+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C27C5257F6D1100B75CA1 /* NSData+Extensions.swift */; };
 		248C27CE257F6DE300B75CA1 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C27CD257F6DE300B75CA1 /* ReachabilityManager.swift */; };
 		248C27F8257F838C00B75CA1 /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C27F7257F838C00B75CA1 /* Notification+Extensions.swift */; };
+		248E93662580A43300839C68 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248E93652580A43300839C68 /* LoadingView.swift */; };
 		24CB965D255E836C00AAC566 /* LoginEmailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB9658255E836C00AAC566 /* LoginEmailModule.swift */; };
 		24CB965E255E836C00AAC566 /* LoginEmailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB9659255E836C00AAC566 /* LoginEmailPresenter.swift */; };
 		24CB965F255E836C00AAC566 /* LoginEmailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB965A255E836C00AAC566 /* LoginEmailInteractor.swift */; };
@@ -136,7 +137,7 @@
 		244085ED2559415A007C6C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2480CAD7257F9ADF00B079DF /* SignupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRequest.swift; sourceTree = "<group>"; };
 		24820DC6256386990072D245 /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
-		24820DC7256386990072D245 /* ToastPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastPresenter.swift; sourceTree = "<group>"; };
+		24820DC7256386990072D245 /* CommonViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonViewPresenter.swift; sourceTree = "<group>"; };
 		24820DCD2563873F0072D245 /* CGAffineTransform+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGAffineTransform+Extensions.swift"; sourceTree = "<group>"; };
 		24820DD5256389200072D245 /* CommonViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonViewInput.swift; sourceTree = "<group>"; };
 		2484C8DE2578EEBF00DAB3BB /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
@@ -161,6 +162,7 @@
 		248C27C5257F6D1100B75CA1 /* NSData+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Extensions.swift"; sourceTree = "<group>"; };
 		248C27CD257F6DE300B75CA1 /* ReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		248C27F7257F838C00B75CA1 /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
+		248E93652580A43300839C68 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		24CB9658255E836C00AAC566 /* LoginEmailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailModule.swift; sourceTree = "<group>"; };
 		24CB9659255E836C00AAC566 /* LoginEmailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailPresenter.swift; sourceTree = "<group>"; };
 		24CB965A255E836C00AAC566 /* LoginEmailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailInteractor.swift; sourceTree = "<group>"; };
@@ -417,7 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				241AE5DD257F218400DC3E0E /* LottieView */,
-				24820DC5256386990072D245 /* Toast */,
+				24820DC5256386990072D245 /* CommonView */,
 				244085D025594159007C6C06 /* LabelWithLinkView.swift */,
 			);
 			path = Views;
@@ -441,13 +443,14 @@
 			path = UITests;
 			sourceTree = "<group>";
 		};
-		24820DC5256386990072D245 /* Toast */ = {
+		24820DC5256386990072D245 /* CommonView */ = {
 			isa = PBXGroup;
 			children = (
+				248E93652580A43300839C68 /* LoadingView.swift */,
 				24820DC6256386990072D245 /* ToastView.swift */,
-				24820DC7256386990072D245 /* ToastPresenter.swift */,
+				24820DC7256386990072D245 /* CommonViewPresenter.swift */,
 			);
-			path = Toast;
+			path = CommonView;
 			sourceTree = "<group>";
 		};
 		2484C9092578F58900DAB3BB /* Network */ = {
@@ -806,6 +809,7 @@
 				24CB9661255E836C00AAC566 /* LoginEmailRouter.swift in Sources */,
 				24CF123325762EB2006D6BA0 /* SignupPresenter.swift in Sources */,
 				248C27CE257F6DE300B75CA1 /* ReachabilityManager.swift in Sources */,
+				248E93662580A43300839C68 /* LoadingView.swift in Sources */,
 				2484C9152578F63300DAB3BB /* UserManager.swift in Sources */,
 				244085CB25594159007C6C06 /* Network.swift in Sources */,
 				244085B625594159007C6C06 /* Entitlements.swift in Sources */,
@@ -844,7 +848,7 @@
 				248C277F257F693600B75CA1 /* AuthenticationAPIService.swift in Sources */,
 				248C27B4257F6C0F00B75CA1 /* Enums.swift in Sources */,
 				248C2781257F693600B75CA1 /* RequestInterceptor.swift in Sources */,
-				24820DC9256386990072D245 /* ToastPresenter.swift in Sources */,
+				24820DC9256386990072D245 /* CommonViewPresenter.swift in Sources */,
 				24161ABA2566607600149CBE /* LanguageSystem.swift in Sources */,
 				241AE5D9257F214D00DC3E0E /* SuccessView.swift in Sources */,
 				24CB965E255E836C00AAC566 /* LoginEmailPresenter.swift in Sources */,

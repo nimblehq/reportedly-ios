@@ -8,11 +8,6 @@
 
 import UIKit
 
-protocol LottieViewPresenterDelegate: AnyObject {
-    
-    func showSuccessView()
-}
-
 final class LottieViewPresenter {
     
     static let shared = LottieViewPresenter()

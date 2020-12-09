@@ -29,3 +29,5 @@
 "module.Signup.SlackIdPlaceholder" = "Slack ID";
 
 "module.Signup.SignupButton" = "Signup";
+
+"generic.Loading" = "Loading...";

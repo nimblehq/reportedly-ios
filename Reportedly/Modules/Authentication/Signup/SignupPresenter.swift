@@ -38,6 +38,7 @@ extension SignupPresenter: SignupViewOutput {
               let slackId = view?.slackIdFieldText
         else { return }
         view?.dismissKeyboard()
+        view?.showLoadingView(message: Localize.genericLoading.localized())
         interactor.signup(email: email, password: password, confirmedPassword: confirmedPassword, slackId: slackId)
         log.debug("Signup button pressed with\nemail: \(email)\npassword: \(password)\nconfirmPassword: \(confirmedPassword)\nslackId: \(slackId)")
     }
@@ -53,12 +54,14 @@ extension SignupPresenter: SignupViewOutput {
 extension SignupPresenter: SignupInteractorOutput {
     
     func didSignup() {
+        view?.hideLoadingView()
         view?.showSuccessOverlayView { [weak self] in
             self?.router.popToRootViewController()
         }
     }
     
     func didFailToSignup(error: ResponseError) {
+        view?.hideLoadingView()
         view?.showToastNotification(message: error.message)
     }
 }
