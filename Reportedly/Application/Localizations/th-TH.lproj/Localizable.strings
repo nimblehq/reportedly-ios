@@ -1,12 +1,10 @@
 //
-//  Localizable.strings (Thai)
+//  Localizable.strings (English)
 //  Reportedly
 //
 //  Created by Mikey Pham on 11/19/20.
 //  Copyright © 2020 NimbleHQ. All rights reserved.
 //
-
-// TODO: To be translated to Thai later
 
 "module.LoginEmail.HeaderTitle" = "Reportedly";
 
@@ -32,4 +30,16 @@
 
 "module.Signup.SignupButton" = "Signup";
 
-"generic.Loading" = "Loading...";
+"module.Home.TodayTitle" = "Today";
+
+"module.Home.StartReportingButton" = "Start Reporting";
+
+"module.Home.MenuReportHistoryOption" = "Report History";
+
+"module.Home.MenuChannelSubscriptionOption" = "Channel Subscription";
+
+"module.Home.MenuUserSettingsOption" = "User Settings";
+
+"module.Home.MenuLogoutOption" = "Logout";
+
+"module.Loading.Message" = "Loading...";

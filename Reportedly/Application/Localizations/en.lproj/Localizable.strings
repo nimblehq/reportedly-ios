@@ -34,4 +34,12 @@
 
 "module.Home.StartReportingButton" = "Start Reporting";
 
+"module.Home.MenuReportHistoryOption" = "Report History";
+
+"module.Home.MenuChannelSubscriptionOption" = "Channel Subscription";
+
+"module.Home.MenuUserSettingsOption" = "User Settings";
+
+"module.Home.MenuLogoutOption" = "Logout";
+
 "module.Loading.Message" = "Loading...";

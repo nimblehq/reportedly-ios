@@ -19,6 +19,7 @@ enum DateFormat {
     static let MMM_d = "MMM d"
     static let MMM_d_YYYY = "MMM, d YYYY"
     static let MMMM_yyyy = "MMMM yyyy"
+    static let EEEE_MMMM_dd_YYYY = "EEEE, MMMM dd YYYY"
     static let EE = "EE"
     static let hh_mm_a = "hh:mm a"
     static let hh_mm = "HH:mm"

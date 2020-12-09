@@ -29,21 +29,40 @@ final class HomePresenter {
 
 extension HomePresenter: HomeViewOutput {
     
+    func viewDidLoad() {
+        view?.configure()
+    }
+    
     func viewWillAppear() {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = DateFormat.MMM_d_YYYY
+        dateFormatter.dateFormat = DateFormat.EEEE_MMMM_dd_YYYY
         dateFormatter.locale = Locale(identifier: LanguageSystem.shared.currentLanguage.locale.identifier)
         view?.setCurrentTime(dateFormatter.string(from: Date()))
     }
     
     func didTapStartReportingButton() {
-        // TODO: Show reporting screen
+        // TODO: Show submit reporting screen
         view?.showToastNotification(message: "Start Reporting button pressed")
     }
     
-
-    func viewDidLoad() {
-        view?.configure()
+    func didTapMenuOptionReportHistoryButton() {
+        // TODO: Show report history screen
+        view?.showToastNotification(message: "Report history menu option pressed")
+    }
+    
+    func didTapMenuOptionChannelSubscriptionButton() {
+        // TODO: Show channel subscription screen
+        view?.showToastNotification(message: "Channel Subscription menu option pressed")
+    }
+    
+    func didTapMenuOptionUserSettingsButton() {
+        // TODO: Show user settings screen
+        view?.showToastNotification(message: "User Settings menu option pressed")
+    }
+    
+    func didTapMenuOptionLogoutButton() {
+        // TODO: Logout the user and show login screen
+        view?.showToastNotification(message: "Logout menu option pressed")
     }
 }
 
