@@ -58,8 +58,8 @@ extension LoginEmailPresenter: LoginEmailInteractorOutput {
     
     func didLogin() {
         view?.hideLoadingView()
-        view?.showSuccessOverlayView {
-            // TODO: Send user to Home Screen
+        view?.showSuccessOverlayView { [weak self] in
+            self?.router.showHome()
         }
     }
     

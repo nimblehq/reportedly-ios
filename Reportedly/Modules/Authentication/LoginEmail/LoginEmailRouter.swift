@@ -11,6 +11,7 @@ import UIKit
 protocol LoginEmailRouterInput {
     
     func show(on window: UIWindow)
+    func showHome()
     func pushSignupScreen()
 }
 
@@ -28,11 +29,16 @@ final class LoginEmailRouter: LoginEmailRouterInput {
     }
     
     func show(on window: UIWindow) {
-        if let viewController = viewController {
-            let navigationController = NavigationController(rootViewController: viewController)
-            window.rootViewController = navigationController
-            self.window = window
-        }
+        guard let viewController = viewController else { return }
+        let navigationController = NavigationController(rootViewController: viewController)
+        window.rootViewController = navigationController
+        self.window = window
+    }
+    
+    func showHome() {
+        guard let window = viewController?.view.window else { return }
+        let module = HomeModule()
+        module.router.show(on: window)
     }
 
     func pushSignupScreen() {
