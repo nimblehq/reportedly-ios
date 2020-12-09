@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Showing the launch screen 0.5s more, right now it is dismissing to fast
         Thread.sleep(forTimeInterval: 0.5)
+        
+        // Request for notifications permission when first open app
+        let options: UNAuthorizationOptions = [.alert, .sound, .badge]
+        UNUserNotificationCenter.current().requestAuthorization(options: options) {
+            (didAllow, error) in
+            if !didAllow {
+                log.error("User has declined notifications")
+            }
+        }
+        LocalNotificationScheduler.shared.setupDailyStandupLocalNotifications()
         
         // Then, show the login screen
         let window = UIWindow(frame: UIScreen.main.bounds)

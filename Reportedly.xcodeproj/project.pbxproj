@@ -31,6 +31,7 @@
 		244085D62559415A007C6C06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244085D42559415A007C6C06 /* LaunchScreen.storyboard */; };
 		244085E12559415A007C6C06 /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085E02559415A007C6C06 /* UnitTests.swift */; };
 		244085EC2559415A007C6C06 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085EB2559415A007C6C06 /* UITests.swift */; };
+		247186F6258102D300ABD1C0 /* LocalNotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247186F5258102D300ABD1C0 /* LocalNotificationScheduler.swift */; };
 		2480CAD8257F9ADF00B079DF /* SignupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2480CAD7257F9ADF00B079DF /* SignupRequest.swift */; };
 		24820DC8256386990072D245 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DC6256386990072D245 /* ToastView.swift */; };
 		24820DC9256386990072D245 /* CommonViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DC7256386990072D245 /* CommonViewPresenter.swift */; };
@@ -141,6 +142,7 @@
 		244085E72559415A007C6C06 /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		244085EB2559415A007C6C06 /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
 		244085ED2559415A007C6C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		247186F5258102D300ABD1C0 /* LocalNotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationScheduler.swift; sourceTree = "<group>"; };
 		2480CAD7257F9ADF00B079DF /* SignupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRequest.swift; sourceTree = "<group>"; };
 		24820DC6256386990072D245 /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		24820DC7256386990072D245 /* CommonViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonViewPresenter.swift; sourceTree = "<group>"; };
@@ -423,6 +425,7 @@
 				248C27AA257F6B4A00B75CA1 /* Obfuscator.swift */,
 				248C27CD257F6DE300B75CA1 /* ReachabilityManager.swift */,
 				241AE5C9257F204C00DC3E0E /* LottieAnimationFactory.swift */,
+				247186F5258102D300ABD1C0 /* LocalNotificationScheduler.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -839,6 +842,7 @@
 				248E93662580A43300839C68 /* LoadingView.swift in Sources */,
 				2484C9152578F63300DAB3BB /* UserManager.swift in Sources */,
 				244085CB25594159007C6C06 /* Network.swift in Sources */,
+				247186F6258102D300ABD1C0 /* LocalNotificationScheduler.swift in Sources */,
 				244085B625594159007C6C06 /* Entitlements.swift in Sources */,
 				243A35CC25679DEF00390E9E /* Thread+Extensions.swift in Sources */,
 				24CB965D255E836C00AAC566 /* LoginEmailModule.swift in Sources */,
