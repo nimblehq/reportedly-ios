@@ -25,7 +25,11 @@ final class AuthenticationAPIService: BaseAPIService, AuthenticationAPIServicePr
 
     // MARK: - Private Variables
     
-    private var tokenData: Token?
+    // TODO: - Removed this hard-coded authentication token when server support user's token
+    private var tokenData: Token? = Token(
+        value: "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMiIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYwNzMzMjUyNCwiZXhwIjoxNjA3NDE4OTI0LCJqdGkiOiI0NzVmNzE5ZS02ZTNmLTRmYTUtYjI3Zi02ZDkxMGM5NGRiMzgifQ.l9mFj8r8tfjk0oVyBPKy5HEvBItFzZ-iIlAjcAmKuhA",
+        isExpired: true
+    )
 
     // MARK: - Public Functions
     

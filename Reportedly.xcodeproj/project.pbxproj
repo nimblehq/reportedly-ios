@@ -420,8 +420,8 @@
 		244085CF25594159007C6C06 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				241AE5DD257F218400DC3E0E /* LottieView */,
 				24820DC5256386990072D245 /* CommonView */,
+				241AE5DD257F218400DC3E0E /* LottieView */,
 				244085D025594159007C6C06 /* LabelWithLinkView.swift */,
 			);
 			path = Views;

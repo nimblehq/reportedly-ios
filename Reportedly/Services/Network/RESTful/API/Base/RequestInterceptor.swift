@@ -137,7 +137,7 @@ class RequestInterceptor {
                 log.info("-------------END-------------")
                 return completion(nil, ResponseSuccess(.noContent), nil)
             }
-            if let error = (dataDict["errors"] as? JSONDictionary)?["message"] as? String {
+            if let error = ((dataDict["errors"] ?? dataDict["error"]) as? JSONDictionary)?["message"] as? String {
                 errorMessage = error
             }
         } else {
