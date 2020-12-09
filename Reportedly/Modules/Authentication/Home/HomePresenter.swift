@@ -2,9 +2,11 @@
 //  HomePresenter.swift
 //  Reportedly
 //
-//  Created by Minh Pham on 09/12/2020.
-//  
+//  Created by Mikey Pham on 12/9/20.
+//  Copyright © 2020 NimbleHQ. All rights reserved.
 //
+
+import Foundation
 
 final class HomePresenter {
 
@@ -26,6 +28,19 @@ final class HomePresenter {
 // MARK: - HomeViewOutput
 
 extension HomePresenter: HomeViewOutput {
+    
+    func viewWillAppear() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = DateFormat.MMM_d_YYYY
+        dateFormatter.locale = Locale(identifier: LanguageSystem.shared.currentLanguage.locale.identifier)
+        view?.setCurrentTime(dateFormatter.string(from: Date()))
+    }
+    
+    func didTapStartReportingButton() {
+        // TODO: Show reporting screen
+        view?.showToastNotification(message: "Start Reporting button pressed")
+    }
+    
 
     func viewDidLoad() {
         view?.configure()

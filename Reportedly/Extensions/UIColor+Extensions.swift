@@ -12,9 +12,11 @@ extension UIColor {
     
     static var background: UIColor { ColorSystem.shared.backgroundColor }
     
+    static var forms: UIColor { ColorSystem.shared.formsColor }
+    
     static var overlay: UIColor { ColorSystem.shared.overlayColor }
     
-    static var forms: UIColor { ColorSystem.shared.formsColor }
+    static var overlayLight: UIColor { ColorSystem.shared.overlayLightColor }
     
     static var primary: UIColor { ColorSystem.shared.primaryColor }
     

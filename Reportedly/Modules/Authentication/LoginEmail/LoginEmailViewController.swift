@@ -49,9 +49,10 @@ final class LoginEmailViewController: ViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        emailField.roundCorners(.allCorners, radius: 8)
-        passwordField.roundCorners(.allCorners, radius: 8)
-        loginButton.roundCorners(.allCorners, radius: 8)
+        super.viewDidLayoutSubviews()
+        emailField.roundCorners(.allCorners, radius: .spacer2)
+        passwordField.roundCorners(.allCorners, radius: .spacer2)
+        loginButton.roundCorners(.allCorners, radius: .spacer2)
     }
     
     override func setUpTexts() {

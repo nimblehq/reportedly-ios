@@ -2,8 +2,8 @@
 //  HomeModule.swift
 //  Reportedly
 //
-//  Created by Minh Pham on 09/12/2020.
-//  
+//  Created by Mikey Pham on 12/9/20.
+//  Copyright © 2020 NimbleHQ. All rights reserved.
 //
 
 // sourcery: AutoMockable

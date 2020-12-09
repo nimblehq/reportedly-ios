@@ -10,6 +10,23 @@ import Foundation
 
 // MARK: - General Enums Constants
 
+enum DateFormat {
+    static let dd_MM_yyyy = "dd MM yyyy"
+    static let dd_MMM = "dd MMM"
+    static let dd_MMM_yyyy_hh_mm_a = "dd MMM yyyy, hh:mm a"
+    static let dd_MMMM_yyyy = "dd MMMM yyyy"
+    static let ddlMMlyyyy = "dd/MM/yyyy"
+    static let MMM_d = "MMM d"
+    static let MMM_d_YYYY = "MMM, d YYYY"
+    static let MMMM_yyyy = "MMMM yyyy"
+    static let EE = "EE"
+    static let hh_mm_a = "hh:mm a"
+    static let hh_mm = "HH:mm"
+    static let yyyy_MM_dd_T_HH_mm_ss = "yyyy-MM-dd'T'HH:mm:ss"
+    static let yyyy_MM_DD_T_hh_mm_ssZ = "yyyy-MM-DD'T'hh:mm:ssZ"
+    static let yyyy_MM_dd_T_HH_mm_ss_SSSZ = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+}
+
 enum FileType {
     static let lproj = "lproj"
 }
@@ -27,4 +44,3 @@ enum PushNotification {
 enum UserDefaultsKey {
     static let appleLanguage = "AppleLanguage"
 }
-

@@ -31,4 +31,6 @@ extension CGFloat {
     static let spacer9: CGFloat = 48.0
     /**CGFLoat = 56.0*/
     static let spacer10: CGFloat = 56.0
+    /**CGFLoat = 60.0*/
+    static let spacer11: CGFloat = 60.0
 }

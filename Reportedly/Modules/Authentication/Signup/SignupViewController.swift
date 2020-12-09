@@ -47,6 +47,7 @@ final class SignupViewController: ViewController {
         output?.viewDidLoad()
     }
     override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         emailField.roundCorners(.allCorners, radius: .spacer2)
         passwordField.roundCorners(.allCorners, radius: .spacer2)
         confirmPasswordField.roundCorners(.allCorners, radius: .spacer2)

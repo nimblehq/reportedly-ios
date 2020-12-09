@@ -30,4 +30,8 @@
 
 "module.Signup.SignupButton" = "Signup";
 
-"generic.Loading" = "Loading...";
+"module.Home.TodayTitle" = "Today";
+
+"module.Home.StartReportingButton" = "Start Reporting";
+
+"module.Loading.Message" = "Loading...";

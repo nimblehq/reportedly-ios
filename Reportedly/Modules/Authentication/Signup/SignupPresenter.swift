@@ -38,7 +38,7 @@ extension SignupPresenter: SignupViewOutput {
               let slackId = view?.slackIdFieldText
         else { return }
         view?.dismissKeyboard()
-        view?.showLoadingView(message: Localize.genericLoading.localized())
+        view?.showLoadingView(message: Localize.moduleLoadingMessage.localized())
         interactor.signup(email: email, password: password, confirmedPassword: confirmedPassword, slackId: slackId)
         log.debug("Signup button pressed with\nemail: \(email)\npassword: \(password)\nconfirmPassword: \(confirmedPassword)\nslackId: \(slackId)")
     }
