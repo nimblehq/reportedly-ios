@@ -27,15 +27,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         module.router.show(on: window)
         window.makeKeyAndVisible()
         
-        // TODO: - Testing purpose only, will remove when have actual APIs
-        Network.shared.apollo.fetch(query: LaunchListQuery()) { result in
-            switch result {
-            case .success(let graphQLResult):
-                print("Success! Result: \(graphQLResult)")
-            case .failure(let error):
-                print("Failure! Error: \(error)")
-            }
-        }
+        // TODO: - Testing purpose only, will remove when have actual APIs, uncomment when we need to see the response
+//        Network.shared.apollo.fetch(query: LaunchListQuery()) { result in
+//            switch result {
+//            case .success(let graphQLResult):
+//                print("Success! Result: \(graphQLResult)")
+//            case .failure(let error):
+//                print("Failure! Error: \(error)")
+//            }
+//        }
         
         return true
     }

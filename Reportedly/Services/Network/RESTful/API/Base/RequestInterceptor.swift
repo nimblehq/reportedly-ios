@@ -31,7 +31,12 @@ class RequestInterceptor {
     private static let requestQueue = DispatchQueue(label: "requestQueue", qos: .background)
 
     private static var requesters: [String: Requester] = [:]
-    private var header: HTTPHeaders { HTTPHeaderBuilder.shared.header }
+    private var header: HTTPHeaders {
+        shouldAuthenticate
+            ? HTTPHeaderBuilder.shared.authenticatedHeader
+            : HTTPHeaderBuilder.shared.normalHeader
+        
+    }
 
     // MARK: - Init Functions
     init(
@@ -96,16 +101,17 @@ class RequestInterceptor {
                 guard let self = self else { return }
                 commonResultHandler($0, completion: self.completion)
             }
-        case .requestWithBody: return AF.request(url, method: method, parameters: bodyParams, encoding: JSONEncoding.prettyPrinted, headers: header) { urlRequest in
-            urlRequest.timeoutInterval = BaseAPIService.DEFAULT_TIMEOUT
-        }.validate().response(queue: DispatchQueue.global(qos: .background)) { [weak self] in
+        case .requestWithBody:
+            return AF.request(url, method: method, parameters: bodyParams, encoding: URLEncoding.httpBody, headers: header) { urlRequest in
+                urlRequest.timeoutInterval = BaseAPIService.DEFAULT_TIMEOUT
+            }.validate().response(queue: DispatchQueue.global(qos: .background)) { [weak self] in
                 guard let self = self else { return }
                 commonResultHandler($0, completion: self.completion)
             }
         case .requestWithBodyAndURLParams:
             var urlComponent = URLComponents(string: url)
             urlComponent?.queryItems = queryParams.map { URLQueryItem(name: $0.key, value: $0.value as? String ?? "") }
-            return AF.request(urlComponent?.url ?? "", method: method, parameters: bodyParams, encoding: JSONEncoding.default, headers: header) { urlRequest in
+            return AF.request(urlComponent?.url ?? "", method: method, parameters: bodyParams, encoding: URLEncoding.httpBody, headers: header) { urlRequest in
                 urlRequest.timeoutInterval = BaseAPIService.DEFAULT_TIMEOUT
             }.validate().response(queue: DispatchQueue.global(qos: .background)) { [weak self] in
                 guard let self = self else { return }
@@ -131,7 +137,9 @@ class RequestInterceptor {
                 log.info("-------------END-------------")
                 return completion(nil, ResponseSuccess(.noContent), nil)
             }
-            errorMessage = dataDict["message"] as? String ?? ""
+            if let error = (dataDict["errors"] as? JSONDictionary)?["message"] as? String {
+                errorMessage = error
+            }
         } else {
             log.error("-------------RESPONSE ERROR------------- \(error?.errorDescription ?? "Cannot found data or data cannot be parsed to dictionary")")
             log.error("-------------END-------------")

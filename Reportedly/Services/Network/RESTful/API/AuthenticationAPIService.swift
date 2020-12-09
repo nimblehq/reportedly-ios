@@ -36,7 +36,8 @@ final class AuthenticationAPIService: BaseAPIService, AuthenticationAPIServicePr
         request(
             topic: RequestResourceType.signup.rawValue,
             method: .post,
-            bodyParams: signupRequest.toDictionary()
+            bodyParams: signupRequest.toDictionary(),
+            shouldAuthenticate: false
         ) { data, success, error in
             Thread.executeOnMainThread {
                 if let error = error {

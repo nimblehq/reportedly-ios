@@ -15,7 +15,7 @@ class BaseAPIService {
     static let DEFAULT_TIMEOUT: TimeInterval = 20
     static let MAX_REQUEST_RETRY_COUNT       = 3
     static let PAGE_SIZE                     = 10
-    static let SERVER_DOMAIN                 = "http://898d5fad949e.ngrok.io/api/v1"
+    static let SERVER_DOMAIN                 = "https://reportedly-staging.herokuapp.com/api/v1"
 
     // MARK: - Managers
     

@@ -13,5 +13,11 @@ class HTTPHeaderBuilder {
     // MARK: - Public Variables
     static var shared = HTTPHeaderBuilder()
 
-    var header: HTTPHeaders { HTTPHeaders(["Authorization": "Bearer \(AuthenticationAPIService.shared.token)"]) }
+    var authenticatedHeader: HTTPHeaders {
+        HTTPHeaders(["Authorization": "Bearer \(AuthenticationAPIService.shared.token)"])
+    }
+    
+    var normalHeader: HTTPHeaders {
+        HTTPHeaders([])
+    }
 }

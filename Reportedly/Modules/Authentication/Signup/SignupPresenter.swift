@@ -40,7 +40,6 @@ extension SignupPresenter: SignupViewOutput {
         view?.dismissKeyboard()
         interactor.signup(email: email, password: password, confirmedPassword: confirmedPassword, slackId: slackId)
         log.debug("Signup button pressed with\nemail: \(email)\npassword: \(password)\nconfirmPassword: \(confirmedPassword)\nslackId: \(slackId)")
-//        U019TLN0E7Q
     }
     
     func textFieldsDidChange() {
