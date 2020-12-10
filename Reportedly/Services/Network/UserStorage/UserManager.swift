@@ -12,6 +12,7 @@ final class UserManager {
     
     static let shared = UserManager()
     
-    // TODO: - Update to get actual token from sever later on
-    public var token: Token? { nil }
+    public var token: Token?
+    
+    public var user: User?
 }

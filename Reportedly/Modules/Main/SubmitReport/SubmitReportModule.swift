@@ -31,7 +31,10 @@ final class SubmitReportModule {
     init() {
         view = SubmitReportViewController()
         router = SubmitReportRouter()
-        interactor = SubmitReportInteractor()
+        interactor = SubmitReportInteractor(
+            reportAPIService: ReportAPIService(),
+            userManager: UserManager.shared
+        )
         presenter = SubmitReportPresenter(
             router: router,
             interactor: interactor

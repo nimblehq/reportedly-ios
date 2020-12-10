@@ -75,8 +75,6 @@ final class HomeViewController: ViewController {
         startReportingButton.setTitle(Localize.moduleHomeStartReportingButton.localized(), for: .normal)
         
         // Right Menu
-        // TODO: Update with actual user's email
-        menuUserEmailLabel.text = "User"
         menuOptionReportHistoryButton.setTitle(Localize.moduleHomeMenuReportHistoryOption.localized(), for: .normal)
         menuOptionChannelSubscriptionButton.setTitle(Localize.moduleHomeMenuChannelSubscriptionOption.localized(), for: .normal)
         menuOptionUserSettingsButton.setTitle(Localize.moduleHomeMenuUserSettingsOption.localized(), for: .normal)
@@ -235,9 +233,9 @@ extension HomeViewController {
             $0.width.equalToSuperview().multipliedBy(0.63)
         }
         menuContainerView.layoutIfNeeded()
-        hideRightMenu()
-        // Hide the menu beyond the right of the phone's screen by default
         
+        // Hide the menu beyond the right of the phone's screen by default
+        hideRightMenu()
         
         menuVerticalSeperatorView.snp.makeConstraints {
             $0.centerY.equalToSuperview().multipliedBy(0.4)
@@ -256,7 +254,7 @@ extension HomeViewController {
             $0.leading.equalToSuperview().offset(CGFloat.spacer4)
             $0.height.equalTo(CGFloat.spacer7)
             $0.top.equalTo(menuUserAvatarImageView.snp.top)
-            $0.trailing.equalTo(menuUserAvatarImageView.snp.leading).inset(CGFloat.spacer2)
+            $0.trailing.equalTo(menuUserAvatarImageView.snp.leading).inset(-CGFloat.spacer2)
         }
         
         menuOptionsContainerStackView.snp.makeConstraints {

@@ -60,6 +60,9 @@ class RequestInterceptor {
     // MARK: - Public Functions
     @discardableResult func makeRequest(retryCount: Int = 0) -> DataRequest? {
         func commonResultHandler(_ result: AFDataResponse<Data?>, completion: @escaping ResponseCompletion) {
+            if let newToken = result.response?.headers.value(for: "Authorization") {
+                AuthenticationAPIService.shared.token = newToken
+            }
             resultHandler(data: result.data, response: result.response, error: result.error, retryCount: retryCount, completion: completion)
         }
         log.info("---------------Making request---------------")

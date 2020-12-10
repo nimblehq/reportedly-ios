@@ -14,7 +14,7 @@ class HTTPHeaderBuilder {
     static var shared = HTTPHeaderBuilder()
 
     var authenticatedHeader: HTTPHeaders {
-        HTTPHeaders(["Authorization": "Bearer \(AuthenticationAPIService.shared.token)"])
+        HTTPHeaders(["Authorization": "\(AuthenticationAPIService.shared.token)"])
     }
     
     var normalHeader: HTTPHeaders {

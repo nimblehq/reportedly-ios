@@ -16,6 +16,7 @@ typealias ResultRestfulCompletion   = (Result<ResponseSuccess, ResponseError>) -
 typealias ResponseCompletion        = (_ data: Data?, _ success: ResponseSuccess?, _ error: ResponseError?) -> Void
 typealias StringCompletion          = (String) -> Void
 typealias SuccessCompletion         = (Bool) -> Void
+typealias ResultUserCompletion      = (Result<User, ResponseError>) -> Void
 
 // MARK: - DataType Typealiases
 

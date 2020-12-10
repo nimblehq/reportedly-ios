@@ -10,7 +10,7 @@ import Alamofire
 
 protocol AuthenticationAPIServiceProtocol {
 
-    func login(with loginRequest: LoginRequest, completion: @escaping ResultRestfulCompletion)
+    func login(with loginRequest: LoginRequest, completion: @escaping ResultUserCompletion)
     
     func signUp(with signupRequest: SignupRequest, completion: @escaping ResultRestfulCompletion)
 }
@@ -21,35 +21,43 @@ final class AuthenticationAPIService: BaseAPIService, AuthenticationAPIServicePr
     
     static let shared = AuthenticationAPIService()
 
-    var token: String { tokenData?.value ?? "" }
+    var token: String {
+        get {
+            UserManager.shared.token?.value ?? ""
+        }
+        set {
+            UserManager.shared.token = Token(value: newValue, isExpired: false)
+        }
+    }
 
     // MARK: - Private Variables
     
-    // TODO: - Removed this hard-coded authentication token when server support user's token
-    private var tokenData: Token? = Token(
-        value: "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMiIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYwNzMzMjUyNCwiZXhwIjoxNjA3NDE4OTI0LCJqdGkiOiI0NzVmNzE5ZS02ZTNmLTRmYTUtYjI3Zi02ZDkxMGM5NGRiMzgifQ.l9mFj8r8tfjk0oVyBPKy5HEvBItFzZ-iIlAjcAmKuhA",
-        isExpired: true
-    )
 
     // MARK: - Public Functions
     
-    func login(with loginRequest: LoginRequest, completion: @escaping ResultRestfulCompletion) {
+    func login(with loginRequest: LoginRequest, completion: @escaping ResultUserCompletion) {
         request(
             topic: RequestResourceType.login.rawValue,
             method: .post,
             bodyParams: loginRequest.toDictionary(),
             shouldAuthenticate: false
         ) { data, success, error in
-            Thread.executeOnMainThread {
-                if let error = error {
-                    return completion(.failure(error))
-                }
-                guard let success = success else {
-                    return completion(.failure(ResponseError(.other)))
-                }
-                switch success.type {
-                case .noContent: completion(.success(ResponseSuccess(.noContent)))
-                case .success: completion(.success(ResponseSuccess(.success)))
+            if let error = error {
+                return Thread.executeOnMainThread { completion(.failure(error)) }
+            }
+            guard let success = success else {
+                return Thread.executeOnMainThread { completion(.failure(ResponseError(.other))) }
+            }
+            switch success.type {
+            case .noContent: Thread.executeOnMainThread { completion(.failure(ResponseError(.wrongJsonFormat))) }
+            case .success:
+                if let data = data, let dataString = String(data: data, encoding: .utf8),
+                   let userDict = dataString.toJSONDictionary?["data"] as? JSONDictionary,
+                   let userData = try? JSONSerialization.data(withJSONObject: userDict, options: .prettyPrinted),
+                   let user: User = try? JSONDecoder().decode(User.self, from: userData) {
+                    Thread.executeOnMainThread { completion(.success(user)) }
+                } else {
+                    Thread.executeOnMainThread { completion(.failure(ResponseError(.wrongJsonFormat))) }
                 }
             }
         }
@@ -62,17 +70,15 @@ final class AuthenticationAPIService: BaseAPIService, AuthenticationAPIServicePr
             bodyParams: signupRequest.toDictionary(),
             shouldAuthenticate: false
         ) { data, success, error in
-            Thread.executeOnMainThread {
-                if let error = error {
-                    return completion(.failure(error))
-                }
-                guard let success = success else {
-                    return completion(.failure(ResponseError(.other)))
-                }
-                switch success.type {
-                case .noContent: completion(.success(ResponseSuccess(.noContent)))
-                case .success: completion(.success(ResponseSuccess(.success)))
-                }
+            if let error = error {
+                return Thread.executeOnMainThread { completion(.failure(error)) }
+            }
+            guard let success = success else {
+                return Thread.executeOnMainThread { completion(.failure(ResponseError(.other))) }
+            }
+            switch success.type {
+            case .noContent: Thread.executeOnMainThread { completion(.success(ResponseSuccess(.noContent))) }
+            case .success: Thread.executeOnMainThread { completion(.success(ResponseSuccess(.success))) }
             }
         }
     }

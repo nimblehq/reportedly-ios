@@ -13,6 +13,7 @@ import Foundation
 enum RequestResourceType: String {
     case signup = "signup"
     case login = "login"
+    case reports = "reports"
 }
 
 enum RequestType {

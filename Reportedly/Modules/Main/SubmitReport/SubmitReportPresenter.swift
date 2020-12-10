@@ -32,8 +32,11 @@ extension SubmitReportPresenter: SubmitReportViewOutput {
     }
     
     func didTapSubmitReportButton() {
-        // TODO: Send submit report API
-        view?.showToastNotification(message: "Submit report button pressed")
+        guard let taskToday = view?.plansForTodayText, let obstaclesToday = view?.blockingIssuesText else { return }
+        view?.dismissKeyboard()
+        view?.showLoadingView(message: Localize.moduleLoadingMessage.localized())
+        interactor.submitReport(taskToday: taskToday, obstaclesToday: obstaclesToday)
+        log.debug("Submit report button pressed with\ntaskToday: \(taskToday)\nobstaclesToday: \(obstaclesToday)")
     }
     
     func textViewsDidChange() {
@@ -45,6 +48,18 @@ extension SubmitReportPresenter: SubmitReportViewOutput {
 // MARK: - SubmitReportInteractorOutput
 
 extension SubmitReportPresenter: SubmitReportInteractorOutput {
+    
+    func didSubmitReport() {
+        view?.hideLoadingView()
+        view?.showSuccessOverlayView { [weak self] in
+            self?.router.popViewController()
+        }
+    }
+    
+    func didFailToSubmitReport(_ error: ResponseError) {
+        view?.hideLoadingView()
+        view?.showToastNotification(message: error.message)
+    }
 }
 
 // MARK: - SubmitReportInput

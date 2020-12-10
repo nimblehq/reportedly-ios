@@ -16,6 +16,7 @@ protocol SubmitReportViewInput: AnyObject, CommonViewInput {
     var isValidReport: Bool { get }
     
     func configure()
+    func dismissKeyboard()
     func setSubmitReportButtonEnabled(_ isEnabled: Bool)
 }
 
@@ -115,6 +116,10 @@ extension SubmitReportViewController: SubmitReportViewInput {
         setUpViews()
     }
     
+    func dismissKeyboard() {
+        dismissKeyboard(nil)
+    }
+    
     func setSubmitReportButtonEnabled(_ isEnabled: Bool) {
         submitReportButton.isEnabled = isEnabled
     }
@@ -149,7 +154,6 @@ extension SubmitReportViewController: UITextViewDelegate {
     
     func textViewDidEndEditing(_ textView: UITextView) {
         containerScrollView.contentSize = CGSize(width: containerScrollView.contentSize.width, height: currentScrollViewContentHeight)
-        containerScrollView.contentOffset = CGPoint(x: 0, y: containerScrollView.contentOffset.y)
         containerScrollView.isScrollEnabled = false
     }
 }

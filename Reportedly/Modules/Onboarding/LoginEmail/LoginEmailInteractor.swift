@@ -44,8 +44,11 @@ extension LoginEmailInteractor: LoginEmailInteractorInput {
         authenticationAPIService.login(with: request) { [weak self] result in
             guard let self = self else { return }
             switch result {
-            case .success: self.output?.didLogin()
-            case .failure(let error): self.output?.didFailToLogin(error)
+            case .success(let user):
+                UserManager.shared.user = user
+                self.output?.didLogin()
+            case .failure(let error):
+                self.output?.didFailToLogin(error)
             }
         }
     }
