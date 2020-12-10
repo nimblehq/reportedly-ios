@@ -42,6 +42,14 @@
 
 "module.Home.MenuLogoutOption" = "Logout";
 
+"module.SubmitReport.SubmitReportTitle" = "Submit Report";
+
+"module.SubmitReport.SubmitReportButton" = "Submit Report";
+
+"module.SubmitReport.PlansForTodayTitle" = "What do you plan on tackling today?";
+
+"moduleSubmitReportBlockingIssuesTitle" = "Okay, are you facing any blockers or unexpected issues? If yes, tell us what happened 🤗";
+
 "module.Notifications.DailyReportReminderTitle" = "Daily Standup Report";
 
 "module.Notifications.DailyReportReminderDescription" = "Hi, it's time to start the daily standup. Please, open the app and answer your daily questions";

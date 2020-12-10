@@ -22,6 +22,9 @@ protocol ReportsHistoryViewOutput: AnyObject {
 
 final class ReportsHistoryViewController: ViewController {
 
+    private let backgroundImageView = UIImageView()
+    private let transparentLayerView = UIView()
+    
     var output: ReportsHistoryViewOutput?
 
     override func viewDidLoad() {
@@ -32,6 +35,8 @@ final class ReportsHistoryViewController: ViewController {
     override func setUpColors() {
         super.setUpColors()
         view.backgroundColor = .background
+        
+        transparentLayerView.backgroundColor = .overlayLight
     }
 }
 
@@ -40,6 +45,39 @@ final class ReportsHistoryViewController: ViewController {
 extension ReportsHistoryViewController: ReportsHistoryViewInput {
 
     func configure() {
+        setUpLayouts()
+        setUpViews()
+    }
+}
+
+// MARK: - Configure
+
+extension ReportsHistoryViewController {
+    
+    private func setUpLayouts() {
+        view.addSubview(backgroundImageView)
+        view.addSubview(transparentLayerView)
         
+        backgroundImageView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        
+        transparentLayerView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+    }
+    
+    private func setUpViews() {
+        setUpBackgroundImageView()
+    }
+}
+
+// MARK: - Main View
+
+extension ReportsHistoryViewController {
+    
+    private func setUpBackgroundImageView() {
+        backgroundImageView.contentMode = .scaleAspectFill
+        backgroundImageView.image = Asset.background.reportsHistoryScreen()
     }
 }

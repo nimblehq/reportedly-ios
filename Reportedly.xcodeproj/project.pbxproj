@@ -26,6 +26,7 @@
 		2432C17F2581D30100993E43 /* SubmitReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2432C17A2581D30100993E43 /* SubmitReportViewController.swift */; };
 		2432C1802581D30100993E43 /* SubmitReportInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2432C17B2581D30100993E43 /* SubmitReportInteractor.swift */; };
 		2432C1812581D30100993E43 /* SubmitReportPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2432C17C2581D30100993E43 /* SubmitReportPresenter.swift */; };
+		2432C1892582013100993E43 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2432C1882582013100993E43 /* View.xib */; };
 		243A35CC25679DEF00390E9E /* Thread+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A35CB25679DEF00390E9E /* Thread+Extensions.swift */; };
 		244085A825594159007C6C06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085A725594159007C6C06 /* AppDelegate.swift */; };
 		244085B025594159007C6C06 /* Application.AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085AF25594159007C6C06 /* Application.AppDelegate.swift */; };
@@ -138,6 +139,7 @@
 		2432C17A2581D30100993E43 /* SubmitReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitReportViewController.swift; sourceTree = "<group>"; };
 		2432C17B2581D30100993E43 /* SubmitReportInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitReportInteractor.swift; sourceTree = "<group>"; };
 		2432C17C2581D30100993E43 /* SubmitReportPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitReportPresenter.swift; sourceTree = "<group>"; };
+		2432C1882582013100993E43 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		243A35CB25679DEF00390E9E /* Thread+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thread+Extensions.swift"; sourceTree = "<group>"; };
 		244085A425594159007C6C06 /* Reportedly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reportedly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		244085A725594159007C6C06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				2432C17B2581D30100993E43 /* SubmitReportInteractor.swift */,
 				2432C17C2581D30100993E43 /* SubmitReportPresenter.swift */,
 				2432C1782581D30100993E43 /* SubmitReportRouter.swift */,
+				2432C1882582013100993E43 /* View.xib */,
 			);
 			path = SubmitReport;
 			sourceTree = "<group>";
@@ -781,6 +784,7 @@
 				24161AAA25665A6F00149CBE /* Localizable.strings in Resources */,
 				2484C8E02578EFFC00DAB3BB /* LaunchList.graphql in Resources */,
 				241AE5E8257F244900DC3E0E /* AnimatedSuccessCheck.json in Resources */,
+				2432C1892582013100993E43 /* View.xib in Resources */,
 				244085D62559415A007C6C06 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

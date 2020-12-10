@@ -30,6 +30,16 @@ extension SubmitReportPresenter: SubmitReportViewOutput {
     func viewDidLoad() {
         view?.configure()
     }
+    
+    func didTapSubmitReportButton() {
+        // TODO: Send submit report API
+        view?.showToastNotification(message: "Submit report button pressed")
+    }
+    
+    func textViewsDidChange() {
+        let shouldEnableSubmitReportButton = view?.isValidReport ?? false
+        view?.setSubmitReportButtonEnabled(shouldEnableSubmitReportButton)
+    }
 }
 
 // MARK: - SubmitReportInteractorOutput

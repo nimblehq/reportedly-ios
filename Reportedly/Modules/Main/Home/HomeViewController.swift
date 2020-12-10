@@ -42,7 +42,7 @@ final class HomeViewController: ViewController {
     private let menuContainerView = UIView()
     private let menuUserEmailLabel = UILabel()
     private let menuUserAvatarImageView = UIImageView()
-    private let menuHorizontalSeperatorView = UIView()
+    private let menuVerticalSeperatorView = UIView()
     private let menuOptionsContainerStackView = UIStackView()
     private let menuOptionReportHistoryButton = UIButton(type: .system)
     private let menuOptionChannelSubscriptionButton = UIButton(type: .system)
@@ -71,7 +71,6 @@ final class HomeViewController: ViewController {
     
     override func setUpTexts() {
         super.setUpTexts()
-        timeLabel.text = ""
         todayLabel.text = Localize.moduleHomeTodayTitle.localized()
         startReportingButton.setTitle(Localize.moduleHomeStartReportingButton.localized(), for: .normal)
         
@@ -102,7 +101,7 @@ final class HomeViewController: ViewController {
         
         menuUserEmailLabel.textColor = .textPrimary
         
-        menuHorizontalSeperatorView.backgroundColor = .gray
+        menuVerticalSeperatorView.backgroundColor = .gray
         
         menuOptionReportHistoryButton.setTitleColor(.lightGray, for: .normal)
         menuOptionReportHistoryButton.setBackgroundColor(.clear, for: .normal)
@@ -224,7 +223,7 @@ extension HomeViewController {
         view.addSubview(menuContainerView)
         menuContainerView.addSubview(menuUserEmailLabel)
         menuContainerView.addSubview(menuUserAvatarImageView)
-        menuContainerView.addSubview(menuHorizontalSeperatorView)
+        menuContainerView.addSubview(menuVerticalSeperatorView)
         menuContainerView.addSubview(menuOptionsContainerStackView)
         menuOptionsContainerStackView.addArrangedSubview(menuOptionReportHistoryButton)
         menuOptionsContainerStackView.addArrangedSubview(menuOptionChannelSubscriptionButton)
@@ -240,7 +239,7 @@ extension HomeViewController {
         // Hide the menu beyond the right of the phone's screen by default
         
         
-        menuHorizontalSeperatorView.snp.makeConstraints {
+        menuVerticalSeperatorView.snp.makeConstraints {
             $0.centerY.equalToSuperview().multipliedBy(0.4)
             $0.leading.equalToSuperview().offset(CGFloat.spacer4)
             $0.trailing.equalToSuperview().inset(CGFloat.spacer4)
@@ -250,7 +249,7 @@ extension HomeViewController {
         menuUserAvatarImageView.snp.makeConstraints {
             $0.height.width.equalTo(CGFloat.spacer7)
             $0.trailing.equalToSuperview().inset(CGFloat.spacer4)
-            $0.bottom.equalTo(menuHorizontalSeperatorView.snp.top).offset(-CGFloat.spacer5)
+            $0.bottom.equalTo(menuVerticalSeperatorView.snp.top).offset(-CGFloat.spacer5)
         }
         
         menuUserEmailLabel.snp.makeConstraints {
@@ -262,7 +261,7 @@ extension HomeViewController {
         
         menuOptionsContainerStackView.snp.makeConstraints {
             $0.leading.centerX.equalToSuperview()
-            $0.top.equalTo(menuHorizontalSeperatorView.snp.bottom).offset(CGFloat.spacer6)
+            $0.top.equalTo(menuVerticalSeperatorView.snp.bottom).offset(CGFloat.spacer6)
         }
         
         menuOptionReportHistoryButton.snp.makeConstraints {

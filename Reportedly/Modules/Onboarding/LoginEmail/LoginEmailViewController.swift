@@ -106,7 +106,7 @@ extension LoginEmailViewController: LoginEmailViewInput {
     
     var isValidEmailAndPassword: Bool {
         let emailText = emailFieldText ?? ""
-        let passwordText = passwordField.text ?? ""
+        let passwordText = passwordFieldText ?? ""
         return emailText.isEmail && !passwordText.isEmpty
     }
     
@@ -284,7 +284,8 @@ extension LoginEmailViewController {
     }
     
     private func setUpLoginButton() {
-        loginButton.isEnabled = false
+        // TODO: - Testing purposes, uncomment the below line when no longer needed
+//        loginButton.isEnabled = false
         loginButton.titleLabel?.font = UIFont.appBoldFont(ofSize: .regular)
         loginButton.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
     }
