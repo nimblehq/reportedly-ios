@@ -34,10 +34,8 @@ extension HomePresenter: HomeViewOutput {
     }
     
     func viewWillAppear() {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = DateFormat.EEEE_MMMM_dd_YYYY
-        dateFormatter.locale = Locale(identifier: LanguageSystem.shared.currentLanguage.locale.identifier)
-        view?.setCurrentTime(dateFormatter.string(from: Date()))
+        let formattedDateString = Date().toString(withFormat: DateFormat.EEEE_MMMM_dd_YYYY)
+        view?.setCurrentTime(formattedDateString)
         if let user = UserManager.shared.user {
             view?.setUser(user)
         }

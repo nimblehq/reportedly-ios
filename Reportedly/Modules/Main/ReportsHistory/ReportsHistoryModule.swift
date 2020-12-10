@@ -31,7 +31,10 @@ final class ReportsHistoryModule {
     init() {
         view = ReportsHistoryViewController()
         router = ReportsHistoryRouter()
-        interactor = ReportsHistoryInteractor()
+        interactor = ReportsHistoryInteractor(
+            reportAPIService: ReportAPIService(),
+            userManager: UserManager.shared
+        )
         presenter = ReportsHistoryPresenter(
             router: router,
             interactor: interactor

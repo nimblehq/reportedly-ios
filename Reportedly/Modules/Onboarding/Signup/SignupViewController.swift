@@ -99,19 +99,19 @@ final class SignupViewController: ViewController {
 extension SignupViewController: SignupViewInput {
     
     var emailFieldText: String? {
-        emailField.text
+        emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
     var passwordFieldText: String? {
-        passwordField.text
+        passwordField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
     var confirmPasswordFieldText: String? {
-        confirmPasswordField.text
+        confirmPasswordField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
     var slackIdFieldText: String? {
-        slackIdField.text
+        slackIdField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
     var isValidSignupData: Bool {

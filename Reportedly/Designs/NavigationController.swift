@@ -23,6 +23,7 @@ final class NavigationController: UINavigationController {
     private func setUpColors() {
         navigationBar.tintColor = .primary
         view.backgroundColor = .clear
+        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.primary]
         setNeedsStatusBarAppearanceUpdate()
     }
     

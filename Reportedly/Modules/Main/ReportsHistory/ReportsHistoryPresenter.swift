@@ -30,11 +30,26 @@ extension ReportsHistoryPresenter: ReportsHistoryViewOutput {
     func viewDidLoad() {
         view?.configure()
     }
+    
+    func viewWillAppear() {
+        view?.showLoadingView(message: Localize.moduleLoaderGettingReportsMessage.localized())
+        interactor.loadReports()
+    }
 }
 
 // MARK: - ReportsHistoryInteractorOutput
 
 extension ReportsHistoryPresenter: ReportsHistoryInteractorOutput {
+    func didLoadReports(reports: [Report]) {
+        view?.hideLoadingView()
+        view?.update(with: reports)
+    }
+    
+    func didFailToLoadReports(_ error: ResponseError) {
+        view?.hideLoadingView()
+        view?.showToastNotification(message: error.message)
+    }
+    
 }
 
 // MARK: - ReportsHistoryInput

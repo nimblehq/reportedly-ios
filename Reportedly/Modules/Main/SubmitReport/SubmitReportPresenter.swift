@@ -34,7 +34,7 @@ extension SubmitReportPresenter: SubmitReportViewOutput {
     func didTapSubmitReportButton() {
         guard let taskToday = view?.plansForTodayText, let obstaclesToday = view?.blockingIssuesText else { return }
         view?.dismissKeyboard()
-        view?.showLoadingView(message: Localize.moduleLoadingMessage.localized())
+        view?.showLoadingView(message: Localize.moduleLoaderLoadingMessage.localized())
         interactor.submitReport(taskToday: taskToday, obstaclesToday: obstaclesToday)
         log.debug("Submit report button pressed with\ntaskToday: \(taskToday)\nobstaclesToday: \(obstaclesToday)")
     }

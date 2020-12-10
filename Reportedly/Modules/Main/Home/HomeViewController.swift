@@ -40,6 +40,7 @@ final class HomeViewController: ViewController {
     
     // Right menu
     private let menuContainerView = UIView()
+    private let menuDismissRegionView = UIView()
     private let menuUserEmailLabel = UILabel()
     private let menuUserAvatarImageView = UIImageView()
     private let menuVerticalSeperatorView = UIView()
@@ -96,6 +97,8 @@ final class HomeViewController: ViewController {
         
         // Right Menu
         menuContainerView.backgroundColor = .overlay
+        
+        menuDismissRegionView.backgroundColor = .overlayLight
         
         menuUserEmailLabel.textColor = .textPrimary
         
@@ -171,6 +174,10 @@ extension HomeViewController {
     @objc private func handleUserAvatarTap(_ gesture: UIGestureRecognizer) {
         toggleRightMenu(shouldShow: true)
     }
+    
+    @objc private func handleDismissMenuTap(_ gesture: UIGestureRecognizer) {
+        toggleRightMenu(shouldShow: false)
+    }
 }
 
 // MARK: - Configure
@@ -218,6 +225,7 @@ extension HomeViewController {
         }
         
         // Right menu
+        view.addSubview(menuDismissRegionView)
         view.addSubview(menuContainerView)
         menuContainerView.addSubview(menuUserEmailLabel)
         menuContainerView.addSubview(menuUserAvatarImageView)
@@ -233,6 +241,10 @@ extension HomeViewController {
             $0.width.equalToSuperview().multipliedBy(0.63)
         }
         menuContainerView.layoutIfNeeded()
+        
+        menuDismissRegionView.snp.makeConstraints {
+            $0.centerY.top.leading.trailing.equalToSuperview()
+        }
         
         // Hide the menu beyond the right of the phone's screen by default
         hideRightMenu()
@@ -288,6 +300,7 @@ extension HomeViewController {
         setUpStartReportingButton()
         
         // Right menu
+        setUpMenuDismissRegionView()
         setUpMenuUserEmailLabel()
         setUpMenuUserAvatarImageView()
         setUpMenuContainerStackView()
@@ -350,12 +363,20 @@ extension HomeViewController {
         guard rightMenuIsShowing != shouldShow else { return }
         
         rightMenuIsShowing = shouldShow
-        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 4.0, initialSpringVelocity: 0.8, options: .curveEaseInOut) { [weak self] in
+        
+        if shouldShow {
+            menuDismissRegionView.isHidden = false
+            menuDismissRegionView.alpha = 0
+        }
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 4.0, initialSpringVelocity: 0.8, options: .curveEaseInOut,animations: { [weak self] in
             if shouldShow {
                 self?.menuContainerView.transform = .identity
             } else {
                 self?.hideRightMenu()
             }
+            self?.menuDismissRegionView.alpha = shouldShow ? 1 : 0
+        }) { [weak self] _ in
+            if !shouldShow { self?.menuDismissRegionView.isHidden = true }
         }
         
     }
@@ -363,6 +384,13 @@ extension HomeViewController {
     private func hideRightMenu() {
         let menuContainerViewWidth = menuContainerView.bounds.width
         menuContainerView.transform = .translation(x: menuContainerViewWidth)
+    }
+    
+    private func setUpMenuDismissRegionView() {
+        menuDismissRegionView.isHidden = true
+        menuDismissRegionView.alpha = 0
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleDismissMenuTap(_:)))
+        menuDismissRegionView.addGestureRecognizer(tap)
     }
     
     private func setUpMenuUserEmailLabel() {

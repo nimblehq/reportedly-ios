@@ -22,6 +22,12 @@ extension String {
         guard let match = (try? NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue))?.firstMatch(in: self, range: NSRange(location: 0, length: utf16.count)) else { return false }
         return match.range.length == utf16.count
     }
+    func toDate(withFormat: String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = withFormat
+        dateFormatter.locale = Locale(identifier: LanguageSystem.shared.currentLanguage.locale.identifier)
+        return dateFormatter.date(from: self) ?? Date(timeIntervalSince1970: 0)
+    }
     var toJSONArray: [JSONDictionary] {
         guard !isEmpty, let data = data(using: .utf8) else { return [] }
         do {

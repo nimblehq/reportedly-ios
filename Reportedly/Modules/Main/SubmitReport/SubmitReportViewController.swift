@@ -36,7 +36,6 @@ final class SubmitReportViewController: ViewController {
     private let containerScrollView = UIScrollView()
     private let plansForTodayLabel = UILabel()
     private let plansForTodayTextView = UITextView()
-    private let transparentVerticalSeparatorView = UIView()
     private let blockingIssuesLabel = UILabel()
     private let blockingIssuesTextView = UITextView()
     private let submitReportButton = UIButton(type: .system)
@@ -44,6 +43,7 @@ final class SubmitReportViewController: ViewController {
     var output: SubmitReportViewOutput?
     
     private var currentScrollViewContentHeight: CGFloat = 0
+    private var deactiveScrollViewTimer: Timer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +65,17 @@ final class SubmitReportViewController: ViewController {
         
         containerScrollView.backgroundColor = .clear
         
-        transparentVerticalSeparatorView.backgroundColor = .clear
+        plansForTodayLabel.textColor = .primary
+        
+        plansForTodayTextView.tintColor = .primary
+        plansForTodayTextView.backgroundColor = .forms
+        plansForTodayTextView.textColor = .textPrimary
+        
+        blockingIssuesLabel.textColor = .primary
+        
+        blockingIssuesTextView.tintColor = .primary
+        blockingIssuesTextView.backgroundColor = .forms
+        blockingIssuesTextView.textColor = .textPrimary
         
         submitReportButton.setTitleColor(.darkGray, for: .disabled)
         submitReportButton.setTitleColor(.black, for: .normal)
@@ -79,15 +89,7 @@ final class SubmitReportViewController: ViewController {
         
         plansForTodayLabel.text = Localize.moduleSubmitReportPlansForTodayTitle.localized()
         
-        plansForTodayTextView.tintColor = .primary
-        plansForTodayTextView.backgroundColor = .forms
-        plansForTodayTextView.textColor = .textPrimary
-        
         blockingIssuesLabel.text = Localize.moduleSubmitReportBlockingIssuesTitle.localized()
-        
-        blockingIssuesTextView.tintColor = .primary
-        blockingIssuesTextView.backgroundColor = .forms
-        blockingIssuesTextView.textColor = .textPrimary
         
         submitReportButton.setTitle(Localize.moduleSubmitReportSubmitReportButton.localized(), for: .normal)
     }
@@ -98,11 +100,11 @@ final class SubmitReportViewController: ViewController {
 extension SubmitReportViewController: SubmitReportViewInput {
 
     var plansForTodayText: String? {
-        plansForTodayTextView.text
+        plansForTodayTextView.text.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
     var blockingIssuesText: String? {
-        blockingIssuesTextView.text
+        blockingIssuesTextView.text.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
     var isValidReport: Bool {
@@ -148,13 +150,29 @@ extension SubmitReportViewController: UITextViewDelegate {
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         if currentScrollViewContentHeight == 0 { currentScrollViewContentHeight = containerScrollView.contentSize.height }
-        containerScrollView.contentSize = CGSize(width: containerScrollView.contentSize.width, height: currentScrollViewContentHeight + 350)
-        containerScrollView.isScrollEnabled = true
+        if !containerScrollView.isScrollEnabled {
+            containerScrollView.contentSize = CGSize(width: containerScrollView.contentSize.width, height: currentScrollViewContentHeight + 350)
+            containerScrollView.isScrollEnabled = true
+            log.debug("enabled scroll view")
+        }
+        deactiveScrollViewTimer?.invalidate()
+        deactiveScrollViewTimer = nil
+        
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
-        containerScrollView.contentSize = CGSize(width: containerScrollView.contentSize.width, height: currentScrollViewContentHeight)
-        containerScrollView.isScrollEnabled = false
+        deactiveScrollViewTimer = Timer.scheduledTimer(withTimeInterval: 0.4, repeats: false) { [weak self] timer in
+            UIView.animate(withDuration: 0.3) { [weak self] in
+                self?.containerScrollView.contentOffset.y = 0
+            } completion: { [weak self] _ in
+                guard let self = self else { return }
+                self.containerScrollView.contentSize = CGSize(width: self.containerScrollView.contentSize.width, height: self.currentScrollViewContentHeight)
+            }
+            self?.containerScrollView.isScrollEnabled = false
+            self?.deactiveScrollViewTimer = nil
+            log.debug("disabled scroll view")
+            timer.invalidate()
+        }
     }
 }
 

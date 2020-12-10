@@ -54,5 +54,4 @@ extension SubmitReportInteractor: SubmitReportInteractorInput {
             }
         }
     }
-    
 }

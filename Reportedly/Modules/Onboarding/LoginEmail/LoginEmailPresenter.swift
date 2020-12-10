@@ -36,7 +36,7 @@ extension LoginEmailPresenter: LoginEmailViewOutput {
     func didTapLoginButton() {
         guard let email = view?.emailFieldText, let password = view?.passwordFieldText else { return }
         view?.dismissKeyboard()
-        view?.showLoadingView(message: Localize.moduleLoaderMessage.localized())
+        view?.showLoadingView(message: Localize.moduleLoaderLoadingMessage.localized())
         interactor.login(email: email, password: password)
         log.debug("Login button pressed with\nemail: \(email)\npassword: \(password)")
     }

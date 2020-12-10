@@ -97,11 +97,11 @@ final class LoginEmailViewController: ViewController {
 extension LoginEmailViewController: LoginEmailViewInput {
     
     var emailFieldText: String? {
-        emailField.text
+        emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
     var passwordFieldText: String? {
-        passwordField.text
+        passwordField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
     var isValidEmailAndPassword: Bool {
