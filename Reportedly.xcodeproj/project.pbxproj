@@ -16,6 +16,16 @@
 		241AE5E8257F244900DC3E0E /* AnimatedSuccessCheck.json in Resources */ = {isa = PBXBuildFile; fileRef = 241AE5E7257F244900DC3E0E /* AnimatedSuccessCheck.json */; };
 		241AE5F0257F292200DC3E0E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241AE5EF257F292200DC3E0E /* UIView+Extensions.swift */; };
 		241F08FE256E6ACC00EC3120 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241F08FD256E6ACC00EC3120 /* CGFloat+Extensions.swift */; };
+		2432C1702581D2ED00993E43 /* ReportsHistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2432C16B2581D2ED00993E43 /* ReportsHistoryRouter.swift */; };
+		2432C1712581D2ED00993E43 /* ReportsHistoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2432C16C2581D2ED00993E43 /* ReportsHistoryModule.swift */; };
+		2432C1722581D2ED00993E43 /* ReportsHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2432C16D2581D2ED00993E43 /* ReportsHistoryViewController.swift */; };
+		2432C1732581D2ED00993E43 /* ReportsHistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2432C16E2581D2ED00993E43 /* ReportsHistoryInteractor.swift */; };
+		2432C1742581D2ED00993E43 /* ReportsHistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2432C16F2581D2ED00993E43 /* ReportsHistoryPresenter.swift */; };
+		2432C17D2581D30100993E43 /* SubmitReportRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2432C1782581D30100993E43 /* SubmitReportRouter.swift */; };
+		2432C17E2581D30100993E43 /* SubmitReportModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2432C1792581D30100993E43 /* SubmitReportModule.swift */; };
+		2432C17F2581D30100993E43 /* SubmitReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2432C17A2581D30100993E43 /* SubmitReportViewController.swift */; };
+		2432C1802581D30100993E43 /* SubmitReportInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2432C17B2581D30100993E43 /* SubmitReportInteractor.swift */; };
+		2432C1812581D30100993E43 /* SubmitReportPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2432C17C2581D30100993E43 /* SubmitReportPresenter.swift */; };
 		243A35CC25679DEF00390E9E /* Thread+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A35CB25679DEF00390E9E /* Thread+Extensions.swift */; };
 		244085A825594159007C6C06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085A725594159007C6C06 /* AppDelegate.swift */; };
 		244085B025594159007C6C06 /* Application.AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085AF25594159007C6C06 /* Application.AppDelegate.swift */; };
@@ -118,6 +128,16 @@
 		241AE5E7257F244900DC3E0E /* AnimatedSuccessCheck.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AnimatedSuccessCheck.json; sourceTree = "<group>"; };
 		241AE5EF257F292200DC3E0E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		241F08FD256E6ACC00EC3120 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
+		2432C16B2581D2ED00993E43 /* ReportsHistoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsHistoryRouter.swift; sourceTree = "<group>"; };
+		2432C16C2581D2ED00993E43 /* ReportsHistoryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsHistoryModule.swift; sourceTree = "<group>"; };
+		2432C16D2581D2ED00993E43 /* ReportsHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsHistoryViewController.swift; sourceTree = "<group>"; };
+		2432C16E2581D2ED00993E43 /* ReportsHistoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsHistoryInteractor.swift; sourceTree = "<group>"; };
+		2432C16F2581D2ED00993E43 /* ReportsHistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsHistoryPresenter.swift; sourceTree = "<group>"; };
+		2432C1782581D30100993E43 /* SubmitReportRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitReportRouter.swift; sourceTree = "<group>"; };
+		2432C1792581D30100993E43 /* SubmitReportModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitReportModule.swift; sourceTree = "<group>"; };
+		2432C17A2581D30100993E43 /* SubmitReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitReportViewController.swift; sourceTree = "<group>"; };
+		2432C17B2581D30100993E43 /* SubmitReportInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitReportInteractor.swift; sourceTree = "<group>"; };
+		2432C17C2581D30100993E43 /* SubmitReportPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitReportPresenter.swift; sourceTree = "<group>"; };
 		243A35CB25679DEF00390E9E /* Thread+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thread+Extensions.swift"; sourceTree = "<group>"; };
 		244085A425594159007C6C06 /* Reportedly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reportedly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		244085A725594159007C6C06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -247,6 +267,40 @@
 				241AE5E7257F244900DC3E0E /* AnimatedSuccessCheck.json */,
 			);
 			path = Lottie;
+			sourceTree = "<group>";
+		};
+		2432C1682581D01800993E43 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				248E93782580BDB500839C68 /* Home */,
+				2432C16A2581D2C800993E43 /* ReportsHistory */,
+				2432C1692581D2BA00993E43 /* SubmitReport */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2432C1692581D2BA00993E43 /* SubmitReport */ = {
+			isa = PBXGroup;
+			children = (
+				2432C1792581D30100993E43 /* SubmitReportModule.swift */,
+				2432C17A2581D30100993E43 /* SubmitReportViewController.swift */,
+				2432C17B2581D30100993E43 /* SubmitReportInteractor.swift */,
+				2432C17C2581D30100993E43 /* SubmitReportPresenter.swift */,
+				2432C1782581D30100993E43 /* SubmitReportRouter.swift */,
+			);
+			path = SubmitReport;
+			sourceTree = "<group>";
+		};
+		2432C16A2581D2C800993E43 /* ReportsHistory */ = {
+			isa = PBXGroup;
+			children = (
+				2432C16C2581D2ED00993E43 /* ReportsHistoryModule.swift */,
+				2432C16D2581D2ED00993E43 /* ReportsHistoryViewController.swift */,
+				2432C16E2581D2ED00993E43 /* ReportsHistoryInteractor.swift */,
+				2432C16F2581D2ED00993E43 /* ReportsHistoryPresenter.swift */,
+				2432C16B2581D2ED00993E43 /* ReportsHistoryRouter.swift */,
+			);
+			path = ReportsHistory;
 			sourceTree = "<group>";
 		};
 		2440859B25594159007C6C06 = {
@@ -392,7 +446,8 @@
 		244085C325594159007C6C06 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				24CF122825762E1A006D6BA0 /* Authentication */,
+				2432C1682581D01800993E43 /* Main */,
+				24CF122825762E1A006D6BA0 /* Onboarding */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -570,14 +625,13 @@
 			path = Designs;
 			sourceTree = "<group>";
 		};
-		24CF122825762E1A006D6BA0 /* Authentication */ = {
+		24CF122825762E1A006D6BA0 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				248E93782580BDB500839C68 /* Home */,
 				24CF122925762E44006D6BA0 /* Signup */,
 				24CB9657255E836C00AAC566 /* LoginEmail */,
 			);
-			path = Authentication;
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		24CF122925762E44006D6BA0 /* Signup */ = {
@@ -838,7 +892,9 @@
 				24CB9661255E836C00AAC566 /* LoginEmailRouter.swift in Sources */,
 				248E939E2580BE0900839C68 /* HomeViewController.swift in Sources */,
 				24CF123325762EB2006D6BA0 /* SignupPresenter.swift in Sources */,
+				2432C17E2581D30100993E43 /* SubmitReportModule.swift in Sources */,
 				248C27CE257F6DE300B75CA1 /* ReachabilityManager.swift in Sources */,
+				2432C1712581D2ED00993E43 /* ReportsHistoryModule.swift in Sources */,
 				248E93662580A43300839C68 /* LoadingView.swift in Sources */,
 				2484C9152578F63300DAB3BB /* UserManager.swift in Sources */,
 				244085CB25594159007C6C06 /* Network.swift in Sources */,
@@ -849,16 +905,20 @@
 				248C27F8257F838C00B75CA1 /* Notification+Extensions.swift in Sources */,
 				241AE5CA257F204C00DC3E0E /* LottieAnimationFactory.swift in Sources */,
 				24CF123225762EB2006D6BA0 /* SignupInteractor.swift in Sources */,
+				2432C1802581D30100993E43 /* SubmitReportInteractor.swift in Sources */,
 				24CB9674255E884500AAC566 /* TypeAliases.swift in Sources */,
 				2485124C25779B7A006133A8 /* UIFont+Extensions.swift in Sources */,
 				244085C225594159007C6C06 /* User.swift in Sources */,
 				24EE32D925628C7100A9C0DC /* UITextField+Extensions.swift in Sources */,
 				244085CE25594159007C6C06 /* Logger.swift in Sources */,
+				2432C1732581D2ED00993E43 /* ReportsHistoryInteractor.swift in Sources */,
 				24CB965F255E836C00AAC566 /* LoginEmailInteractor.swift in Sources */,
 				24CB9660255E836C00AAC566 /* LoginEmailViewController.swift in Sources */,
+				2432C1702581D2ED00993E43 /* ReportsHistoryRouter.swift in Sources */,
 				241F08FE256E6ACC00EC3120 /* CGFloat+Extensions.swift in Sources */,
 				248C277E257F693600B75CA1 /* HTTPHeaderBuilder.swift in Sources */,
 				248E939D2580BE0900839C68 /* HomeModule.swift in Sources */,
+				2432C1812581D30100993E43 /* SubmitReportPresenter.swift in Sources */,
 				24EE32E425628F2900A9C0DC /* UIButton+Extensions.swift in Sources */,
 				244085C825594159007C6C06 /* URLOpener.swift in Sources */,
 				248C277D257F693600B75CA1 /* BaseAPIService.swift in Sources */,
@@ -867,6 +927,7 @@
 				24820DC8256386990072D245 /* ToastView.swift in Sources */,
 				241AE5F0257F292200DC3E0E /* UIView+Extensions.swift in Sources */,
 				24CF123125762EB2006D6BA0 /* SignupViewController.swift in Sources */,
+				2432C1742581D2ED00993E43 /* ReportsHistoryPresenter.swift in Sources */,
 				2480CAD8257F9ADF00B079DF /* SignupRequest.swift in Sources */,
 				248C27AB257F6B4A00B75CA1 /* Obfuscator.swift in Sources */,
 				248C279A257F6AB400B75CA1 /* Cryptor.swift in Sources */,
@@ -876,6 +937,7 @@
 				24CB9689255E8B5400AAC566 /* ColorSystem.swift in Sources */,
 				24EE32F92562982B00A9C0DC /* R.generated.swift in Sources */,
 				24CB968E255E8D3500AAC566 /* UIColor+Extensions.swift in Sources */,
+				2432C17F2581D30100993E43 /* SubmitReportViewController.swift in Sources */,
 				24820DD6256389200072D245 /* CommonViewInput.swift in Sources */,
 				248C277F257F693600B75CA1 /* AuthenticationAPIService.swift in Sources */,
 				248C27B4257F6C0F00B75CA1 /* Enums.swift in Sources */,
@@ -886,6 +948,7 @@
 				241AE5D9257F214D00DC3E0E /* SuccessView.swift in Sources */,
 				24CB965E255E836C00AAC566 /* LoginEmailPresenter.swift in Sources */,
 				2484C8FB2578F23100DAB3BB /* ResponseLoggingInterceptor.swift in Sources */,
+				2432C1722581D2ED00993E43 /* ReportsHistoryViewController.swift in Sources */,
 				2484C91D2578F76200DAB3BB /* Token.swift in Sources */,
 				244085BC25594159007C6C06 /* Resource.swift in Sources */,
 				24CB9684255E896300AAC566 /* ViewController.swift in Sources */,
@@ -904,6 +967,7 @@
 				248E939F2580BE0900839C68 /* HomeInteractor.swift in Sources */,
 				248C27B5257F6C0F00B75CA1 /* Structs.swift in Sources */,
 				248C27C6257F6D1100B75CA1 /* NSData+Extensions.swift in Sources */,
+				2432C17D2581D30100993E43 /* SubmitReportRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

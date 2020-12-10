@@ -12,6 +12,8 @@ import UIKit
 protocol HomeRouterInput: AnyObject {
     
     func show(on window: UIWindow)
+    func pushReportsHistoryScreen()
+    func pushSubmitReportScreen()
 }
 
 final class HomeRouter {
@@ -31,5 +33,15 @@ extension HomeRouter: HomeRouterInput {
         let navigationController = NavigationController(rootViewController: viewController)
         window.rootViewController = navigationController
         self.window = window
+    }
+    
+    func pushReportsHistoryScreen() {
+        let module = ReportsHistoryModule()
+        viewController?.navigationController?.pushViewController(module.view, animated: true)
+    }
+    
+    func pushSubmitReportScreen() {
+        let module = SubmitReportModule()
+        viewController?.navigationController?.pushViewController(module.view, animated: true)
     }
 }

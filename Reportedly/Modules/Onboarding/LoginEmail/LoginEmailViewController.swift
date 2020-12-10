@@ -65,6 +65,10 @@ final class LoginEmailViewController: ViewController {
             labelText: Localize.moduleLoginEmailSignupDescription.localized(),
             linkText: Localize.moduleLoginEmailSignupLink.localized()
         )
+        
+        // TODO: - Testing purposes, remove when no longer needed
+        emailField.text = "minh@nimblehq.co"
+        passwordField.text = "12345678"
     }
     
     override func setUpColors() {

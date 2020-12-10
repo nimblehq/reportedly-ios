@@ -41,13 +41,11 @@ extension HomePresenter: HomeViewOutput {
     }
     
     func didTapStartReportingButton() {
-        // TODO: Show submit reporting screen
-        view?.showToastNotification(message: "Start Reporting button pressed")
+        router.pushSubmitReportScreen()
     }
     
     func didTapMenuOptionReportHistoryButton() {
-        // TODO: Show report history screen
-        view?.showToastNotification(message: "Report history menu option pressed")
+        router.pushReportsHistoryScreen()
     }
     
     func didTapMenuOptionChannelSubscriptionButton() {
