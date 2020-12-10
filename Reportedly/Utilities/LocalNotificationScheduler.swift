@@ -33,8 +33,8 @@ final class LocalNotificationScheduler {
                      dateMatching: dateComponents, repeats: true)
                
             // Create the request
-            let uuidString = UUID().uuidString
-            let request = UNNotificationRequest(identifier: uuidString,
+            let identifier = "DailyStandupReminderNotification\(i)"
+            let request = UNNotificationRequest(identifier: identifier,
                         content: content, trigger: trigger)
 
             // Schedule the request with the system.
