@@ -46,6 +46,7 @@ extension HomePresenter: HomeViewOutput {
     }
     
     func didTapMenuOptionReportHistoryButton() {
+        view?.hideRightMenuBar()
         router.pushReportsHistoryScreen()
     }
     
@@ -60,14 +61,20 @@ extension HomePresenter: HomeViewOutput {
     }
     
     func didTapMenuOptionLogoutButton() {
-        // TODO: Logout the user and show login screen
-        view?.showToastNotification(message: "Logout menu option pressed")
+        interactor.cleanupUserSession()
+        view?.hideRightMenuBar()
+        router.showLoginEmail()
     }
 }
 
 // MARK: - HomeInteractorOutput
 
 extension HomePresenter: HomeInteractorOutput {
+    
+    func didReceieveTokenExpiredEvent() {
+        interactor.cleanupUserSession()
+        router.showLoginEmail()
+    }
 }
 
 // MARK: - HomeInput

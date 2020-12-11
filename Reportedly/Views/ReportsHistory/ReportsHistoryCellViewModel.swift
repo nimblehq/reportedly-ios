@@ -1,5 +1,5 @@
 //
-//  AccountRecoveryVerifyMethodCellViewModel.swift
+//  ReportsHistoryCellViewModel.swift
 //  Reportedly
 //
 //  Created by Mikey Pham on 12/10/20.

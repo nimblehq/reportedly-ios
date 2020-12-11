@@ -179,6 +179,7 @@ class RequestPerformer {
                     self.makeRequest(retryCount: retryCount + 1)
                 } else {
                     completion(nil, nil, ResponseError(.invalidAuthToken))
+                    NotificationCenter.default.post(name: Notification.Name.UserTokenExpired, object: nil)
                     return log.error("Failed to get new token")
                 }
             }

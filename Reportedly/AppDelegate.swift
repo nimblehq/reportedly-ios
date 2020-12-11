@@ -44,8 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let module = HomeModule()
             module.router.show(on: window)
         } else {
-            UserManager.shared.token = nil
-            UserManager.shared.user = nil
+            UserManager.shared.cleanupUserSession()
             let module = LoginEmailModule()
             module.router.show(on: window)
         }

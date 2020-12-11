@@ -9,6 +9,10 @@
 import Foundation
 
 extension Notification.Name {
+    
     // Network
     static let NetworkStatusChanged = Notification.Name("NetworkStatusChanged")
+    
+    // Session
+    static let UserTokenExpired = Notification.Name("UserTokenExpired")
 }

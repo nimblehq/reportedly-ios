@@ -12,6 +12,7 @@ import UIKit
 protocol HomeViewInput: AnyObject, CommonViewInput {
 
     func configure()
+    func hideRightMenuBar()
     func setCurrentTime(_ time: String)
     func setUser(_ user: User)
 }
@@ -125,6 +126,10 @@ extension HomeViewController: HomeViewInput {
     func configure() {
         setUpLayouts()
         setUpViews()
+    }
+    
+    func hideRightMenuBar() {
+        toggleRightMenu(shouldShow: false)
     }
     
     func setCurrentTime(_ time: String) {
@@ -378,7 +383,6 @@ extension HomeViewController {
         }) { [weak self] _ in
             if !shouldShow { self?.menuDismissRegionView.isHidden = true }
         }
-        
     }
     
     private func hideRightMenu() {

@@ -12,6 +12,7 @@ import UIKit
 protocol HomeRouterInput: AnyObject {
     
     func show(on window: UIWindow)
+    func showLoginEmail()
     func pushReportsHistoryScreen()
     func pushSubmitReportScreen()
 }
@@ -33,6 +34,12 @@ extension HomeRouter: HomeRouterInput {
         let navigationController = NavigationController(rootViewController: viewController)
         window.rootViewController = navigationController
         self.window = window
+    }
+    
+    func showLoginEmail() {
+        guard let window = viewController?.view.window else { return }
+        let module = LoginEmailModule()
+        module.router.show(on: window)
     }
     
     func pushReportsHistoryScreen() {

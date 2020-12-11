@@ -31,7 +31,9 @@ final class HomeModule {
     init() {
         view = HomeViewController()
         router = HomeRouter()
-        interactor = HomeInteractor()
+        interactor = HomeInteractor(
+            userManager: UserManager.shared
+        )
         presenter = HomePresenter(
             router: router,
             interactor: interactor

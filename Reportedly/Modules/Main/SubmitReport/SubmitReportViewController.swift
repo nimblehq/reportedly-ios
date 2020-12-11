@@ -155,6 +155,11 @@ extension SubmitReportViewController: UITextViewDelegate {
             containerScrollView.isScrollEnabled = true
             log.debug("enabled scroll view")
         }
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            guard let self = self else { return }
+            let titleHeight = textView == self.plansForTodayTextView ? self.plansForTodayLabel.frame.height : self.blockingIssuesLabel.frame.height
+            self.containerScrollView.contentOffset.y = textView.frame.origin.y - CGFloat.spacer4 * 2 - titleHeight
+        }
         deactiveScrollViewTimer?.invalidate()
         deactiveScrollViewTimer = nil
         

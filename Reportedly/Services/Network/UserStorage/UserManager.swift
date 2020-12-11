@@ -25,4 +25,9 @@ final class UserManager {
             UserDefaults.userSlackId = user?.slackId
         }
     }
+    
+    func cleanupUserSession() {
+        token = nil
+        user = nil
+    }
 }

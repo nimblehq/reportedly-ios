@@ -2,7 +2,8 @@
 //  Date+Extensions.swift
 //  Reportedly
 //
-//  Created by Minh Pham on 10/12/2020.
+//  Created by Mikey Pham on 12/11/20.
+//  Copyright © 2020 NimbleHQ. All rights reserved.
 //
 
 import Foundation
