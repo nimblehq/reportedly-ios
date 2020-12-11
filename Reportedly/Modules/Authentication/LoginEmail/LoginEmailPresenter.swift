@@ -63,7 +63,7 @@ extension LoginEmailPresenter: LoginEmailInteractorOutput {
         }
     }
     
-    func didFailToLogin(error: ResponseError) {
+    func didFailToLogin(_ error: ResponseError) {
         view?.hideLoadingView()
         view?.showToastNotification(message: error.message)
     }
