@@ -1,5 +1,5 @@
 //
-//  RequestInterceptor.swift
+//  RequestPerformer.swift
 //  Reportedly
 //
 //  Created by Mikey Pham on 12/8/20.
@@ -14,7 +14,7 @@ private class Requester {
     var dataRequest: DataRequest?
 }
 
-class RequestInterceptor {
+class RequestPerformer {
 
     // MARK: - Callbacks
     let completion: ResponseCompletion
@@ -74,26 +74,26 @@ class RequestInterceptor {
         switch requestType {
         case .defaultRequest:
             if method == .get {
-                RequestInterceptor.requestQueue.async { [weak self] in
+                RequestPerformer.requestQueue.async { [weak self] in
                     guard let self = self else { return }
 
                     // For GET method, we optimize all of the same request (same url and query params)
                     let key = self.url + (self.queryParams as? [String: AnyHashable]).hashValue.description
-                    if retryCount == 0, let requester = RequestInterceptor.requesters[key] {
+                    if retryCount == 0, let requester = RequestPerformer.requesters[key] {
                         requester.completions.append(self.completion)
                     } else {
                         let request = AF.request(self.url, method: self.method, parameters: self.queryParams, headers: self.header) { urlRequest in
                             urlRequest.timeoutInterval = BaseAPIService.DEFAULT_TIMEOUT
-                        }.validate().response(queue: RequestInterceptor.requestQueue) {
+                        }.validate().response(queue: RequestPerformer.requestQueue) {
                             commonResultHandler($0) { [key] data, success, error in
-                                RequestInterceptor.requesters[key]?.completions.forEach { $0(data, success, error) }
-                                RequestInterceptor.requesters[key] = nil
+                                RequestPerformer.requesters[key]?.completions.forEach { $0(data, success, error) }
+                                RequestPerformer.requesters[key] = nil
                             }
                         }
-                        let requester = RequestInterceptor.requesters[key] ?? Requester()
+                        let requester = RequestPerformer.requesters[key] ?? Requester()
                         requester.completions.append(self.completion)
                         requester.dataRequest = request
-                        RequestInterceptor.requesters[key] = requester
+                        RequestPerformer.requesters[key] = requester
                     }
                 }
                 return nil

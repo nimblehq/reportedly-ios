@@ -65,10 +65,6 @@ final class LoginEmailViewController: ViewController {
             labelText: Localize.moduleLoginEmailSignupDescription.localized(),
             linkText: Localize.moduleLoginEmailSignupLink.localized()
         )
-        
-        // TODO: - Testing purposes, remove when no longer needed
-        emailField.text = "minh@nimblehq.co"
-        passwordField.text = "12345678"
     }
     
     override func setUpColors() {
@@ -284,8 +280,7 @@ extension LoginEmailViewController {
     }
     
     private func setUpLoginButton() {
-        // TODO: - Testing purposes, uncomment the below line when no longer needed
-//        loginButton.isEnabled = false
+        loginButton.isEnabled = false
         loginButton.titleLabel?.font = UIFont.appBoldFont(ofSize: .regular)
         loginButton.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
     }

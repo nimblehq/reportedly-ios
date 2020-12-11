@@ -50,7 +50,7 @@ class BaseAPIService {
             : !bodyParams.isEmpty
             ? .requestWithBody
             : .defaultRequest
-        return RequestInterceptor(
+        return RequestPerformer(
             bodyParams: bodyParams,
             method: method,
             queryParams: queryParams,

@@ -35,4 +35,10 @@ struct User: Decodable {
         email = try values.decode(String.self, forKey: .email)
         id = try values.decode(Int.self, forKey: .id)
     }
+    
+    init(id: Int, email: String, slackId: String) {
+        self.id = id
+        self.email = email
+        self.slackId = slackId
+    }
 }

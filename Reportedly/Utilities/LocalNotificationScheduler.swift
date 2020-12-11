@@ -14,6 +14,10 @@ final class LocalNotificationScheduler {
     static let shared = LocalNotificationScheduler()
     
     func setupDailyStandupLocalNotifications() {
+        // Clean up existing requests to avoid duplications
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.removeAllPendingNotificationRequests()
+        
         // Create the notification content
         let content = UNMutableNotificationContent()
         content.title = Localize.moduleNotificationsDailyReportReminderTitle.localized()
@@ -33,12 +37,11 @@ final class LocalNotificationScheduler {
                      dateMatching: dateComponents, repeats: true)
                
             // Create the request
-            let identifier = UUID().uuidString // "DailyStandupReminderNotification\(i)"
+            let identifier = "DailyStandupReminderNotification\(i)"
             let request = UNNotificationRequest(identifier: identifier,
                         content: content, trigger: trigger)
 
             // Schedule the request with the system.
-            let notificationCenter = UNUserNotificationCenter.current()
             notificationCenter.add(request) { error in
                 if let error = error {
                     log.error("Can't add local notification due to: \(error.localizedDescription)")

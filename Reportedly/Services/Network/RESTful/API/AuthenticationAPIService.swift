@@ -85,6 +85,6 @@ final class AuthenticationAPIService: BaseAPIService, AuthenticationAPIServicePr
     
     func refreshToken(completion: SuccessCompletion? = nil) {
         // TODO: Add refreshToken API logic here
-        completion?(true)
+        completion?(false)
     }
 }

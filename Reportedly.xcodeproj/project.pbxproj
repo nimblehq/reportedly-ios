@@ -49,6 +49,7 @@
 		244085EC2559415A007C6C06 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244085EB2559415A007C6C06 /* UITests.swift */; };
 		246758F2258255780099F681 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246758F1258255780099F681 /* Report.swift */; };
 		247186F6258102D300ABD1C0 /* LocalNotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247186F5258102D300ABD1C0 /* LocalNotificationScheduler.swift */; };
+		2474E11B2583136500E5F1B3 /* UserDefault+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2474E11A2583136500E5F1B3 /* UserDefault+Extensions.swift */; };
 		2480CAD8257F9ADF00B079DF /* SignupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2480CAD7257F9ADF00B079DF /* SignupRequest.swift */; };
 		24820DC8256386990072D245 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DC6256386990072D245 /* ToastView.swift */; };
 		24820DC9256386990072D245 /* CommonViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24820DC7256386990072D245 /* CommonViewPresenter.swift */; };
@@ -67,7 +68,7 @@
 		248C277E257F693600B75CA1 /* HTTPHeaderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C2779257F693600B75CA1 /* HTTPHeaderBuilder.swift */; };
 		248C277F257F693600B75CA1 /* AuthenticationAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C277A257F693600B75CA1 /* AuthenticationAPIService.swift */; };
 		248C2780257F693600B75CA1 /* ReportAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C277B257F693600B75CA1 /* ReportAPIService.swift */; };
-		248C2781257F693600B75CA1 /* RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C277C257F693600B75CA1 /* RequestInterceptor.swift */; };
+		248C2781257F693600B75CA1 /* RequestPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C277C257F693600B75CA1 /* RequestPerformer.swift */; };
 		248C279A257F6AB400B75CA1 /* Cryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C2799257F6AB400B75CA1 /* Cryptor.swift */; };
 		248C27AB257F6B4A00B75CA1 /* Obfuscator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C27AA257F6B4A00B75CA1 /* Obfuscator.swift */; };
 		248C27B4257F6C0F00B75CA1 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C27B2257F6C0F00B75CA1 /* Enums.swift */; };
@@ -177,6 +178,7 @@
 		244085ED2559415A007C6C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		246758F1258255780099F681 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		247186F5258102D300ABD1C0 /* LocalNotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationScheduler.swift; sourceTree = "<group>"; };
+		2474E11A2583136500E5F1B3 /* UserDefault+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+Extensions.swift"; sourceTree = "<group>"; };
 		2480CAD7257F9ADF00B079DF /* SignupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRequest.swift; sourceTree = "<group>"; };
 		24820DC6256386990072D245 /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		24820DC7256386990072D245 /* CommonViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonViewPresenter.swift; sourceTree = "<group>"; };
@@ -196,7 +198,7 @@
 		248C2779257F693600B75CA1 /* HTTPHeaderBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPHeaderBuilder.swift; sourceTree = "<group>"; };
 		248C277A257F693600B75CA1 /* AuthenticationAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationAPIService.swift; sourceTree = "<group>"; };
 		248C277B257F693600B75CA1 /* ReportAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportAPIService.swift; sourceTree = "<group>"; };
-		248C277C257F693600B75CA1 /* RequestInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestInterceptor.swift; sourceTree = "<group>"; };
+		248C277C257F693600B75CA1 /* RequestPerformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestPerformer.swift; sourceTree = "<group>"; };
 		248C2799257F6AB400B75CA1 /* Cryptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cryptor.swift; sourceTree = "<group>"; };
 		248C27AA257F6B4A00B75CA1 /* Obfuscator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Obfuscator.swift; sourceTree = "<group>"; };
 		248C27B2257F6C0F00B75CA1 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -456,6 +458,7 @@
 				2485124B25779B7A006133A8 /* UIFont+Extensions.swift */,
 				24EE32D825628C7100A9C0DC /* UITextField+Extensions.swift */,
 				241AE5EF257F292200DC3E0E /* UIView+Extensions.swift */,
+				2474E11A2583136500E5F1B3 /* UserDefault+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -616,7 +619,7 @@
 			children = (
 				248C2778257F693600B75CA1 /* BaseAPIService.swift */,
 				248C2779257F693600B75CA1 /* HTTPHeaderBuilder.swift */,
-				248C277C257F693600B75CA1 /* RequestInterceptor.swift */,
+				248C277C257F693600B75CA1 /* RequestPerformer.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -963,6 +966,7 @@
 				2480CAD8257F9ADF00B079DF /* SignupRequest.swift in Sources */,
 				248C27AB257F6B4A00B75CA1 /* Obfuscator.swift in Sources */,
 				248C279A257F6AB400B75CA1 /* Cryptor.swift in Sources */,
+				2474E11B2583136500E5F1B3 /* UserDefault+Extensions.swift in Sources */,
 				24CB966F255E872700AAC566 /* NavigationController.swift in Sources */,
 				2484C9002578F32E00DAB3BB /* RequestLoggingInterceptor.swift in Sources */,
 				24CB967F255E88FF00AAC566 /* BuildConfiguration.swift in Sources */,
@@ -975,7 +979,7 @@
 				248C27B4257F6C0F00B75CA1 /* Enums.swift in Sources */,
 				248E939C2580BE0900839C68 /* HomeRouter.swift in Sources */,
 				2432C19F25820B4B00993E43 /* SubmitReportRequest.swift in Sources */,
-				248C2781257F693600B75CA1 /* RequestInterceptor.swift in Sources */,
+				248C2781257F693600B75CA1 /* RequestPerformer.swift in Sources */,
 				24820DC9256386990072D245 /* CommonViewPresenter.swift in Sources */,
 				24161ABA2566607600149CBE /* LanguageSystem.swift in Sources */,
 				241AE5D9257F214D00DC3E0E /* SuccessView.swift in Sources */,

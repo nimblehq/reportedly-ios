@@ -12,7 +12,17 @@ final class UserManager {
     
     static let shared = UserManager()
     
-    public var token: Token?
+    public var token: Token? {
+        didSet {
+            UserDefaults.userToken = token?.value
+        }
+    }
     
-    public var user: User?
+    public var user: User? {
+        didSet {
+            UserDefaults.userId = user?.id
+            UserDefaults.userEmail = user?.email
+            UserDefaults.userSlackId = user?.slackId
+        }
+    }
 }

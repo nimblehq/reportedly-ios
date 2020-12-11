@@ -31,11 +31,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         LocalNotificationScheduler.shared.setupDailyStandupLocalNotifications()
         
-        // Then, show the login screen
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
-        let module = LoginEmailModule()
-        module.router.show(on: window)
+        
+        if let userToken = UserDefaults.userToken,
+           let userId = UserDefaults.userId,
+           let userEmail = UserDefaults.userEmail,
+           let userSlackId = UserDefaults.userSlackId
+        {
+            UserManager.shared.token = Token(value: userToken, isExpired: false)
+            UserManager.shared.user = User(id: userId, email: userEmail, slackId: userSlackId)
+            let module = HomeModule()
+            module.router.show(on: window)
+        } else {
+            UserManager.shared.token = nil
+            UserManager.shared.user = nil
+            let module = LoginEmailModule()
+            module.router.show(on: window)
+        }
         window.makeKeyAndVisible()
         
         // TODO: - Testing purpose only, will remove when have actual APIs, uncomment when we need to see the response
