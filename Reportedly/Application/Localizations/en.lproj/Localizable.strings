@@ -52,6 +52,8 @@
 
 "module.ReportsHistory.ReportsHistoryTitle" = "Reports History";
 
+"module.ReportsHistory.NoReportText" = "Nothing to show";
+
 "module.ReportsHistoryCell.ReportTasksTitle" = "What do you plan on tackling today?";
 
 "module.ReportsHistoryCell.ReportObstaclesTitle" = "Okay, are you facing any blockers or unexpected issues? If yes, tell us what happened 🤗";

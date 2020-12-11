@@ -32,7 +32,16 @@ extension ReportsHistoryPresenter: ReportsHistoryViewOutput {
     }
     
     func viewWillAppear() {
+        triggerLoadReportAction()
+    }
+    
+    func didTapRefreshRightNavBarButtonItem() {
+        triggerLoadReportAction()
+    }
+    
+    private func triggerLoadReportAction() {
         view?.showLoadingView(message: Localize.moduleLoaderGettingReportsMessage.localized())
+        view?.hideNoReportLabel()
         interactor.loadReports()
     }
 }
@@ -47,6 +56,7 @@ extension ReportsHistoryPresenter: ReportsHistoryInteractorOutput {
     
     func didFailToLoadReports(_ error: ResponseError) {
         view?.hideLoadingView()
+        view?.update(with: [])
         view?.showToastNotification(message: error.message)
     }
     

@@ -12,6 +12,7 @@ import UIKit
 protocol ReportsHistoryViewInput: AnyObject, CommonViewInput {
 
     func configure()
+    func hideNoReportLabel()
     func update(with reports: [Report])
 }
 
@@ -20,6 +21,8 @@ protocol ReportsHistoryViewOutput: AnyObject {
 
     func viewDidLoad()
     func viewWillAppear()
+    
+    func didTapRefreshRightNavBarButtonItem()
 }
 
 final class ReportsHistoryViewController: ViewController {
@@ -27,6 +30,7 @@ final class ReportsHistoryViewController: ViewController {
     private let backgroundImageView = UIImageView()
     private let transparentLayerView = UIView()
     
+    private let emptyReportLabel = UILabel()
     private let reportsHistoryTableView = UITableView()
     private var reportsHistoryCellViewModels: [ReportsHistoryCellViewModel] = []
     
@@ -49,11 +53,15 @@ final class ReportsHistoryViewController: ViewController {
         transparentLayerView.backgroundColor = .overlayLight
         
         reportsHistoryTableView.backgroundColor = .clear
+        
+        emptyReportLabel.textColor = .primary
     }
     
     override func setUpTexts() {
         super.setUpTexts()
         title = Localize.moduleReportsHistoryReportsHistoryTitle.localized()
+        
+        emptyReportLabel.text = Localize.moduleReportsHistoryNoReportText.localized()
     }
 }
 
@@ -64,6 +72,11 @@ extension ReportsHistoryViewController: ReportsHistoryViewInput {
     func configure() {
         setUpLayouts()
         setUpViews()
+        setUpNavigationBar()
+    }
+    
+    func hideNoReportLabel() {
+        emptyReportLabel.isHidden = true
     }
     
     func update(with reports: [Report]) {
@@ -74,7 +87,19 @@ extension ReportsHistoryViewController: ReportsHistoryViewInput {
                 obstacles: $0.obstacles
             )
         }.sorted { $0.reportDate > $1.reportDate }
+        let isNoReport = reportsHistoryCellViewModels.isEmpty
+        reportsHistoryTableView.isHidden = isNoReport
+        emptyReportLabel.isHidden = !isNoReport
         reportsHistoryTableView.reloadData()
+    }
+}
+
+// MARK: - Actions
+
+extension ReportsHistoryViewController {
+    
+    @objc private func didTapRefreshRightNavBarButtonItem() {
+        output?.didTapRefreshRightNavBarButtonItem()
     }
 }
 
@@ -86,6 +111,7 @@ extension ReportsHistoryViewController {
         view.addSubview(backgroundImageView)
         view.addSubview(transparentLayerView)
         view.addSubview(reportsHistoryTableView)
+        view.addSubview(emptyReportLabel)
         
         backgroundImageView.snp.makeConstraints {
             $0.edges.equalToSuperview()
@@ -99,11 +125,21 @@ extension ReportsHistoryViewController {
             $0.leading.trailing.bottom.equalToSuperview()
             $0.top.equalTo(view.snp.topMargin)
         }
+        
+        emptyReportLabel.snp.makeConstraints {
+            $0.centerX.centerY.equalToSuperview()
+            $0.leading.equalToSuperview().offset(CGFloat.spacer4)
+        }
     }
     
     private func setUpViews() {
         setUpBackgroundImageView()
         setUpReportsHistoryTableView()
+        setUpRmptyReportLabel()
+    }
+    
+    private func setUpNavigationBar() {
+        addRefreshRightNavBarButtonItem()
     }
 }
 
@@ -124,6 +160,17 @@ extension ReportsHistoryViewController {
         reportsHistoryTableView.separatorStyle = .none
         reportsHistoryTableView.rowHeight = UITableView.automaticDimension
         reportsHistoryTableView.alwaysBounceVertical = true
+    }
+    
+    private func setUpRmptyReportLabel() {
+        emptyReportLabel.isHidden = true
+        emptyReportLabel.textAlignment = .center
+        emptyReportLabel.font = UIFont.appBoldFont(ofSize: .regular)
+    }
+    
+    private func addRefreshRightNavBarButtonItem() {
+        let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(didTapRefreshRightNavBarButtonItem))
+        navigationItem.rightBarButtonItems = [refresh]
     }
 }
 
