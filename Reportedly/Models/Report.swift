@@ -12,6 +12,7 @@ import Foundation
 struct Report: Decodable {
     
     // MARK: - Decodable Enums
+    
     enum Category: String, Decodable {
         case swift, combine, debugging, xcode
     }
@@ -33,18 +34,12 @@ struct Report: Decodable {
     var date: Date {
         attributes.user.createdAt.toDate(withFormat: DateFormat.yyyy_MM_dd_T_HH_mm_ss_SSSZ)
     }
-    
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        id = try values.decode(String.self, forKey: .id)
-        type = try values.decode(String.self, forKey: .type)
-        attributes = try values.decode(ReportAttributes.self, forKey: .attributes)
-    }
 }
 
 struct ReportAttributes: Decodable {
     
     // MARK: - Decodable Enums
+    
     enum Category: String, Decodable {
         case swift, combine, debugging, xcode
     }
@@ -59,12 +54,4 @@ struct ReportAttributes: Decodable {
     var obstaclesToday: String = ""
     var taskToday: String = ""
     var user: User
-    
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        id = try values.decode(Int.self, forKey: .id)
-        obstaclesToday = try values.decode(String.self, forKey: .obstaclesToday)
-        taskToday = try values.decode(String.self, forKey: .taskToday)
-        user = try values.decode(User.self, forKey: .user)
-    }
 }

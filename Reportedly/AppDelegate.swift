@@ -34,13 +34,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
         
-        if let userToken = UserDefaults.userToken,
-           let userId = UserDefaults.userId,
-           let userEmail = UserDefaults.userEmail,
-           let userSlackId = UserDefaults.userSlackId
+        if let user = UserDefaults.user,
+           let userCredentials = UserDefaults.userCredentials
         {
-            UserManager.shared.token = Token(value: userToken, isExpired: false)
-            UserManager.shared.user = User(id: userId, email: userEmail, slackId: userSlackId)
+            UserManager.shared.user = user
+            UserManager.shared.token = Token(value: userCredentials.appToken.value, isExpired: false)
             let module = HomeModule()
             module.router.show(on: window)
         } else {

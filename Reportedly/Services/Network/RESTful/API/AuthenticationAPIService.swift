@@ -10,7 +10,7 @@ import Alamofire
 
 protocol AuthenticationAPIServiceProtocol {
 
-    func login(with loginRequest: LoginRequest, completion: @escaping ResultUserCompletion)
+    func login(with loginRequest: LoginRequest, completion: @escaping ResultCompletion<User>)
     
     func signUp(with signupRequest: SignupRequest, completion: @escaping ResultRestfulCompletion)
 }
@@ -35,7 +35,7 @@ final class AuthenticationAPIService: BaseAPIService, AuthenticationAPIServicePr
 
     // MARK: - Public Functions
     
-    func login(with loginRequest: LoginRequest, completion: @escaping ResultUserCompletion) {
+    func login(with loginRequest: LoginRequest, completion: @escaping ResultCompletion<User>) {
         request(
             topic: RequestResourceType.login.rawValue,
             method: .post,

@@ -82,6 +82,8 @@
 		248E939E2580BE0900839C68 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248E93992580BE0900839C68 /* HomeViewController.swift */; };
 		248E939F2580BE0900839C68 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248E939A2580BE0900839C68 /* HomeInteractor.swift */; };
 		248E93A02580BE0900839C68 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248E939B2580BE0900839C68 /* HomePresenter.swift */; };
+		249137FD2588C0E2002E3424 /* HomeUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249137FC2588C0E2002E3424 /* HomeUserViewModel.swift */; };
+		249138052588C32B002E3424 /* UserCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249138042588C32B002E3424 /* UserCredentials.swift */; };
 		24CB965D255E836C00AAC566 /* LoginEmailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB9658255E836C00AAC566 /* LoginEmailModule.swift */; };
 		24CB965E255E836C00AAC566 /* LoginEmailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB9659255E836C00AAC566 /* LoginEmailPresenter.swift */; };
 		24CB965F255E836C00AAC566 /* LoginEmailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB965A255E836C00AAC566 /* LoginEmailInteractor.swift */; };
@@ -211,6 +213,8 @@
 		248E93992580BE0900839C68 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		248E939A2580BE0900839C68 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		248E939B2580BE0900839C68 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		249137FC2588C0E2002E3424 /* HomeUserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeUserViewModel.swift; sourceTree = "<group>"; };
+		249138042588C32B002E3424 /* UserCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentials.swift; sourceTree = "<group>"; };
 		24CB9658255E836C00AAC566 /* LoginEmailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailModule.swift; sourceTree = "<group>"; };
 		24CB9659255E836C00AAC566 /* LoginEmailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailPresenter.swift; sourceTree = "<group>"; };
 		24CB965A255E836C00AAC566 /* LoginEmailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEmailInteractor.swift; sourceTree = "<group>"; };
@@ -566,6 +570,7 @@
 			children = (
 				2484C91C2578F76200DAB3BB /* Token.swift */,
 				2484C9142578F63300DAB3BB /* UserManager.swift */,
+				249138042588C32B002E3424 /* UserCredentials.swift */,
 			);
 			path = UserStorage;
 			sourceTree = "<group>";
@@ -629,6 +634,7 @@
 				248E939A2580BE0900839C68 /* HomeInteractor.swift */,
 				248E939B2580BE0900839C68 /* HomePresenter.swift */,
 				248E93972580BE0900839C68 /* HomeRouter.swift */,
+				249137FC2588C0E2002E3424 /* HomeUserViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -927,6 +933,7 @@
 				2432C1712581D2ED00993E43 /* ReportsHistoryModule.swift in Sources */,
 				248E93662580A43300839C68 /* LoadingView.swift in Sources */,
 				2484C9152578F63300DAB3BB /* UserManager.swift in Sources */,
+				249137FD2588C0E2002E3424 /* HomeUserViewModel.swift in Sources */,
 				2432C1B725822D5C00993E43 /* ReportsHistoryCellViewModel.swift in Sources */,
 				244085CB25594159007C6C06 /* Network.swift in Sources */,
 				247186F6258102D300ABD1C0 /* LocalNotificationScheduler.swift in Sources */,
@@ -974,6 +981,7 @@
 				248C277F257F693600B75CA1 /* AuthenticationAPIService.swift in Sources */,
 				248C27B4257F6C0F00B75CA1 /* Enums.swift in Sources */,
 				248E939C2580BE0900839C68 /* HomeRouter.swift in Sources */,
+				249138052588C32B002E3424 /* UserCredentials.swift in Sources */,
 				2432C19F25820B4B00993E43 /* SubmitReportRequest.swift in Sources */,
 				248C2781257F693600B75CA1 /* RequestPerformer.swift in Sources */,
 				24820DC9256386990072D245 /* CommonViewPresenter.swift in Sources */,

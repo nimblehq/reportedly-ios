@@ -10,23 +10,29 @@ import Foundation
 
 // MARK: - Computed Properties
 extension UserDefaults {
-    static var userToken: String? {
-        get { UserDefaults.standard.string(forKey: "USERDEFAULTSKEY_USERTOKEN") }
-        set { UserDefaults.standard.set(newValue, forKey: "USERDEFAULTSKEY_USERTOKEN") }
+    static var userCredentials: UserCredentials? {
+        get {
+            if let data = UserDefaults.standard.value(forKey: "USERDEFAULTSKEY_USERCREDENTIALS") as? Data {
+                return try? PropertyListDecoder().decode(UserCredentials.self, from: data)
+            }
+            return nil
+        }
+        set {
+            let encodedUserCredentials = try? PropertyListEncoder().encode(newValue)
+            UserDefaults.standard.set(encodedUserCredentials, forKey: "USERDEFAULTSKEY_USERCREDENTIALS")
+        }
     }
     
-    static var userId: Int? {
-        get { UserDefaults.standard.integer(forKey: "USERDEFAULTSKEY_USERID") }
-        set { UserDefaults.standard.set(newValue, forKey: "USERDEFAULTSKEY_USERID") }
-    }
-    
-    static var userEmail: String? {
-        get { UserDefaults.standard.string(forKey: "USERDEFAULTSKEY_USEREMAIL") }
-        set { UserDefaults.standard.set(newValue, forKey: "USERDEFAULTSKEY_USEREMAIL") }
-    }
-    
-    static var userSlackId: String? {
-        get { UserDefaults.standard.string(forKey: "USERDEFAULTSKEY_USERSLACKID") ?? "" }
-        set { UserDefaults.standard.set(newValue, forKey: "USERDEFAULTSKEY_USERSLACKID") }
+    static var user: User? {
+        get {
+            if let data = UserDefaults.standard.value(forKey: "USERDEFAULTSKEY_USER") as? Data {
+                return try? PropertyListDecoder().decode(User.self, from: data)
+            }
+            return nil
+        }
+        set {
+            let encodedUser = try? PropertyListEncoder().encode(newValue)
+            UserDefaults.standard.set(encodedUser, forKey: "USERDEFAULTSKEY_USER")
+        }
     }
 }

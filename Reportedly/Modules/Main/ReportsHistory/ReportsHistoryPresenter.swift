@@ -49,6 +49,7 @@ extension ReportsHistoryPresenter: ReportsHistoryViewOutput {
 // MARK: - ReportsHistoryInteractorOutput
 
 extension ReportsHistoryPresenter: ReportsHistoryInteractorOutput {
+    
     func didLoadReports(reports: [Report]) {
         view?.hideLoadingView()
         view?.update(with: reports)

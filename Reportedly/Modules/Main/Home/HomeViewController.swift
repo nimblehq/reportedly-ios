@@ -14,7 +14,7 @@ protocol HomeViewInput: AnyObject, CommonViewInput {
     func configure()
     func hideRightMenuBar()
     func setCurrentTime(_ time: String)
-    func setUser(_ user: User)
+    func setUser(_ user: HomeUserViewModel)
 }
 
 // sourcery: AutoMockable
@@ -136,7 +136,7 @@ extension HomeViewController: HomeViewInput {
         timeLabel.text = time
     }
     
-    func setUser(_ user: User) {
+    func setUser(_ user: HomeUserViewModel) {
         menuUserEmailLabel.text = user.email
     }
 }

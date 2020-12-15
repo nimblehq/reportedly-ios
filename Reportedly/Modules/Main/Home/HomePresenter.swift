@@ -36,8 +36,8 @@ extension HomePresenter: HomeViewOutput {
     func viewWillAppear() {
         let formattedDateString = Date().toString(withFormat: DateFormat.EEEE_MMMM_dd_YYYY)
         view?.setCurrentTime(formattedDateString)
-        if let user = UserManager.shared.user {
-            view?.setUser(user)
+        if let user = interactor.user {
+            view?.setUser(HomeUserViewModel(from: user))
         }
     }
     

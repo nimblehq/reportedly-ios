@@ -11,6 +11,8 @@ import Foundation
 // sourcery: AutoMockable
 protocol HomeInteractorInput: AnyObject {
     
+    var user: User? { get }
+    
     func cleanupUserSession()
 }
 
@@ -21,6 +23,7 @@ protocol HomeInteractorOutput: AnyObject {
 }
 
 final class HomeInteractor {
+    
     private let userManager: UserManager
     
     weak var output: HomeInteractorOutput?
@@ -49,6 +52,10 @@ final class HomeInteractor {
 // MARK: - HomeInteractorInput
 
 extension HomeInteractor: HomeInteractorInput {
+    
+    var user: User? {
+        userManager.user
+    }
     
     func cleanupUserSession() {
         userManager.cleanupUserSession()

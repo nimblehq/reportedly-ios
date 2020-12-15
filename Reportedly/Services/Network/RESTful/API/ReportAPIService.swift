@@ -10,7 +10,7 @@ import Alamofire
 
 protocol ReportAPIServiceProtocol {
 
-    func loadReports(with userId: Int, completion: @escaping ResultReportsCompletion)
+    func loadReports(with userId: Int, completion: @escaping ResultCompletion<[Report]>)
     
     func submitReport(with submitReportRequest: SubmitReportRequest, completion: @escaping ResultRestfulCompletion)
 }
@@ -23,7 +23,7 @@ final class ReportAPIService: BaseAPIService, ReportAPIServiceProtocol {
 
     // MARK: - Public Functions
     
-    func loadReports(with userId: Int, completion: @escaping ResultReportsCompletion) {
+    func loadReports(with userId: Int, completion: @escaping ResultCompletion<[Report]>) {
         request(
             topic: "\(RequestResourceType.reports.rawValue)/\(userId)",
             method: .get

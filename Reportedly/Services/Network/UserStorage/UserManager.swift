@@ -14,15 +14,17 @@ final class UserManager {
     
     public var token: Token? {
         didSet {
-            UserDefaults.userToken = token?.value
+            if let token = token {
+                UserDefaults.userCredentials = UserCredentials(appToken: token, userId: user?.id ?? -1)
+            } else {
+                UserDefaults.userCredentials = nil
+            }
         }
     }
     
     public var user: User? {
         didSet {
-            UserDefaults.userId = user?.id
-            UserDefaults.userEmail = user?.email
-            UserDefaults.userSlackId = user?.slackId
+            UserDefaults.user = user
         }
     }
     

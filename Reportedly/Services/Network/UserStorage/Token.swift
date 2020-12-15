@@ -8,8 +8,9 @@
 
 import Foundation
 
-// TODO: - Update to get actual token from sever later on
-struct Token {
+// TODO: - Update to get actual token and calculate isExpired flag from sever later on
+struct Token: Codable {
+    
     var value: String = ""
     var isExpired: Bool = false
 }
