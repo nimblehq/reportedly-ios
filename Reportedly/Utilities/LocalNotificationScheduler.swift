@@ -16,17 +16,17 @@ final class LocalNotificationScheduler {
     func setupDailyStandupLocalNotifications() {
         // Create the notification content
         let content = UNMutableNotificationContent()
-        content.title = "Daily Standup Report"
-        content.body = "Hi, it's time to start the daily standup. Please, open the app and answer your daily questions"
+        content.title = Localize.moduleNotificationsDailyReportReminderTitle.localized()
+        content.body = Localize.moduleNotificationsDailyReportReminderDescription.localized()
         content.sound = UNNotificationSound.default
                         
-        for i in 2...6 {
+        for i in DayIndex.monday...DayIndex.friday {
             // Configure the recurring date.
             var dateComponents = DateComponents()
             dateComponents.calendar = Calendar.current
 
-            dateComponents.weekday = i  // Monday to Friday
-            dateComponents.hour = 9    // 9:00 hours
+            dateComponents.weekday = i              // Monday to Friday
+            dateComponents.hour = HourValue.nine    // 9:00 hours
                
             // Create the trigger as a repeating event.
             let trigger = UNCalendarNotificationTrigger(

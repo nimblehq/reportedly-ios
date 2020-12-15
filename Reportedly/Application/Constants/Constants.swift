@@ -28,6 +28,17 @@ enum DateFormat {
     static let yyyy_MM_dd_T_HH_mm_ss_SSSZ = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 }
 
+// TODO: Create constants for hard-coding DayIndex for now, will remove when implement Notification Scheduler Settings feature
+enum DayIndex {
+    static let monday = 2
+    static let friday = 6
+}
+
+// TODO: Create constants for hard-coding HourValue for now, will remove when implement Notification Scheduler Settings feature
+enum HourValue {
+    static let nine = 9
+}
+
 enum FileType {
     static let lproj = "lproj"
 }

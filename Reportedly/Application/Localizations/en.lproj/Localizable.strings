@@ -42,4 +42,8 @@
 
 "module.Home.MenuLogoutOption" = "Logout";
 
-"module.Loading.Message" = "Loading...";
+"module.Notifications.DailyReportReminderTitle" = "Daily Standup Report";
+
+"module.Notifications.DailyReportReminderDescription" = "Hi, it's time to start the daily standup. Please, open the app and answer your daily questions";
+
+"module.Loader.Message" = "Loading...";

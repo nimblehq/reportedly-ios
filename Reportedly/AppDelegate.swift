@@ -24,8 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Request for notifications permission when first open app
         let options: UNAuthorizationOptions = [.alert, .sound, .badge]
         UNUserNotificationCenter.current().requestAuthorization(options: options) {
-            (didAllow, error) in
-            if !didAllow {
+            (isAuthorised, error) in
+            if !isAuthorised {
                 log.error("User has declined notifications")
             }
         }
