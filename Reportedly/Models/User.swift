@@ -43,3 +43,18 @@ struct User: Codable {
         self.slackId = slackId
     }
 }
+
+struct UserData: Decodable {
+    
+    // MARK: - Decodable Enums
+    
+    enum Category: String, Decodable {
+        case swift, combine, debugging, xcode
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case data
+    }
+
+    var data: User
+}

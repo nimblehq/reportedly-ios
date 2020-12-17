@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 struct Report: Decodable {
     
     // MARK: - Decodable Enums

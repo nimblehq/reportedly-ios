@@ -11,5 +11,5 @@ import Foundation
 struct UserCredentials: Codable {
     
     var appToken: Token
-    var userId: Int
+    var userId: Int?
 }

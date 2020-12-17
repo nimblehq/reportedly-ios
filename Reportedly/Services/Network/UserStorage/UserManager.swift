@@ -15,7 +15,7 @@ final class UserManager {
     public var token: Token? {
         didSet {
             if let token = token {
-                UserDefaults.userCredentials = UserCredentials(appToken: token, userId: user?.id ?? -1)
+                UserDefaults.userCredentials = UserCredentials(appToken: token, userId: user?.id)
             } else {
                 UserDefaults.userCredentials = nil
             }

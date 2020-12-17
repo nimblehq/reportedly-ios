@@ -217,13 +217,13 @@ extension SubmitReportViewController {
         containerScrollView.snp.makeConstraints {
             $0.leading.trailing.width.equalToSuperview()
             $0.top.equalTo(view.snp.topMargin)
-            $0.bottom.equalTo(submitReportButton.snp.top).offset(-CGFloat.spacer4)
         }
         
         submitReportButton.snp.makeConstraints {
             $0.height.equalTo(CGFloat.spacer9)
             $0.bottom.equalTo(view.snp.bottomMargin).inset(CGFloat.spacer7)
             $0.trailing.equalToSuperview().inset(CGFloat.spacer4)
+            $0.top.equalTo(containerScrollView.snp.bottom).offset(CGFloat.spacer4)
         }
         
         plansForTodayLabel.snp.makeConstraints {

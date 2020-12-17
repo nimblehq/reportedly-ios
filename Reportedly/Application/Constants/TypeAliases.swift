@@ -20,9 +20,9 @@ typealias ResultCompletion<T>       = (Result<T, ResponseError>) -> Void
 
 // MARK: - DataType Typealiases
 
-typealias JSONDictionary         = [String: Any]
+typealias JSONDictionary            = [String: Any]
 
 // MARK: - R.Swift Typealiases
 
-typealias Asset = R.image
-typealias Localize = R.string.localizable
+typealias Asset                     = R.image
+typealias Localize                  = R.string.localizable

@@ -259,19 +259,19 @@ extension HomeViewController {
             $0.leading.equalToSuperview().offset(CGFloat.spacer4)
             $0.trailing.equalToSuperview().inset(CGFloat.spacer4)
             $0.height.equalTo(1)
+            $0.top.equalTo(menuUserAvatarImageView.snp.bottom).offset(CGFloat.spacer5)
         }
         
         menuUserAvatarImageView.snp.makeConstraints {
             $0.height.width.equalTo(CGFloat.spacer7)
             $0.trailing.equalToSuperview().inset(CGFloat.spacer4)
-            $0.bottom.equalTo(menuVerticalSeperatorView.snp.top).offset(-CGFloat.spacer5)
+            $0.leading.equalTo(menuUserEmailLabel.snp.trailing).offset(CGFloat.spacer2)
         }
         
         menuUserEmailLabel.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(CGFloat.spacer4)
             $0.height.equalTo(CGFloat.spacer7)
             $0.top.equalTo(menuUserAvatarImageView.snp.top)
-            $0.trailing.equalTo(menuUserAvatarImageView.snp.leading).inset(-CGFloat.spacer2)
         }
         
         menuOptionsContainerStackView.snp.makeConstraints {

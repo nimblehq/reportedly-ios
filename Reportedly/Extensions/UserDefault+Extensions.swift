@@ -9,7 +9,9 @@
 import Foundation
 
 // MARK: - Computed Properties
+
 extension UserDefaults {
+    
     static var userCredentials: UserCredentials? {
         get {
             if let data = UserDefaults.standard.value(forKey: "USERDEFAULTSKEY_USERCREDENTIALS") as? Data {

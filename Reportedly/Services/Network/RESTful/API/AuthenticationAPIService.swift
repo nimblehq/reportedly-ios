@@ -6,7 +6,7 @@
 //  Copyright © 2020 NimbleHQ. All rights reserved.
 //
 
-import Alamofire
+import Foundation
 
 protocol AuthenticationAPIServiceProtocol {
 
@@ -30,9 +30,6 @@ final class AuthenticationAPIService: BaseAPIService, AuthenticationAPIServicePr
         }
     }
 
-    // MARK: - Private Variables
-    
-
     // MARK: - Public Functions
     
     func login(with loginRequest: LoginRequest, completion: @escaping ResultCompletion<User>) {
@@ -51,11 +48,9 @@ final class AuthenticationAPIService: BaseAPIService, AuthenticationAPIServicePr
             switch success.type {
             case .noContent: Thread.executeOnMainThread { completion(.failure(ResponseError(.wrongJsonFormat))) }
             case .success:
-                if let data = data, let dataString = String(data: data, encoding: .utf8),
-                   let userDict = dataString.toJSONDictionary?["data"] as? JSONDictionary,
-                   let userData = try? JSONSerialization.data(withJSONObject: userDict, options: .prettyPrinted),
-                   let user: User = try? JSONDecoder().decode(User.self, from: userData) {
-                    Thread.executeOnMainThread { completion(.success(user)) }
+                if let data = data,
+                   let userData: UserData = try? JSONDecoder().decode(UserData.self, from: data) {
+                    Thread.executeOnMainThread { completion(.success(userData.data)) }
                 } else {
                     Thread.executeOnMainThread { completion(.failure(ResponseError(.wrongJsonFormat))) }
                 }
