@@ -6,62 +6,62 @@
 //  Copyright © 2020 NimbleHQ. All rights reserved.
 //
 
-"module.LoginEmail.HeaderTitle" = "Reportedly";
+"module.loginEmail.headerTitle" = "Reportedly";
 
-"module.LoginEmail.EmailPlaceholder" = "Email";
+"module.loginEmail.emailPlaceholder" = "Email";
 
-"module.LoginEmail.PasswordPlaceholder" = "Password";
+"module.loginEmail.passwordPlaceholder" = "Password";
 
-"module.LoginEmail.LoginButton" = "Login";
+"module.loginEmail.loginButton" = "Login";
 
-"module.LoginEmail.SignupDescription" = "Don't have an account yet?";
+"module.loginEmail.signupDescription" = "Don't have an account yet?";
 
-"module.LoginEmail.SignupLink" = "Sign up now";
+"module.loginEmail.signupLink" = "Sign up now";
 
-"module.Signup.HeaderTitle" = "Signup";
+"module.signup.headerTitle" = "Signup";
 
-"module.Signup.EmailPlaceholder" = "Email";
+"module.signup.emailPlaceholder" = "Email";
 
-"module.Signup.PasswordPlaceholder" = "Password";
+"module.signup.passwordPlaceholder" = "Password";
 
-"module.Signup.ConfirmPasswordPlaceholder" = "Confirm Password";
+"module.signup.confirmPasswordPlaceholder" = "Confirm Password";
 
-"module.Signup.SlackIdPlaceholder" = "Slack ID";
+"module.signup.slackIdPlaceholder" = "Slack ID";
 
-"module.Signup.SignupButton" = "Signup";
+"module.signup.signupButton" = "Signup";
 
-"module.Home.TodayTitle" = "Today";
+"module.home.todayTitle" = "Today";
 
-"module.Home.StartReportingButton" = "Start Reporting";
+"module.home.startReportingButton" = "Start Reporting";
 
-"module.Home.MenuReportHistoryOption" = "Report History";
+"module.home.menuReportHistoryOption" = "Report History";
 
-"module.Home.MenuChannelSubscriptionOption" = "Channel Subscription";
+"module.home.menuChannelSubscriptionOption" = "Channel Subscription";
 
-"module.Home.MenuUserSettingsOption" = "User Settings";
+"module.home.menuUserSettingsOption" = "User Settings";
 
-"module.Home.MenuLogoutOption" = "Logout";
+"module.home.menuLogoutOption" = "Logout";
 
-"module.SubmitReport.SubmitReportTitle" = "Submit Report";
+"module.submitReport.submitReportTitle" = "Submit Report";
 
-"module.SubmitReport.SubmitReportButton" = "Submit Report";
+"module.submitReport.submitReportButton" = "Submit Report";
 
-"module.SubmitReport.PlansForTodayTitle" = "What do you plan on tackling today?";
+"module.submitReport.plansForTodayTitle" = "What do you plan on tackling today?";
 
-"module.SubmitReport.BlockingIssuesTitle" = "Okay, are you facing any blockers or unexpected issues? If yes, tell us what happened 🤗";
+"module.submitReport.blockingIssuesTitle" = "Okay, are you facing any blockers or unexpected issues? If yes, tell us what happened 🤗";
 
-"module.ReportsHistory.ReportsHistoryTitle" = "Reports History";
+"module.reportsHistory.reportsHistoryTitle" = "Reports History";
 
-"module.ReportsHistory.NoReportText" = "Nothing to show";
+"module.reportsHistory.noReportText" = "Nothing to show";
 
-"module.ReportsHistoryCell.ReportTasksTitle" = "What do you plan on tackling today?";
+"module.reportsHistoryCell.reportTasksTitle" = "What do you plan on tackling today?";
 
-"module.ReportsHistoryCell.ReportObstaclesTitle" = "Okay, are you facing any blockers or unexpected issues? If yes, tell us what happened 🤗";
+"module.reportsHistoryCell.reportObstaclesTitle" = "Okay, are you facing any blockers or unexpected issues? If yes, tell us what happened 🤗";
 
-"module.Notifications.DailyReportReminderTitle" = "Daily Standup Report";
+"module.notifications.dailyReportReminderTitle" = "Daily Standup Report";
 
-"module.Notifications.DailyReportReminderDescription" = "Hi, it's time to start the daily standup. Please, open the app and answer your daily questions";
+"module.notifications.dailyReportReminderDescription" = "Hi, it's time to start the daily standup. Please, open the app and answer your daily questions";
 
-"module.Loader.LoadingMessage" = "Loading...";
+"module.loader.loadingMessage" = "Loading...";
 
-"module.Loader.GettingReportsMessage" = "Getting reports...";
+"module.loader.gettingReportsMessage" = "Getting reports...";
